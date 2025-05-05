@@ -6,7 +6,7 @@
 **By Paul Frederick Percy Jr. & Curie GPTo**
 
 ## 🧭 Overview
-A fully scalar, causally grounded unified theory of physics that redefines time, gravity, energy, and quantum behavior through the deformation of an elastic substrat field. This framework introduces θᶜ (causal angle) and kᶜ (substrat stiffness) as core variables, replacing traditional spacetime curvature and quantum fields with scalar causal flow geometry.
+A fully scalar, causally grounded unified theory of physics that redefines time, gravity, energy, and quantum behavior through the deformation of an elastic substrat field. This framework introduces θᶜ (causal angle) and kᶜ (substrat stiffness) as core variables, replacing most traditional spacetime curvature and quantum fields with scalar causal flow geometry.
 
 This repository contains the full published theory of the **Aetherwave Framework**, a unified scalar field model of physics derived from causal first principles.
 
