@@ -58,6 +58,9 @@ This is not a patch to existing models — it is a **replacement architecture**,
 - **Paper III** – Causal Fracture Cosmology
 - **Paper IV** – Quantum Causality
 - **Paper V** – Aetherwave Field Dynamics
+separate works:
+- **Paper VI** – Particle Identity and Topological Emergence in the Aetheron Framework
+- **Paper VII** – Quantum Curvature and the Causal Geometry of Substrat Identity
 
 Each paper builds upon the previous to form a testable, predictive, and physically grounded alternative to the tensor union of general relativity and quantum mechanics.
 ---
