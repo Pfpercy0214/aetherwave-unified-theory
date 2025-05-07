@@ -11,8 +11,8 @@ A fully scalar, causally grounded unified theory of physics that redefines time,
 - **Paper III** – Causal Fracture Cosmology
 - **Paper IV** – Quantum Causality
 - **Paper V** – Aetherwave Field Dynamics
-- **Paper VI* – Particle Identity and Topological Emergence in the Aetheron Framework
-- **Paper VII – Quantum Curvature and the Causal Geometry of Substrat Identity
+- **Paper VI** – Particle Identity and Topological Emergence in the Aetheron Framework
+- **Paper VII** – Quantum Curvature and the Causal Geometry of Substrat Identity
 
 
 Each paper builds upon the previous to form a testable, predictive, and physically grounded alternative to the tensor union of general relativity and quantum mechanics.
