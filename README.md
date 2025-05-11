@@ -13,7 +13,8 @@ A fully scalar, causally grounded unified theory of physics that redefines time,
 - **Paper V** – Aetherwave Field Dynamics
 - **Paper VI** – Particle Identity and Topological Emergence in the Aetheron Framework
 - **Paper VII** – Quantum Curvature and the Causal Geometry of Substrat Identity
-
+- **Paper VIII** – Aetherwave Thermodynamic Flow and Substrat Equilibrium
+- **Paper IX ** – Aetherwave Biology- Causal Geometry of Life and Mind
 
 Each paper builds upon the previous to form a testable, predictive, and physically grounded alternative to the tensor union of general relativity and quantum mechanics.
 
