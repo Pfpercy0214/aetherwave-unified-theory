@@ -1,0 +1,25 @@
+Maxwell–Faraday in ARK form (long → short):
+
+Classical testbed (long solenoid):
+Inside a solenoid (radius R, turns per length n, current I):
+B(t) = μ₀ n I(t)
+Aφ(r,t) = ½ r B(t)
+Eφ(r,t) = −½ r (dB/dt)
+
+ARK bridges (one-time SI links):
+Aφ = ΛA · kᶜ θᶜ
+B²/(2 μ₀) = Λu · ½ kᶜ θᶜ²
+
+Solve scalars directly from measured fields (point of use):
+θᶜ = (ΛA / Λu) · (B² / μ₀) / Aφ
+kᶜ = (Λu / ΛA²) · (Aφ² μ₀ / B²)
+
+So at each r,t the causal slope θᶜ and stiffness kᶜ are not assumed, they are computed from the same Aφ, B you measure in the lab.
+
+Now compute E with ARK definition:
+E = −∂t A − ∇φ
+In this symmetry ∇φ = 0, so
+Eφ = −∂t (ΛA kᶜ θᶜ) = −∂t Aφ = −½ r (dB/dt)
+
+Result:
+That is exactly Faraday’s law in classical form. ARK did not tune anything: it derived θᶜ, kᶜ from measured Aφ and B, then the scalar update returned the same induced field.
