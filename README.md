@@ -4,6 +4,22 @@
 
 This branch is where we turn the Aetherwave / ARK corpus from a messy room into a working office.
 
+## Working memory (`notes/`)
+
+**Session continuity for Gwok.** Read these at the start of a new chat:
+
+| Note | Purpose |
+|------|---------|
+| [`notes/README.md`](notes/README.md) | Index + how to use the notes area |
+| [`notes/SESSION_BOOT.md`](notes/SESSION_BOOT.md) | New-chat boot checklist |
+| [`notes/BRANCH_MAP.md`](notes/BRANCH_MAP.md) | All branches: purpose, parentage, contents |
+| [`notes/CORPUS_INDEX.md`](notes/CORPUS_INDEX.md) | Filename-level paper inventory (main + Papers) |
+| [`notes/FRAMEWORK.md`](notes/FRAMEWORK.md) | Distilled ARK / Aetherwave working model |
+| [`notes/GALAXY_MODELING.md`](notes/GALAXY_MODELING.md) | Galaxy v9.4 status, metrics, open questions |
+| [`notes/COLLAB_NORMS.md`](notes/COLLAB_NORMS.md) | No-delete rule, partner stance, repo norms |
+
+Dated **2026-09-10**. Inventories match branch listings; nothing deleted to create them.
+
 ## Why this branch exists
 
 `main` currently holds the paper dump as uploaded: many PDFs and notes at the repo root, with little structure. That is fine as a holding area. It is not yet a place to *work*.
@@ -30,13 +46,13 @@ High-level target once we start arranging (do not treat this as done):
 
 ```text
 papers/          # numbered series + Complete Aetherwave volumes
-notes/           # short notes, analyses, Maxwell–Faraday ARK form, etc.
+notes/           # working memory + short notes, analyses, Maxwell–Faraday ARK form, etc.
 modeling/        # galaxy / SPARC / solvers when added
 index/           # reading spine, status, claim↔evidence maps
 README.md        # this workspace charter (evolves with the office)
 ```
 
-No folder moves have been made yet on this branch beyond rewriting this README.
+`notes/` working-memory files are in place (2026-09-10). No paper folder moves have been made yet.
 
 ## Corpus snapshot (as of branch creation)
 
@@ -46,6 +62,8 @@ Present on `main` / this branch tip at creation:
 - **XVII** Voyager / causal pressure; **XVIII–XIX**; Complete Aetherwave parts; ARK scalar / three-body notes; misc analysis files
 - Gaps vs a full I→XXV spine: early Papers **I–XI** style material may still be missing from the repo
 - The old `main` README still described Papers I–VII / Zenodo framing — that framing belongs to an earlier stage of the project
+
+See [`notes/CORPUS_INDEX.md`](notes/CORPUS_INDEX.md) for the filename-level inventory (early set lives on branch `Papers`).
 
 ## How we’ll use this branch
 
