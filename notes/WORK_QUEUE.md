@@ -7,7 +7,11 @@
 
 Paul’s call (2026-09-10): **three-body / full mechanics at the top** — upstream accuracy driver for 2D–3D; regimes that look minimized in reduced descriptions may still set the error floor. Goal is to surface what is currently unaccounted for, **not** to announce that ARK solved the three-body problem.
 
-Curie parallel record: `workspace/curie` → `notes/curie/2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md` and her `RESEARCH_QUEUE.md` (Priority 0).
+Curie parallel records (`workspace/curie` → `notes/curie/`):
+
+- `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md` — stress-test / program framing
+- `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md` — **candidate constitutive architecture** (1.0B)
+- `RESEARCH_QUEUE.md` — Priority 0 aligned
 
 ---
 
@@ -19,20 +23,22 @@ Curie parallel record: `workspace/curie` → `notes/curie/2026-09-10_STUDYING_TH
 | # | Task | Notes |
 |---|------|-------|
 | 1.0A | **Reconcile gravity-map lineage** | `(θᶜ)² = 2\|Φ\|/c²` (later / galaxy) vs `Φ := θᶜ c²` (XXIV). Lineage audit before any paper-grade three-body claim. |
-| 1.0B | **Derive matter–substrate constitutive bridge** | How moving structured matter sources/updates `θᶜ`, `τᶜ`, `κᶜ`, `dSₜ`, `ω` — frozen **outside** three-body residuals. |
+| 1.0B | **Derive matter–substrate constitutive bridge** | Primary formalization: Curie `…_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`. Architecture only: `E_ARK = C_matter = C_static + C_reactive + C_dissipative`; uniform-motion null; momentum reciprocity; **no coefficients yet**. Freeze **outside** three-body residuals. First bench: one accelerated extended body. |
 | 1.0C | **Sealed forward benchmark harness** | Separate conventional integrator as calibration surface; ARK never receives future trajectory. |
-| 1.0D | **Validation ladder** | Two-body → figure-eight control → hierarchical/symmetric triples → rigid-body/asymmetry → close encounter / chaos. |
+| 1.0D | **Validation ladder** | Uniform translation → one-body acceleration → rigid/raw internal → two-body gravity → figure-eight → hierarchical triples → close encounter / chaos. |
 | 1.0E | **Discriminating observable** | Only after coupling law is frozen; sign/scale derived first. |
 
-**Guards:** no target-driven memory/stabilizer; preserve chaos; no naive aether drag; rigid-body flip is calibration not substrate evidence; figure-eight = control not novel prediction.
+**Organizing principle (Curie):** substrate responds to **reconfiguration** of the coupled state, not mere motion.
 
-**Anchors:** Curie three-body note; `ARK_Three_Body_First_Principles_Note.pdf` (provenance); XVIII / XXIV / XXVI lineage; `notes/curie/SUBSTRATE_SCALE_BRIDGE.md`.
+**Guards:** reactive ≠ dissipative; no target-driven memory/stabilizer; preserve chaos; no naive aether drag; rigid-body flip is calibration not substrate evidence; figure-eight = control not novel prediction; no new fluid fundamentals until forced by the five scalars.
+
+**Anchors:** both Curie 2026-09-10 notes above; `ARK_Three_Body_First_Principles_Note.pdf` (provenance); XVIII / XXIV / XXVI lineage; `notes/curie/SUBSTRATE_SCALE_BRIDGE.md`.
 
 ---
 
 ## 2 — Gravity / inertia constitutive continuity
 
-Same law as §1 must recover weak-field gravity **and** effective inertia (including intermediate-axis / Dzhanibekov as macroscopic limit), with momentum/energy bookkeeping between matter and field. Do not invent a separate “orbital aether.”
+Same law as §1 must recover weak-field gravity **and** effective inertia (including intermediate-axis / Dzhanibekov as macroscopic limit), with momentum/energy bookkeeping between matter and field. Do not invent a separate “orbital aether.” Action/conservation-first route preferred once 1.0A is reconciled.
 
 ---
 
