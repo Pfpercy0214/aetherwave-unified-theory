@@ -1,0 +1,38 @@
+======================================================================
+PART A — SYNTHETIC NULL CURVES (artifact guard)
+======================================================================
+  curve               eta_outer/inner   r_trans[kpc]
+  flat                           9.53           5.04
+  kepler                        10.68           8.82
+  solid_then_flat                9.53           3.53
+  exp_disk                      11.49           9.58
+  INTERPRETATION:
+   - if ALL synthetics show ~10x outer rise => Q3 ratio is largely a math
+     artifact of the reconstruction (flat-ish v -> eta rises by construction).
+   - if synthetics rise much LESS than SPARC's ~10x median, the SPARC excess
+     carries real structure beyond the generic flat-curve baseline.
+
+======================================================================
+PART B — SEALED PHOTOMETRY CROSS-CHECK
+======================================================================
+  froze eta-transition for 84 well-sampled galaxies (V_obs only)
+
+  --- eta-transition vs baryonic half-support radius (n=84) ---
+  corr(eta_transition, r_bar_half)      = +0.831  (p=1.36e-22)
+  corr(r_max [NULL],    r_bar_half)      = +0.897  (p=9.94e-31)
+  partial corr(eta_trans, r_bar_half | r_max) = +0.119  (p=2.81e-01)
+  KEY: if eta_transition correlates with baryon scale AND adds info beyond
+       r_max (partial != 0), then eta-transition genuinely 'knows' baryon
+       structure. If partial ~ 0, it's just tracking overall galaxy size.
+
+  SPARC outer/inner eta median = 10.06
+  synthetic flat-curve baseline = 9.53
+  -> SPARC/synthetic excess factor = 1.06
+     (>1 means SPARC carries structure beyond the generic flat-curve artifact)
+
+####################################################################
+VERDICT LOGIC:
+ - Part A tells us how much of the 10x is reconstruction artifact.
+ - Part B tells us whether eta-transition beats a dumb radius null at
+   locating baryons. Only if BOTH favor physics is Q3 publishable-adjacent.
+####################################################################
