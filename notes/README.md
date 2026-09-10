@@ -10,19 +10,21 @@ Durable session-continuity notes for **Gwok** (Paul Percy’s assistant). This b
 
 1. [`ACTIVE_WORK.md`](ACTIVE_WORK.md) — what is in focus *now*
 2. [`WORK_QUEUE.md`](WORK_QUEUE.md) — **prioritized work list** (three-body at top)
-3. [`SESSION_BOOT.md`](SESSION_BOOT.md) — identity, rules, hot threads
-4. [`EPISTEMIC_DISCIPLINE.md`](EPISTEMIC_DISCIPLINE.md) — standing rulebook
-5. [`CLAIM_LEDGER.md`](CLAIM_LEDGER.md) — labeled hot results (carry labels with numbers)
-6. Skim [`BRANCH_MAP.md`](BRANCH_MAP.md) — where artifacts live
-7. Domain depth as needed: FRAMEWORK / CORPUS_INDEX / GALAXY_MODELING / COLLAB_NORMS
-8. **Do not delete.** Read heavy artifacts from their home branches; don’t duplicate unless editing.
+3. [`2026-09-10_EXPLORATION_CURIE_TRIO_MECHANICAL_CORE_AND_RATE_EMERGENCE.md`](2026-09-10_EXPLORATION_CURIE_TRIO_MECHANICAL_CORE_AND_RATE_EMERGENCE.md) — clerk map of Curie trio vs repo
+4. [`SESSION_BOOT.md`](SESSION_BOOT.md) — identity, rules, hot threads
+5. [`EPISTEMIC_DISCIPLINE.md`](EPISTEMIC_DISCIPLINE.md) — standing rulebook
+6. [`CLAIM_LEDGER.md`](CLAIM_LEDGER.md) — labeled hot results
+7. Skim [`BRANCH_MAP.md`](BRANCH_MAP.md) — where artifacts live
+8. Domain depth: FRAMEWORK / CORPUS_INDEX / GALAXY_MODELING / COLLAB_NORMS
+9. **Do not delete.** Read Curie notes on `workspace/curie` only — never edit `notes/curie/*` from here.
 
 ## Index
 
 | File | Role |
 |------|------|
-| [ACTIVE_WORK.md](ACTIVE_WORK.md) | **Current focus + workspace policy** |
-| [WORK_QUEUE.md](WORK_QUEUE.md) | **Prioritized work list** (three-body #1) |
+| [ACTIVE_WORK.md](ACTIVE_WORK.md) | Current focus + workspace policy |
+| [WORK_QUEUE.md](WORK_QUEUE.md) | Prioritized work list (three-body #1) |
+| [2026-09-10_EXPLORATION_CURIE_TRIO_MECHANICAL_CORE_AND_RATE_EMERGENCE.md](2026-09-10_EXPLORATION_CURIE_TRIO_MECHANICAL_CORE_AND_RATE_EMERGENCE.md) | **Gwok exploration of Curie trio** |
 | [SESSION_BOOT.md](SESSION_BOOT.md) | New-chat boot checklist |
 | [EPISTEMIC_DISCIPLINE.md](EPISTEMIC_DISCIPLINE.md) | Standing epistemic rulebook |
 | [CLAIM_LEDGER.md](CLAIM_LEDGER.md) | Hot results with status labels |
