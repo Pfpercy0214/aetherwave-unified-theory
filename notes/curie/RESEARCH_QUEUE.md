@@ -7,28 +7,37 @@ This queue prioritizes work by epistemic value, not by how impressive the result
 **Status:** PARAMOUNT / upstream framework problem.
 
 **Primary three-body record:** `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`  
-**Constitutive formalization:** `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`
+**Constitutive formalization:** `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`  
+**Mechanical core / Maxwell–Faraday lineage:** `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
 
 The three-body study exposed a framework-level requirement that sits upstream of inertia, gravity, rigid-body motion, galaxy dynamics, and other forward modeling: ARK does not yet uniquely specify how arbitrary moving structured matter sources and updates the full substrate state.
 
+The subsequent mechanical-core audit identified a potentially important historical structure: an earlier Maxwell–Faraday solenoid bridge used `A_phi ∝ k^c theta^c` together with an energy bridge `u ∝ 1/2 k^c(theta^c)^2`, while the currently archived Paper XXII uses a different squared-product energy bridge. The earlier form is algebraically self-consistent and is independently echoed by the deformation-energy term in Paper XXIV H.10; the later Paper XXII bridge/inversion pair does not close as presently rendered. This lineage must be resolved before selecting a canonical action or forward equation.
+
 Immediate sequence:
 
-1. Reconcile the historical gravity-map lineage: `(theta^c)^2 = 2|Phi|/c^2` versus `Phi = theta^c c^2`.
-2. Derive the matter–substrate constitutive law from prior constraints rather than three-body residuals.
-3. State how position, velocity, acceleration history, shape, orientation, and matter distribution initialize and update `theta^c`, `tau^c`, `kappa^c`, `dS_t`, and `omega`.
-4. Require explicit matter/field energy and momentum bookkeeping.
-5. Build a sealed forward benchmark harness with a separate conventional gravitational integrator as calibration surface.
-6. Validate progressively: two-body controls → periodic three-body controls → symmetric/hierarchical triples → rigid-body/asymmetry calibration → close-encounter and chaotic systems.
-7. Preserve the Newtonian-equivalent `theta^c` figure-eight result as a control only, not a novel ARK prediction.
-8. Search for a discriminating ARK residual only after the coupling law is frozen.
+1. Recover and audit the Maxwell–Faraday / energy-bridge lineage: earlier `1/2 k^c(theta^c)^2` versus Paper XXII `1/2(k^c theta^c)^2`, including the geometry-factor insertion and inversion algebra.
+2. Build a dimensions/normalization table for `theta^c`, `tau^c`, `k^c`, `dS_t`, `omega`, and the historical EM bridges.
+3. Audit Paper XXIV H.10 and determine whether `tau^c` can legitimately supply the persistence/inertial coefficient in a common action without choosing its normalization from a target rate.
+4. Reconcile the historical gravity-map lineage: `(theta^c)^2 = 2|Phi|/c^2` versus `Phi = theta^c c^2`.
+5. Derive the matter–substrate constitutive law from prior constraints and a common energy/momentum ledger rather than three-body residuals.
+6. Treat sustained rates, especially `omega`, as derived outputs wherever the frozen mechanics can determine them; do not use adaptive rate terms as convergence controls.
+7. State how position, velocity, acceleration history, shape, orientation, and matter distribution initialize and update the surviving ARK state.
+8. Build the one-body acceleration / uniform-motion-null benchmark before orbital modeling.
+9. Build a sealed forward benchmark harness with a separate conventional gravitational integrator as calibration surface.
+10. Validate progressively: one-body motion → rigid/fluid internal response → two-body controls → periodic three-body controls → symmetric/hierarchical triples → rigid-body/asymmetry calibration → close-encounter and chaotic systems.
+11. Preserve the Newtonian-equivalent `theta^c` figure-eight result as a control only, not a novel ARK prediction.
+12. Search for a discriminating ARK residual only after the coupling law is frozen.
 
 Non-negotiable guards:
 
 - no target-driven memory kernel or stabilizer,
 - no convergence-by-design,
+- no prescribed sustained dynamical rate when the rate can be derived from the state,
 - no naive preferred-frame aether drag,
 - no claiming ordinary rigid-body effects as substrate evidence,
 - no hidden 1-D reduction of an intrinsically 3-D problem,
+- no silent reconciliation of historically inconsistent bridge equations,
 - and no claim of a three-body “solution” unless the full causal model is independently specified.
 
 The goal is not to obtain a prettier orbit. The goal is to determine whether one constrained matter–substrate law can make the established gravitational/inertial behavior fall out while retaining a coherent larger causal state.
@@ -103,6 +112,8 @@ Requirements:
 - multiple independent systems,
 - comparison against ordinary systematic-error explanations,
 - no post-hoc condition variable introduced solely to repair a miss.
+
+The 2026-09-10 mechanical-core formalization adds a stricter working principle for dynamical quantities: effective constants and sustained rates should be treated as properties of sustained regimes wherever the underlying mechanics can derive them, rather than inserted as free instructions.
 
 ## Gate before major new paper
 
