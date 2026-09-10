@@ -1,0 +1,41 @@
+{
+  "comparison": "V5.2 vs V5.4",
+  "alpha": "4\u03c0/3 = 4.188790",
+  "free_parameters": 0,
+  "v54_changes": [
+    "Smooth \u03ba\u1d9c (softplus, floor=1e-6)",
+    "Adaptive damping (0.08\u21920.20 ramp + oscillation detection)",
+    "Radially-adaptive entropy smoothing",
+    "Extended iterations (500)"
+  ],
+  "v52": {
+    "label": "V5.2",
+    "total": 175,
+    "failed": 0,
+    "converged": 147,
+    "not_converged": 28,
+    "global_r": 0.7441,
+    "global_rms": 64.2,
+    "median_r": 0.858,
+    "mean_r": 0.7228,
+    "frac_r_gt_08": 0.577,
+    "frac_r_gt_05": 0.806
+  },
+  "v54": {
+    "label": "V5.4",
+    "total": 175,
+    "failed": 0,
+    "converged": 167,
+    "not_converged": 8,
+    "global_r": 0.8922,
+    "global_rms": 34.8,
+    "median_r": 0.8825,
+    "mean_r": 0.7669,
+    "frac_r_gt_08": 0.686,
+    "frac_r_gt_05": 0.863
+  },
+  "runtime_s": {
+    "v52": 4.1,
+    "v54": 7.3
+  }
+}

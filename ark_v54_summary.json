@@ -1,0 +1,3039 @@
+{
+  "solver": "ARK Zero-Parameter Inverse Solver",
+  "version": "5.4 (Final)",
+  "alpha": "4\u03c0/3 = 4.188790 (DERIVED from spherical geometry)",
+  "free_parameters": 0,
+  "degrees_of_freedom": "N (zero parameters subtracted)",
+  "Upsilon_disk": 0.5,
+  "Upsilon_bulge": 0.7,
+  "algorithmic_changes_from_v52": [
+    "Smooth \u03ba\u1d9c regularization (softplus, floor=1e-6)",
+    "Adaptive damping (0.08\u21920.20 ramp + oscillation detection)",
+    "Radially-adaptive entropy smoothing",
+    "Extended iterations (500)"
+  ],
+  "chi2_uncertainty_model": {
+    "note": "ARK is an inverse solver comparing predicted vs measured baryonic velocity. Three uncertainty models are reported for transparency since SPARC does not provide direct uncertainties on baryonic velocity components.",
+    "kinematic": "\u03c3 = max(err_v \u00b7 f_bar, 2.0 km/s)",
+    "composite": "\u03c3 = sqrt(\u03c3_kin\u00b2 + (0.12\u00b7v_meas)\u00b2)",
+    "conservative": "\u03c3 = max(err_v, 0.20\u00b7v_meas + 2.0)"
+  },
+  "global_statistics": {
+    "total_galaxies": 175,
+    "total_points": 3391,
+    "failed": 0,
+    "converged": 167,
+    "global_correlation": 0.8922,
+    "global_RMS_kms": 34.8,
+    "median_correlation": 0.8825,
+    "mean_correlation": 0.7669,
+    "frac_r_gt_0.8": 0.686,
+    "frac_r_gt_0.5": 0.863,
+    "chi2_global": {
+      "N": 3388,
+      "dof": 3388,
+      "rms_kms": 34.78706356881964,
+      "kinematic": {
+        "chi2": 307442.11,
+        "chi2_reduced": 90.7444,
+        "sigma_model": "max(err_v \u00b7 f_bar, 2.0 km/s)",
+        "median_sigma": 2.73
+      },
+      "composite": {
+        "chi2": 25945.7,
+        "chi2_reduced": 7.6581,
+        "sigma_model": "sqrt(\u03c3_kin\u00b2 + (0.12\u00b7v_meas)\u00b2)",
+        "median_sigma": 9.85
+      },
+      "conservative": {
+        "chi2": 7873.75,
+        "chi2_reduced": 2.324,
+        "sigma_model": "max(err_v, 0.20\u00b7v_meas + 2.0)",
+        "median_sigma": 16.98
+      }
+    },
+    "chi2_per_galaxy_medians": {
+      "kinematic": 25.7565,
+      "composite": 4.468,
+      "conservative": 1.4217
+    }
+  },
+  "runtime_seconds": 7.3,
+  "galaxies": [
+    {
+      "name": "F583-4",
+      "N": 12,
+      "distance_Mpc": 53.3,
+      "v_max_kms": 69.9,
+      "RMS_kms": 9.22,
+      "correlation": 0.9965,
+      "chi2_kinematic": 16.2973,
+      "chi2_composite": 5.3754,
+      "chi2_conservative": 1.5593,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 93
+    },
+    {
+      "name": "KK98-251",
+      "N": 15,
+      "distance_Mpc": 6.8,
+      "v_max_kms": 34.6,
+      "RMS_kms": 1.07,
+      "correlation": 0.9952,
+      "chi2_kinematic": 0.2876,
+      "chi2_composite": 0.1514,
+      "chi2_conservative": 0.0482,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "UGC07866",
+      "N": 7,
+      "distance_Mpc": 4.57,
+      "v_max_kms": 33.1,
+      "RMS_kms": 2.67,
+      "correlation": 0.9949,
+      "chi2_kinematic": 1.3433,
+      "chi2_composite": 0.8108,
+      "chi2_conservative": 0.275,
+      "kappa_range": [
+        0.644314,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "UGC02259",
+      "N": 8,
+      "distance_Mpc": 10.5,
+      "v_max_kms": 90.0,
+      "RMS_kms": 21.39,
+      "correlation": 0.9933,
+      "chi2_kinematic": 114.4011,
+      "chi2_composite": 23.4259,
+      "chi2_conservative": 6.283,
+      "kappa_range": [
+        0.553872,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "DDO154",
+      "N": 12,
+      "distance_Mpc": 4.04,
+      "v_max_kms": 48.2,
+      "RMS_kms": 9.6,
+      "correlation": 0.9926,
+      "chi2_kinematic": 23.0616,
+      "chi2_composite": 11.1405,
+      "chi2_conservative": 3.1181,
+      "kappa_range": [
+        0.99678,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "NGC3109",
+      "N": 25,
+      "distance_Mpc": 1.33,
+      "v_max_kms": 67.3,
+      "RMS_kms": 13.64,
+      "correlation": 0.9922,
+      "chi2_kinematic": 46.2206,
+      "chi2_composite": 19.7075,
+      "chi2_conservative": 5.46,
+      "kappa_range": [
+        0.779404,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "UGC08837",
+      "N": 8,
+      "distance_Mpc": 7.21,
+      "v_max_kms": 48.0,
+      "RMS_kms": 2.3,
+      "correlation": 0.9922,
+      "chi2_kinematic": 1.2887,
+      "chi2_composite": 0.4284,
+      "chi2_conservative": 0.1291,
+      "kappa_range": [
+        0.87142,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 103
+    },
+    {
+      "name": "UGC07323",
+      "N": 10,
+      "distance_Mpc": 8.0,
+      "v_max_kms": 85.6,
+      "RMS_kms": 3.02,
+      "correlation": 0.9916,
+      "chi2_kinematic": 1.5704,
+      "chi2_composite": 0.3048,
+      "chi2_conservative": 0.0916,
+      "kappa_range": [
+        0.963343,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "UGC05986",
+      "N": 15,
+      "distance_Mpc": 8.63,
+      "v_max_kms": 116.0,
+      "RMS_kms": 17.64,
+      "correlation": 0.9903,
+      "chi2_kinematic": 75.8326,
+      "chi2_composite": 7.954,
+      "chi2_conservative": 2.2156,
+      "kappa_range": [
+        0.98366,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 96
+    },
+    {
+      "name": "UGC00191",
+      "N": 9,
+      "distance_Mpc": 17.1,
+      "v_max_kms": 83.8,
+      "RMS_kms": 5.97,
+      "correlation": 0.9891,
+      "chi2_kinematic": 7.8684,
+      "chi2_composite": 1.4868,
+      "chi2_conservative": 0.4282,
+      "kappa_range": [
+        0.543077,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "name": "F561-1",
+      "N": 6,
+      "distance_Mpc": 66.4,
+      "v_max_kms": 50.4,
+      "RMS_kms": 8.72,
+      "correlation": 0.989,
+      "chi2_kinematic": 4.0326,
+      "chi2_composite": 1.8577,
+      "chi2_conservative": 0.8185,
+      "kappa_range": [
+        0.439011,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 125
+    },
+    {
+      "name": "NGC7793",
+      "N": 46,
+      "distance_Mpc": 3.61,
+      "v_max_kms": 116.0,
+      "RMS_kms": 7.72,
+      "correlation": 0.989,
+      "chi2_kinematic": 2.0394,
+      "chi2_composite": 0.9955,
+      "chi2_conservative": 0.8099,
+      "kappa_range": [
+        0.216494,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "NGC2976",
+      "N": 27,
+      "distance_Mpc": 3.58,
+      "v_max_kms": 88.7,
+      "RMS_kms": 6.5,
+      "correlation": 0.9888,
+      "chi2_kinematic": 4.6238,
+      "chi2_composite": 1.0307,
+      "chi2_conservative": 0.4881,
+      "kappa_range": [
+        0.511264,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "UGC07089",
+      "N": 12,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 79.1,
+      "RMS_kms": 2.54,
+      "correlation": 0.9885,
+      "chi2_kinematic": 0.6128,
+      "chi2_composite": 0.1877,
+      "chi2_conservative": 0.0657,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "UGC01281",
+      "N": 25,
+      "distance_Mpc": 5.27,
+      "v_max_kms": 56.9,
+      "RMS_kms": 8.68,
+      "correlation": 0.9872,
+      "chi2_kinematic": 15.3166,
+      "chi2_composite": 7.2084,
+      "chi2_conservative": 2.0208,
+      "kappa_range": [
+        0.515357,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "DDO170",
+      "N": 8,
+      "distance_Mpc": 15.4,
+      "v_max_kms": 62.2,
+      "RMS_kms": 10.44,
+      "correlation": 0.9871,
+      "chi2_kinematic": 27.2478,
+      "chi2_composite": 7.2562,
+      "chi2_conservative": 1.9256,
+      "kappa_range": [
+        0.640007,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "NGC4013",
+      "N": 36,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 198.0,
+      "RMS_kms": 12.66,
+      "correlation": 0.9837,
+      "chi2_kinematic": 14.298,
+      "chi2_composite": 0.4958,
+      "chi2_conservative": 0.1658,
+      "kappa_range": [
+        0.928754,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 151
+    },
+    {
+      "name": "F574-2",
+      "N": 5,
+      "distance_Mpc": 89.1,
+      "v_max_kms": 40.0,
+      "RMS_kms": 10.07,
+      "correlation": 0.9833,
+      "chi2_kinematic": 1.6967,
+      "chi2_composite": 1.3562,
+      "chi2_conservative": 1.2913,
+      "kappa_range": [
+        0.470979,
+        0.840129
+      ],
+      "converged": true,
+      "iterations": 109
+    },
+    {
+      "name": "UGC04483",
+      "N": 8,
+      "distance_Mpc": 3.34,
+      "v_max_kms": 24.3,
+      "RMS_kms": 2.31,
+      "correlation": 0.9827,
+      "chi2_kinematic": 1.3318,
+      "chi2_composite": 0.8502,
+      "chi2_conservative": 0.264,
+      "kappa_range": [
+        0.619705,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "F571-V1",
+      "N": 7,
+      "distance_Mpc": 80.1,
+      "v_max_kms": 84.3,
+      "RMS_kms": 16.61,
+      "correlation": 0.9824,
+      "chi2_kinematic": 38.4184,
+      "chi2_composite": 10.9175,
+      "chi2_conservative": 3.365,
+      "kappa_range": [
+        0.602929,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "F563-V1",
+      "N": 6,
+      "distance_Mpc": 54.0,
+      "v_max_kms": 29.5,
+      "RMS_kms": 4.74,
+      "correlation": 0.9823,
+      "chi2_kinematic": 1.2703,
+      "chi2_composite": 0.9088,
+      "chi2_conservative": 0.5327,
+      "kappa_range": [
+        0.484074,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "UGC11557",
+      "N": 12,
+      "distance_Mpc": 24.2,
+      "v_max_kms": 85.0,
+      "RMS_kms": 16.85,
+      "correlation": 0.982,
+      "chi2_kinematic": 5.0944,
+      "chi2_composite": 2.2184,
+      "chi2_conservative": 1.9255,
+      "kappa_range": [
+        0.976265,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "UGC06399",
+      "N": 9,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 87.6,
+      "RMS_kms": 15.47,
+      "correlation": 0.9807,
+      "chi2_kinematic": 51.309,
+      "chi2_composite": 10.575,
+      "chi2_conservative": 2.9947,
+      "kappa_range": [
+        0.800147,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "NGC7331",
+      "N": 36,
+      "distance_Mpc": 14.7,
+      "v_max_kms": 257.0,
+      "RMS_kms": 103.1,
+      "correlation": 0.9796,
+      "chi2_kinematic": 1239.8718,
+      "chi2_composite": 20.7798,
+      "chi2_conservative": 6.908,
+      "kappa_range": [
+        0.122055,
+        1.0
+      ],
+      "converged": false,
+      "iterations": 500
+    },
+    {
+      "name": "UGCA444",
+      "N": 36,
+      "distance_Mpc": 0.98,
+      "v_max_kms": 38.3,
+      "RMS_kms": 4.49,
+      "correlation": 0.9786,
+      "chi2_kinematic": 4.2814,
+      "chi2_composite": 2.7688,
+      "chi2_conservative": 0.89,
+      "kappa_range": [
+        0.603719,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "IC2574",
+      "N": 34,
+      "distance_Mpc": 3.91,
+      "v_max_kms": 67.5,
+      "RMS_kms": 6.88,
+      "correlation": 0.9775,
+      "chi2_kinematic": 9.2951,
+      "chi2_composite": 3.3904,
+      "chi2_conservative": 0.9521,
+      "kappa_range": [
+        0.64893,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 114
+    },
+    {
+      "name": "NGC5907",
+      "N": 19,
+      "distance_Mpc": 17.3,
+      "v_max_kms": 235.0,
+      "RMS_kms": 5.65,
+      "correlation": 0.9774,
+      "chi2_kinematic": 4.1497,
+      "chi2_composite": 0.1107,
+      "chi2_conservative": 0.0359,
+      "kappa_range": [
+        0.736863,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 143
+    },
+    {
+      "name": "DDO161",
+      "N": 31,
+      "distance_Mpc": 7.5,
+      "v_max_kms": 67.5,
+      "RMS_kms": 3.69,
+      "correlation": 0.9761,
+      "chi2_kinematic": 2.8735,
+      "chi2_composite": 0.8141,
+      "chi2_conservative": 0.2647,
+      "kappa_range": [
+        0.512866,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 115
+    },
+    {
+      "name": "NGC0055",
+      "N": 21,
+      "distance_Mpc": 2.11,
+      "v_max_kms": 87.4,
+      "RMS_kms": 2.68,
+      "correlation": 0.9759,
+      "chi2_kinematic": 1.3557,
+      "chi2_composite": 0.2222,
+      "chi2_conservative": 0.0657,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 134
+    },
+    {
+      "name": "UGC11455",
+      "N": 36,
+      "distance_Mpc": 78.6,
+      "v_max_kms": 291.0,
+      "RMS_kms": 26.26,
+      "correlation": 0.9756,
+      "chi2_kinematic": 20.0213,
+      "chi2_composite": 2.2552,
+      "chi2_conservative": 0.9026,
+      "kappa_range": [
+        0.52604,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 120
+    },
+    {
+      "name": "F565-V2",
+      "N": 7,
+      "distance_Mpc": 51.8,
+      "v_max_kms": 83.1,
+      "RMS_kms": 20.49,
+      "correlation": 0.9738,
+      "chi2_kinematic": 81.6069,
+      "chi2_composite": 28.3945,
+      "chi2_conservative": 7.5955,
+      "kappa_range": [
+        0.682251,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "ESO116-G012",
+      "N": 15,
+      "distance_Mpc": 13.0,
+      "v_max_kms": 112.0,
+      "RMS_kms": 14.6,
+      "correlation": 0.9733,
+      "chi2_kinematic": 49.6804,
+      "chi2_composite": 5.4865,
+      "chi2_conservative": 1.5369,
+      "kappa_range": [
+        0.856944,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 114
+    },
+    {
+      "name": "UGC06923",
+      "N": 6,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 81.1,
+      "RMS_kms": 9.3,
+      "correlation": 0.9733,
+      "chi2_kinematic": 5.2981,
+      "chi2_composite": 1.711,
+      "chi2_conservative": 0.8283,
+      "kappa_range": [
+        0.52947,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "UGC11820",
+      "N": 10,
+      "distance_Mpc": 18.1,
+      "v_max_kms": 84.5,
+      "RMS_kms": 7.78,
+      "correlation": 0.9728,
+      "chi2_kinematic": 15.0665,
+      "chi2_composite": 2.6678,
+      "chi2_conservative": 0.717,
+      "kappa_range": [
+        0.392634,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 126
+    },
+    {
+      "name": "UGC07577",
+      "N": 9,
+      "distance_Mpc": 2.59,
+      "v_max_kms": 17.8,
+      "RMS_kms": 2.07,
+      "correlation": 0.9705,
+      "chi2_kinematic": 0.5679,
+      "chi2_composite": 0.4637,
+      "chi2_conservative": 0.256,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "NGC1090",
+      "N": 24,
+      "distance_Mpc": 37.0,
+      "v_max_kms": 176.0,
+      "RMS_kms": 17.57,
+      "correlation": 0.9685,
+      "chi2_kinematic": 49.7611,
+      "chi2_composite": 2.0968,
+      "chi2_conservative": 0.9068,
+      "kappa_range": [
+        0.717693,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 121
+    },
+    {
+      "name": "ESO563-G021",
+      "N": 30,
+      "distance_Mpc": 60.8,
+      "v_max_kms": 321.0,
+      "RMS_kms": 23.65,
+      "correlation": 0.9679,
+      "chi2_kinematic": 34.8993,
+      "chi2_composite": 1.6706,
+      "chi2_conservative": 1.0267,
+      "kappa_range": [
+        0.668159,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 186
+    },
+    {
+      "name": "UGC04325",
+      "N": 8,
+      "distance_Mpc": 9.6,
+      "v_max_kms": 92.7,
+      "RMS_kms": 19.42,
+      "correlation": 0.9669,
+      "chi2_kinematic": 94.2638,
+      "chi2_composite": 17.0288,
+      "chi2_conservative": 4.6132,
+      "kappa_range": [
+        0.582305,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "NGC4068",
+      "N": 6,
+      "distance_Mpc": 4.37,
+      "v_max_kms": 41.9,
+      "RMS_kms": 3.74,
+      "correlation": 0.9664,
+      "chi2_kinematic": 2.3789,
+      "chi2_composite": 1.2682,
+      "chi2_conservative": 0.5567,
+      "kappa_range": [
+        0.516523,
+        0.896251
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "UGC05750",
+      "N": 11,
+      "distance_Mpc": 58.7,
+      "v_max_kms": 78.9,
+      "RMS_kms": 9.81,
+      "correlation": 0.9659,
+      "chi2_kinematic": 7.7166,
+      "chi2_composite": 3.2325,
+      "chi2_conservative": 1.04,
+      "kappa_range": [
+        0.675904,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "NGC0247",
+      "N": 26,
+      "distance_Mpc": 3.7,
+      "v_max_kms": 108.0,
+      "RMS_kms": 12.74,
+      "correlation": 0.9658,
+      "chi2_kinematic": 29.7759,
+      "chi2_composite": 6.6829,
+      "chi2_conservative": 1.8981,
+      "kappa_range": [
+        0.86798,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 126
+    },
+    {
+      "name": "UGC07399",
+      "N": 10,
+      "distance_Mpc": 8.43,
+      "v_max_kms": 106.0,
+      "RMS_kms": 29.83,
+      "correlation": 0.9628,
+      "chi2_kinematic": 222.4543,
+      "chi2_composite": 47.2621,
+      "chi2_conservative": 12.5627,
+      "kappa_range": [
+        0.719367,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "F563-V2",
+      "N": 10,
+      "distance_Mpc": 59.7,
+      "v_max_kms": 118.0,
+      "RMS_kms": 19.47,
+      "correlation": 0.9623,
+      "chi2_kinematic": 26.9182,
+      "chi2_composite": 10.007,
+      "chi2_conservative": 2.5988,
+      "kappa_range": [
+        0.564587,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "UGC07559",
+      "N": 7,
+      "distance_Mpc": 4.97,
+      "v_max_kms": 32.1,
+      "RMS_kms": 2.51,
+      "correlation": 0.9616,
+      "chi2_kinematic": 1.498,
+      "chi2_composite": 0.7826,
+      "chi2_conservative": 0.2438,
+      "kappa_range": [
+        0.684929,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "UGC05999",
+      "N": 5,
+      "distance_Mpc": 47.7,
+      "v_max_kms": 100.0,
+      "RMS_kms": 11.9,
+      "correlation": 0.9615,
+      "chi2_kinematic": 24.1993,
+      "chi2_composite": 4.1522,
+      "chi2_conservative": 1.2343,
+      "kappa_range": [
+        0.431046,
+        0.878571
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "NGC2841",
+      "N": 50,
+      "distance_Mpc": 14.1,
+      "v_max_kms": 323.0,
+      "RMS_kms": 38.4,
+      "correlation": 0.9613,
+      "chi2_kinematic": 290.1894,
+      "chi2_composite": 5.8874,
+      "chi2_conservative": 1.8604,
+      "kappa_range": [
+        0.869403,
+        1.0
+      ],
+      "converged": false,
+      "iterations": 500
+    },
+    {
+      "name": "UGC10310",
+      "N": 7,
+      "distance_Mpc": 15.2,
+      "v_max_kms": 73.2,
+      "RMS_kms": 10.02,
+      "correlation": 0.9595,
+      "chi2_kinematic": 15.7792,
+      "chi2_composite": 4.5026,
+      "chi2_conservative": 1.344,
+      "kappa_range": [
+        0.570372,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "UGCA281",
+      "N": 7,
+      "distance_Mpc": 5.68,
+      "v_max_kms": 29.5,
+      "RMS_kms": 2.88,
+      "correlation": 0.9571,
+      "chi2_kinematic": 2.0753,
+      "chi2_composite": 1.1248,
+      "chi2_conservative": 0.3282,
+      "kappa_range": [
+        0.533579,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "UGC05829",
+      "N": 11,
+      "distance_Mpc": 8.64,
+      "v_max_kms": 68.6,
+      "RMS_kms": 8.49,
+      "correlation": 0.9568,
+      "chi2_kinematic": 15.8455,
+      "chi2_composite": 9.5818,
+      "chi2_conservative": 2.3504,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "NGC3972",
+      "N": 10,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 134.0,
+      "RMS_kms": 10.26,
+      "correlation": 0.9557,
+      "chi2_kinematic": 11.8482,
+      "chi2_composite": 1.659,
+      "chi2_conservative": 0.5452,
+      "kappa_range": [
+        0.831511,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "NGC4085",
+      "N": 7,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 136.0,
+      "RMS_kms": 28.64,
+      "correlation": 0.955,
+      "chi2_kinematic": 21.8879,
+      "chi2_composite": 4.4828,
+      "chi2_conservative": 2.2688,
+      "kappa_range": [
+        0.619649,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "UGC05005",
+      "N": 11,
+      "distance_Mpc": 53.7,
+      "v_max_kms": 100.0,
+      "RMS_kms": 12.33,
+      "correlation": 0.9546,
+      "chi2_kinematic": 7.4165,
+      "chi2_composite": 3.1683,
+      "chi2_conservative": 1.2849,
+      "kappa_range": [
+        0.638625,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "UGC05918",
+      "N": 8,
+      "distance_Mpc": 7.66,
+      "v_max_kms": 44.5,
+      "RMS_kms": 10.27,
+      "correlation": 0.9519,
+      "chi2_kinematic": 26.3715,
+      "chi2_composite": 14.9057,
+      "chi2_conservative": 4.4641,
+      "kappa_range": [
+        0.645078,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 103
+    },
+    {
+      "name": "UGC07608",
+      "N": 8,
+      "distance_Mpc": 8.21,
+      "v_max_kms": 69.3,
+      "RMS_kms": 17.26,
+      "correlation": 0.9509,
+      "chi2_kinematic": 53.7037,
+      "chi2_composite": 26.6806,
+      "chi2_conservative": 6.4389,
+      "kappa_range": [
+        0.743275,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "ESO079-G014",
+      "N": 15,
+      "distance_Mpc": 28.7,
+      "v_max_kms": 178.0,
+      "RMS_kms": 13.16,
+      "correlation": 0.9508,
+      "chi2_kinematic": 22.8501,
+      "chi2_composite": 1.8962,
+      "chi2_conservative": 0.6363,
+      "kappa_range": [
+        0.773873,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 109
+    },
+    {
+      "name": "F567-2",
+      "N": 5,
+      "distance_Mpc": 79.0,
+      "v_max_kms": 52.2,
+      "RMS_kms": 2.46,
+      "correlation": 0.9508,
+      "chi2_kinematic": 0.9635,
+      "chi2_composite": 0.4567,
+      "chi2_conservative": 0.1395,
+      "kappa_range": [
+        0.403751,
+        0.847622
+      ],
+      "converged": true,
+      "iterations": 109
+    },
+    {
+      "name": "DDO064",
+      "N": 14,
+      "distance_Mpc": 6.8,
+      "v_max_kms": 46.9,
+      "RMS_kms": 6.19,
+      "correlation": 0.9502,
+      "chi2_kinematic": 7.8918,
+      "chi2_composite": 4.6006,
+      "chi2_conservative": 1.279,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 109
+    },
+    {
+      "name": "NGC4088",
+      "N": 12,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 182.0,
+      "RMS_kms": 42.49,
+      "correlation": 0.9485,
+      "chi2_kinematic": 42.7366,
+      "chi2_composite": 4.5591,
+      "chi2_conservative": 1.7751,
+      "kappa_range": [
+        0.738047,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "NGC3917",
+      "N": 17,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 138.0,
+      "RMS_kms": 8.85,
+      "correlation": 0.9475,
+      "chi2_kinematic": 14.8329,
+      "chi2_composite": 1.4449,
+      "chi2_conservative": 0.4545,
+      "kappa_range": [
+        0.980751,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 115
+    },
+    {
+      "name": "UGC04499",
+      "N": 9,
+      "distance_Mpc": 12.5,
+      "v_max_kms": 74.3,
+      "RMS_kms": 8.78,
+      "correlation": 0.9461,
+      "chi2_kinematic": 18.9864,
+      "chi2_composite": 3.5486,
+      "chi2_conservative": 0.9682,
+      "kappa_range": [
+        0.751131,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "NGC0100",
+      "N": 21,
+      "distance_Mpc": 13.5,
+      "v_max_kms": 91.2,
+      "RMS_kms": 11.41,
+      "correlation": 0.9449,
+      "chi2_kinematic": 20.4113,
+      "chi2_composite": 4.6274,
+      "chi2_conservative": 1.368,
+      "kappa_range": [
+        0.825375,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 114
+    },
+    {
+      "name": "UGC05414",
+      "N": 6,
+      "distance_Mpc": 9.4,
+      "v_max_kms": 61.4,
+      "RMS_kms": 4.62,
+      "correlation": 0.9429,
+      "chi2_kinematic": 5.3452,
+      "chi2_composite": 1.4411,
+      "chi2_conservative": 0.3925,
+      "kappa_range": [
+        0.473159,
+        0.951041
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "UGC09992",
+      "N": 5,
+      "distance_Mpc": 10.7,
+      "v_max_kms": 34.3,
+      "RMS_kms": 3.49,
+      "correlation": 0.9373,
+      "chi2_kinematic": 0.933,
+      "chi2_composite": 0.6463,
+      "chi2_conservative": 0.3206,
+      "kappa_range": [
+        0.375021,
+        0.844015
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "NGC4010",
+      "N": 12,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 129.0,
+      "RMS_kms": 6.11,
+      "correlation": 0.9368,
+      "chi2_kinematic": 2.187,
+      "chi2_composite": 0.5322,
+      "chi2_conservative": 0.2244,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "F568-3",
+      "N": 18,
+      "distance_Mpc": 82.4,
+      "v_max_kms": 120.0,
+      "RMS_kms": 18.12,
+      "correlation": 0.9357,
+      "chi2_kinematic": 29.3979,
+      "chi2_composite": 10.0432,
+      "chi2_conservative": 3.2518,
+      "kappa_range": [
+        0.813701,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 116
+    },
+    {
+      "name": "UGC07603",
+      "N": 12,
+      "distance_Mpc": 4.7,
+      "v_max_kms": 64.0,
+      "RMS_kms": 12.07,
+      "correlation": 0.9292,
+      "chi2_kinematic": 36.4094,
+      "chi2_composite": 11.5739,
+      "chi2_conservative": 3.0784,
+      "kappa_range": [
+        0.917466,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "UGC11914",
+      "N": 65,
+      "distance_Mpc": 16.9,
+      "v_max_kms": 305.0,
+      "RMS_kms": 33.8,
+      "correlation": 0.9292,
+      "chi2_kinematic": 52.2515,
+      "chi2_composite": 1.2591,
+      "chi2_conservative": 0.5196,
+      "kappa_range": [
+        0.691309,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "NGC0300",
+      "N": 25,
+      "distance_Mpc": 2.08,
+      "v_max_kms": 97.0,
+      "RMS_kms": 15.89,
+      "correlation": 0.928,
+      "chi2_kinematic": 36.6004,
+      "chi2_composite": 8.6905,
+      "chi2_conservative": 2.5674,
+      "kappa_range": [
+        0.992377,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 120
+    },
+    {
+      "name": "UGC06667",
+      "N": 9,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 85.7,
+      "RMS_kms": 26.23,
+      "correlation": 0.9277,
+      "chi2_kinematic": 171.9579,
+      "chi2_composite": 70.516,
+      "chi2_conservative": 20.6175,
+      "kappa_range": [
+        0.799648,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "UGC06628",
+      "N": 7,
+      "distance_Mpc": 15.1,
+      "v_max_kms": 42.3,
+      "RMS_kms": 9.99,
+      "correlation": 0.9271,
+      "chi2_kinematic": 1.651,
+      "chi2_composite": 1.2314,
+      "chi2_conservative": 1.0087,
+      "kappa_range": [
+        0.473302,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "NGC4183",
+      "N": 23,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 115.0,
+      "RMS_kms": 12.88,
+      "correlation": 0.9235,
+      "chi2_kinematic": 19.6243,
+      "chi2_composite": 3.3821,
+      "chi2_conservative": 1.0718,
+      "kappa_range": [
+        0.798111,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 166
+    },
+    {
+      "name": "NGC3198",
+      "N": 43,
+      "distance_Mpc": 13.8,
+      "v_max_kms": 157.0,
+      "RMS_kms": 13.01,
+      "correlation": 0.9228,
+      "chi2_kinematic": 13.3187,
+      "chi2_composite": 0.9778,
+      "chi2_conservative": 0.5692,
+      "kappa_range": [
+        0.399061,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 163
+    },
+    {
+      "name": "NGC6015",
+      "N": 44,
+      "distance_Mpc": 17.0,
+      "v_max_kms": 166.0,
+      "RMS_kms": 8.77,
+      "correlation": 0.9228,
+      "chi2_kinematic": 14.9734,
+      "chi2_composite": 1.0744,
+      "chi2_conservative": 0.3216,
+      "kappa_range": [
+        0.393909,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 145
+    },
+    {
+      "name": "NGC2366",
+      "N": 26,
+      "distance_Mpc": 3.27,
+      "v_max_kms": 53.7,
+      "RMS_kms": 3.27,
+      "correlation": 0.9211,
+      "chi2_kinematic": 2.2137,
+      "chi2_composite": 0.7212,
+      "chi2_conservative": 0.2105,
+      "kappa_range": [
+        0.878879,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 114
+    },
+    {
+      "name": "DDO168",
+      "N": 10,
+      "distance_Mpc": 4.25,
+      "v_max_kms": 55.0,
+      "RMS_kms": 7.39,
+      "correlation": 0.9196,
+      "chi2_kinematic": 13.6368,
+      "chi2_composite": 4.0856,
+      "chi2_conservative": 1.0874,
+      "kappa_range": [
+        0.902922,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "NGC4389",
+      "N": 6,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 110.0,
+      "RMS_kms": 46.04,
+      "correlation": 0.9091,
+      "chi2_kinematic": 26.9808,
+      "chi2_composite": 9.8689,
+      "chi2_conservative": 5.7137,
+      "kappa_range": [
+        0.592151,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 124
+    },
+    {
+      "name": "NGC6789",
+      "N": 4,
+      "distance_Mpc": 3.52,
+      "v_max_kms": 60.4,
+      "RMS_kms": 10.88,
+      "correlation": 0.9063,
+      "chi2_kinematic": 15.9722,
+      "chi2_composite": 9.2244,
+      "chi2_conservative": 1.7559,
+      "kappa_range": [
+        0.45915,
+        0.717066
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "name": "UGC01230",
+      "N": 11,
+      "distance_Mpc": 53.7,
+      "v_max_kms": 113.0,
+      "RMS_kms": 21.47,
+      "correlation": 0.9031,
+      "chi2_kinematic": 18.7029,
+      "chi2_composite": 8.5619,
+      "chi2_conservative": 3.1455,
+      "kappa_range": [
+        0.612927,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 116
+    },
+    {
+      "name": "NGC5585",
+      "N": 24,
+      "distance_Mpc": 7.06,
+      "v_max_kms": 92.3,
+      "RMS_kms": 10.71,
+      "correlation": 0.9002,
+      "chi2_kinematic": 26.5147,
+      "chi2_composite": 4.9412,
+      "chi2_conservative": 1.375,
+      "kappa_range": [
+        0.336074,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 115
+    },
+    {
+      "name": "UGC02023",
+      "N": 5,
+      "distance_Mpc": 10.4,
+      "v_max_kms": 58.8,
+      "RMS_kms": 6.13,
+      "correlation": 0.8982,
+      "chi2_kinematic": 0.9485,
+      "chi2_composite": 0.7202,
+      "chi2_conservative": 0.4983,
+      "kappa_range": [
+        0.505156,
+        0.824952
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "NGC2955",
+      "N": 24,
+      "distance_Mpc": 97.9,
+      "v_max_kms": 276.0,
+      "RMS_kms": 39.8,
+      "correlation": 0.8978,
+      "chi2_kinematic": 52.0707,
+      "chi2_composite": 2.1273,
+      "chi2_conservative": 0.752,
+      "kappa_range": [
+        0.65235,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "UGC07151",
+      "N": 11,
+      "distance_Mpc": 6.87,
+      "v_max_kms": 76.2,
+      "RMS_kms": 5.87,
+      "correlation": 0.8945,
+      "chi2_kinematic": 8.6139,
+      "chi2_composite": 1.5735,
+      "chi2_conservative": 0.4209,
+      "kappa_range": [
+        0.877276,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "NGC3741",
+      "N": 21,
+      "distance_Mpc": 3.21,
+      "v_max_kms": 51.6,
+      "RMS_kms": 12.48,
+      "correlation": 0.894,
+      "chi2_kinematic": 38.9119,
+      "chi2_composite": 24.1837,
+      "chi2_conservative": 7.3939,
+      "kappa_range": [
+        0.658634,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "NGC2403",
+      "N": 73,
+      "distance_Mpc": 3.16,
+      "v_max_kms": 136.0,
+      "RMS_kms": 12.49,
+      "correlation": 0.8932,
+      "chi2_kinematic": 33.0047,
+      "chi2_composite": 3.55,
+      "chi2_conservative": 1.0156,
+      "kappa_range": [
+        0.141554,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 154
+    },
+    {
+      "name": "D512-2",
+      "N": 4,
+      "distance_Mpc": 15.2,
+      "v_max_kms": 37.2,
+      "RMS_kms": 4.64,
+      "correlation": 0.886,
+      "chi2_kinematic": 3.7215,
+      "chi2_composite": 2.188,
+      "chi2_conservative": 0.6598,
+      "kappa_range": [
+        0.397094,
+        0.777537
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "UGC08286",
+      "N": 17,
+      "distance_Mpc": 6.5,
+      "v_max_kms": 84.3,
+      "RMS_kms": 18.17,
+      "correlation": 0.8851,
+      "chi2_kinematic": 82.553,
+      "chi2_composite": 20.5354,
+      "chi2_conservative": 5.4988,
+      "kappa_range": [
+        0.869016,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 125
+    },
+    {
+      "name": "NGC4100",
+      "N": 24,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 195.0,
+      "RMS_kms": 19.73,
+      "correlation": 0.8825,
+      "chi2_kinematic": 23.3686,
+      "chi2_composite": 2.734,
+      "chi2_conservative": 0.9296,
+      "kappa_range": [
+        0.430508,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 128
+    },
+    {
+      "name": "UGC06930",
+      "N": 10,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 109.0,
+      "RMS_kms": 13.94,
+      "correlation": 0.8825,
+      "chi2_kinematic": 20.6429,
+      "chi2_composite": 3.873,
+      "chi2_conservative": 1.2408,
+      "kappa_range": [
+        0.665236,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "NGC5371",
+      "N": 19,
+      "distance_Mpc": 39.7,
+      "v_max_kms": 242.0,
+      "RMS_kms": 40.48,
+      "correlation": 0.8821,
+      "chi2_kinematic": 214.1428,
+      "chi2_composite": 3.4876,
+      "chi2_conservative": 1.1542,
+      "kappa_range": [
+        0.580184,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 126
+    },
+    {
+      "name": "UGC08490",
+      "N": 30,
+      "distance_Mpc": 4.65,
+      "v_max_kms": 80.1,
+      "RMS_kms": 10.71,
+      "correlation": 0.8767,
+      "chi2_kinematic": 28.6287,
+      "chi2_composite": 5.9118,
+      "chi2_conservative": 1.5751,
+      "kappa_range": [
+        0.362154,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 146
+    },
+    {
+      "name": "IC4202",
+      "N": 32,
+      "distance_Mpc": 100.4,
+      "v_max_kms": 250.0,
+      "RMS_kms": 49.14,
+      "correlation": 0.8763,
+      "chi2_kinematic": 105.7742,
+      "chi2_composite": 5.9129,
+      "chi2_conservative": 2.2898,
+      "kappa_range": [
+        0.603809,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 145
+    },
+    {
+      "name": "CamB",
+      "N": 9,
+      "distance_Mpc": 3.36,
+      "v_max_kms": 20.1,
+      "RMS_kms": 4.5,
+      "correlation": 0.8761,
+      "chi2_kinematic": 4.6792,
+      "chi2_composite": 3.13,
+      "chi2_conservative": 1.1186,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "UGC07524",
+      "N": 31,
+      "distance_Mpc": 4.74,
+      "v_max_kms": 83.8,
+      "RMS_kms": 12.16,
+      "correlation": 0.8662,
+      "chi2_kinematic": 35.9152,
+      "chi2_composite": 9.6264,
+      "chi2_conservative": 2.6082,
+      "kappa_range": [
+        0.711738,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 114
+    },
+    {
+      "name": "UGC04278",
+      "N": 25,
+      "distance_Mpc": 9.51,
+      "v_max_kms": 92.8,
+      "RMS_kms": 13.84,
+      "correlation": 0.8654,
+      "chi2_kinematic": 39.5302,
+      "chi2_composite": 13.4608,
+      "chi2_conservative": 3.6025,
+      "kappa_range": [
+        0.580243,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "UGC00128",
+      "N": 22,
+      "distance_Mpc": 64.5,
+      "v_max_kms": 134.0,
+      "RMS_kms": 32.47,
+      "correlation": 0.8619,
+      "chi2_kinematic": 261.4899,
+      "chi2_composite": 30.5258,
+      "chi2_conservative": 8.4132,
+      "kappa_range": [
+        0.722965,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "UGC02916",
+      "N": 43,
+      "distance_Mpc": 65.4,
+      "v_max_kms": 218.0,
+      "RMS_kms": 54.62,
+      "correlation": 0.8614,
+      "chi2_kinematic": 345.5134,
+      "chi2_composite": 4.835,
+      "chi2_conservative": 1.6958,
+      "kappa_range": [
+        0.444387,
+        1.0
+      ],
+      "converged": false,
+      "iterations": 500
+    },
+    {
+      "name": "NGC2903",
+      "N": 34,
+      "distance_Mpc": 6.6,
+      "v_max_kms": 216.0,
+      "RMS_kms": 48.6,
+      "correlation": 0.8613,
+      "chi2_kinematic": 243.5189,
+      "chi2_composite": 7.53,
+      "chi2_conservative": 2.8666,
+      "kappa_range": [
+        0.213476,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 136
+    },
+    {
+      "name": "NGC6946",
+      "N": 58,
+      "distance_Mpc": 5.52,
+      "v_max_kms": 181.0,
+      "RMS_kms": 54.73,
+      "correlation": 0.8606,
+      "chi2_kinematic": 296.4096,
+      "chi2_composite": 11.3963,
+      "chi2_conservative": 4.2304,
+      "kappa_range": [
+        0.132173,
+        1.0
+      ],
+      "converged": false,
+      "iterations": 500
+    },
+    {
+      "name": "D564-8",
+      "N": 6,
+      "distance_Mpc": 8.79,
+      "v_max_kms": 25.0,
+      "RMS_kms": 5.21,
+      "correlation": 0.8603,
+      "chi2_kinematic": 6.7824,
+      "chi2_composite": 5.2481,
+      "chi2_conservative": 1.8784,
+      "kappa_range": [
+        0.544572,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 120
+    },
+    {
+      "name": "F568-V1",
+      "N": 15,
+      "distance_Mpc": 80.6,
+      "v_max_kms": 118.0,
+      "RMS_kms": 35.7,
+      "correlation": 0.8598,
+      "chi2_kinematic": 145.9656,
+      "chi2_composite": 42.1646,
+      "chi2_conservative": 10.1755,
+      "kappa_range": [
+        0.75972,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "F574-1",
+      "N": 14,
+      "distance_Mpc": 96.8,
+      "v_max_kms": 99.7,
+      "RMS_kms": 19.23,
+      "correlation": 0.8544,
+      "chi2_kinematic": 87.2653,
+      "chi2_composite": 16.5272,
+      "chi2_conservative": 4.5077,
+      "kappa_range": [
+        0.840691,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 114
+    },
+    {
+      "name": "UGC07232",
+      "N": 4,
+      "distance_Mpc": 2.83,
+      "v_max_kms": 44.0,
+      "RMS_kms": 4.65,
+      "correlation": 0.8544,
+      "chi2_kinematic": 4.8776,
+      "chi2_composite": 2.1172,
+      "chi2_conservative": 0.632,
+      "kappa_range": [
+        0.479535,
+        0.760744
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "NGC5055",
+      "N": 28,
+      "distance_Mpc": 9.9,
+      "v_max_kms": 206.0,
+      "RMS_kms": 37.1,
+      "correlation": 0.8504,
+      "chi2_kinematic": 210.9095,
+      "chi2_composite": 2.6805,
+      "chi2_conservative": 0.9892,
+      "kappa_range": [
+        0.614114,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 163
+    },
+    {
+      "name": "UGC07261",
+      "N": 7,
+      "distance_Mpc": 13.1,
+      "v_max_kms": 76.1,
+      "RMS_kms": 10.58,
+      "correlation": 0.8504,
+      "chi2_kinematic": 14.0667,
+      "chi2_composite": 4.2997,
+      "chi2_conservative": 1.3586,
+      "kappa_range": [
+        0.538825,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "UGCA442",
+      "N": 8,
+      "distance_Mpc": 4.35,
+      "v_max_kms": 57.8,
+      "RMS_kms": 12.68,
+      "correlation": 0.8492,
+      "chi2_kinematic": 40.2141,
+      "chi2_composite": 15.4369,
+      "chi2_conservative": 4.199,
+      "kappa_range": [
+        0.598622,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "NGC0024",
+      "N": 29,
+      "distance_Mpc": 7.3,
+      "v_max_kms": 110.0,
+      "RMS_kms": 11.53,
+      "correlation": 0.8461,
+      "chi2_kinematic": 24.2438,
+      "chi2_composite": 4.6026,
+      "chi2_conservative": 1.3672,
+      "kappa_range": [
+        0.473735,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 160
+    },
+    {
+      "name": "NGC6195",
+      "N": 23,
+      "distance_Mpc": 127.8,
+      "v_max_kms": 258.0,
+      "RMS_kms": 51.66,
+      "correlation": 0.8419,
+      "chi2_kinematic": 97.429,
+      "chi2_composite": 3.5277,
+      "chi2_conservative": 1.2758,
+      "kappa_range": [
+        0.676724,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "UGC12732",
+      "N": 16,
+      "distance_Mpc": 13.2,
+      "v_max_kms": 98.0,
+      "RMS_kms": 18.44,
+      "correlation": 0.8414,
+      "chi2_kinematic": 84.9632,
+      "chi2_composite": 20.4159,
+      "chi2_conservative": 5.4542,
+      "kappa_range": [
+        0.841126,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "name": "UGC05764",
+      "N": 10,
+      "distance_Mpc": 7.47,
+      "v_max_kms": 55.8,
+      "RMS_kms": 15.24,
+      "correlation": 0.8353,
+      "chi2_kinematic": 58.076,
+      "chi2_composite": 29.4463,
+      "chi2_conservative": 8.9946,
+      "kappa_range": [
+        0.735806,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "NGC4559",
+      "N": 32,
+      "distance_Mpc": 9.0,
+      "v_max_kms": 124.0,
+      "RMS_kms": 14.73,
+      "correlation": 0.8332,
+      "chi2_kinematic": 17.47,
+      "chi2_composite": 2.4054,
+      "chi2_conservative": 0.8343,
+      "kappa_range": [
+        0.582589,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 155
+    },
+    {
+      "name": "F568-1",
+      "N": 12,
+      "distance_Mpc": 90.7,
+      "v_max_kms": 142.0,
+      "RMS_kms": 34.74,
+      "correlation": 0.8306,
+      "chi2_kinematic": 89.4074,
+      "chi2_composite": 35.5171,
+      "chi2_conservative": 7.7852,
+      "kappa_range": [
+        0.83641,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "NGC4157",
+      "N": 17,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 201.0,
+      "RMS_kms": 26.14,
+      "correlation": 0.8291,
+      "chi2_kinematic": 13.5389,
+      "chi2_composite": 1.6281,
+      "chi2_conservative": 0.6931,
+      "kappa_range": [
+        0.710328,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 116
+    },
+    {
+      "name": "UGC06818",
+      "N": 8,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 74.4,
+      "RMS_kms": 11.5,
+      "correlation": 0.829,
+      "chi2_kinematic": 19.0311,
+      "chi2_composite": 5.917,
+      "chi2_conservative": 1.9285,
+      "kappa_range": [
+        0.752199,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "NGC2998",
+      "N": 13,
+      "distance_Mpc": 68.1,
+      "v_max_kms": 214.0,
+      "RMS_kms": 20.49,
+      "correlation": 0.8272,
+      "chi2_kinematic": 34.1145,
+      "chi2_composite": 1.4935,
+      "chi2_conservative": 0.5298,
+      "kappa_range": [
+        0.421755,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "NGC3953",
+      "N": 8,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 224.0,
+      "RMS_kms": 22.38,
+      "correlation": 0.8235,
+      "chi2_kinematic": 18.3356,
+      "chi2_composite": 1.2342,
+      "chi2_conservative": 0.4284,
+      "kappa_range": [
+        0.686443,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "NGC4051",
+      "N": 7,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 161.0,
+      "RMS_kms": 32.1,
+      "correlation": 0.8138,
+      "chi2_kinematic": 19.2568,
+      "chi2_composite": 3.4618,
+      "chi2_conservative": 1.5464,
+      "kappa_range": [
+        0.50171,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "F579-V1",
+      "N": 14,
+      "distance_Mpc": 89.5,
+      "v_max_kms": 114.0,
+      "RMS_kms": 24.5,
+      "correlation": 0.8053,
+      "chi2_kinematic": 34.358,
+      "chi2_composite": 14.8356,
+      "chi2_conservative": 4.6036,
+      "kappa_range": [
+        0.706086,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "name": "NGC6503",
+      "N": 31,
+      "distance_Mpc": 6.26,
+      "v_max_kms": 121.0,
+      "RMS_kms": 12.46,
+      "correlation": 0.8031,
+      "chi2_kinematic": 30.9469,
+      "chi2_composite": 3.2183,
+      "chi2_conservative": 0.9491,
+      "kappa_range": [
+        0.18133,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 138
+    },
+    {
+      "name": "UGC05716",
+      "N": 12,
+      "distance_Mpc": 21.3,
+      "v_max_kms": 74.7,
+      "RMS_kms": 15.77,
+      "correlation": 0.8028,
+      "chi2_kinematic": 62.1757,
+      "chi2_composite": 18.5207,
+      "chi2_conservative": 4.9525,
+      "kappa_range": [
+        0.807595,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "NGC0891",
+      "N": 18,
+      "distance_Mpc": 9.91,
+      "v_max_kms": 234.0,
+      "RMS_kms": 67.38,
+      "correlation": 0.8015,
+      "chi2_kinematic": 325.8306,
+      "chi2_composite": 6.6106,
+      "chi2_conservative": 2.2947,
+      "kappa_range": [
+        0.594773,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "name": "F583-1",
+      "N": 25,
+      "distance_Mpc": 35.4,
+      "v_max_kms": 86.9,
+      "RMS_kms": 20.65,
+      "correlation": 0.7963,
+      "chi2_kinematic": 77.0662,
+      "chi2_composite": 35.5873,
+      "chi2_conservative": 8.6572,
+      "kappa_range": [
+        0.428551,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 122
+    },
+    {
+      "name": "UGC12632",
+      "N": 15,
+      "distance_Mpc": 9.77,
+      "v_max_kms": 73.2,
+      "RMS_kms": 13.57,
+      "correlation": 0.7943,
+      "chi2_kinematic": 45.2882,
+      "chi2_composite": 14.6138,
+      "chi2_conservative": 3.9161,
+      "kappa_range": [
+        0.910089,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "UGC08550",
+      "N": 11,
+      "distance_Mpc": 6.7,
+      "v_max_kms": 57.8,
+      "RMS_kms": 11.97,
+      "correlation": 0.7898,
+      "chi2_kinematic": 35.8247,
+      "chi2_composite": 13.8661,
+      "chi2_conservative": 3.7506,
+      "kappa_range": [
+        0.809069,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "ESO444-G084",
+      "N": 7,
+      "distance_Mpc": 4.83,
+      "v_max_kms": 63.1,
+      "RMS_kms": 15.33,
+      "correlation": 0.7813,
+      "chi2_kinematic": 58.7466,
+      "chi2_composite": 26.6669,
+      "chi2_conservative": 5.9515,
+      "kappa_range": [
+        0.572029,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 124
+    },
+    {
+      "name": "UGC06917",
+      "N": 11,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 111.0,
+      "RMS_kms": 13.18,
+      "correlation": 0.7787,
+      "chi2_kinematic": 38.0978,
+      "chi2_composite": 4.468,
+      "chi2_conservative": 1.2608,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "UGC05721",
+      "N": 23,
+      "distance_Mpc": 6.18,
+      "v_max_kms": 82.6,
+      "RMS_kms": 19.75,
+      "correlation": 0.7782,
+      "chi2_kinematic": 88.5992,
+      "chi2_composite": 21.537,
+      "chi2_conservative": 5.7406,
+      "kappa_range": [
+        0.709282,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 131
+    },
+    {
+      "name": "NGC3992",
+      "N": 9,
+      "distance_Mpc": 23.7,
+      "v_max_kms": 272.0,
+      "RMS_kms": 22.68,
+      "correlation": 0.7764,
+      "chi2_kinematic": 45.1604,
+      "chi2_composite": 1.7974,
+      "chi2_conservative": 0.5883,
+      "kappa_range": [
+        0.60034,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "UGC00891",
+      "N": 5,
+      "distance_Mpc": 10.2,
+      "v_max_kms": 63.8,
+      "RMS_kms": 9.75,
+      "correlation": 0.772,
+      "chi2_kinematic": 23.7884,
+      "chi2_composite": 7.7553,
+      "chi2_conservative": 2.0689,
+      "kappa_range": [
+        0.44158,
+        0.846781
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "UGC00731",
+      "N": 12,
+      "distance_Mpc": 12.5,
+      "v_max_kms": 74.0,
+      "RMS_kms": 17.79,
+      "correlation": 0.7596,
+      "chi2_kinematic": 79.102,
+      "chi2_composite": 39.7999,
+      "chi2_conservative": 12.6068,
+      "kappa_range": [
+        0.886437,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "UGC02487",
+      "N": 17,
+      "distance_Mpc": 69.1,
+      "v_max_kms": 383.0,
+      "RMS_kms": 34.64,
+      "correlation": 0.756,
+      "chi2_kinematic": 223.1267,
+      "chi2_composite": 2.5377,
+      "chi2_conservative": 0.8381,
+      "kappa_range": [
+        0.625149,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "NGC2683",
+      "N": 11,
+      "distance_Mpc": 9.81,
+      "v_max_kms": 212.0,
+      "RMS_kms": 21.98,
+      "correlation": 0.7541,
+      "chi2_kinematic": 13.9317,
+      "chi2_composite": 1.3846,
+      "chi2_conservative": 0.5069,
+      "kappa_range": [
+        0.532756,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "F563-1",
+      "N": 17,
+      "distance_Mpc": 48.9,
+      "v_max_kms": 112.5,
+      "RMS_kms": 31.54,
+      "correlation": 0.7389,
+      "chi2_kinematic": 84.9394,
+      "chi2_composite": 39.0225,
+      "chi2_conservative": 7.5841,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "name": "UGC03205",
+      "N": 48,
+      "distance_Mpc": 50.0,
+      "v_max_kms": 237.0,
+      "RMS_kms": 18.81,
+      "correlation": 0.7347,
+      "chi2_kinematic": 23.3496,
+      "chi2_composite": 1.1269,
+      "chi2_conservative": 0.4341,
+      "kappa_range": [
+        0.570246,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 132
+    },
+    {
+      "name": "UGC09037",
+      "N": 22,
+      "distance_Mpc": 83.6,
+      "v_max_kms": 160.0,
+      "RMS_kms": 25.92,
+      "correlation": 0.7296,
+      "chi2_kinematic": 26.5719,
+      "chi2_composite": 3.2371,
+      "chi2_conservative": 1.2539,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "UGC07125",
+      "N": 13,
+      "distance_Mpc": 19.8,
+      "v_max_kms": 65.6,
+      "RMS_kms": 4.67,
+      "correlation": 0.7264,
+      "chi2_kinematic": 5.1878,
+      "chi2_composite": 0.9473,
+      "chi2_conservative": 0.2603,
+      "kappa_range": [
+        0.858182,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "NGC5005",
+      "N": 18,
+      "distance_Mpc": 16.9,
+      "v_max_kms": 265.0,
+      "RMS_kms": 67.77,
+      "correlation": 0.7209,
+      "chi2_kinematic": 16.5163,
+      "chi2_composite": 3.9154,
+      "chi2_conservative": 1.9491,
+      "kappa_range": [
+        0.650412,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "UGC02455",
+      "N": 8,
+      "distance_Mpc": 6.92,
+      "v_max_kms": 61.0,
+      "RMS_kms": 26.76,
+      "correlation": 0.7068,
+      "chi2_kinematic": 23.5191,
+      "chi2_composite": 9.4292,
+      "chi2_conservative": 4.7391,
+      "kappa_range": [
+        0.825577,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 104
+    },
+    {
+      "name": "NGC3877",
+      "N": 13,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 171.0,
+      "RMS_kms": 31.59,
+      "correlation": 0.6823,
+      "chi2_kinematic": 41.0632,
+      "chi2_composite": 3.2676,
+      "chi2_conservative": 1.5786,
+      "kappa_range": [
+        0.933493,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 97
+    },
+    {
+      "name": "NGC7814",
+      "N": 18,
+      "distance_Mpc": 14.4,
+      "v_max_kms": 265.0,
+      "RMS_kms": 49.13,
+      "correlation": 0.6639,
+      "chi2_kinematic": 22.2146,
+      "chi2_composite": 2.1196,
+      "chi2_conservative": 0.8283,
+      "kappa_range": [
+        0.47193,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 137
+    },
+    {
+      "name": "UGC00634",
+      "N": 4,
+      "distance_Mpc": 30.9,
+      "v_max_kms": 108.0,
+      "RMS_kms": 17.51,
+      "correlation": 0.6527,
+      "chi2_kinematic": 76.5468,
+      "chi2_composite": 10.2739,
+      "chi2_conservative": 2.7963,
+      "kappa_range": [
+        0.399616,
+        0.771909
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "UGC06446",
+      "N": 17,
+      "distance_Mpc": 12.0,
+      "v_max_kms": 84.9,
+      "RMS_kms": 18.62,
+      "correlation": 0.6518,
+      "chi2_kinematic": 81.7952,
+      "chi2_composite": 22.0804,
+      "chi2_conservative": 5.9735,
+      "kappa_range": [
+        0.839021,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 109
+    },
+    {
+      "name": "NGC3726",
+      "N": 12,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 169.0,
+      "RMS_kms": 16.34,
+      "correlation": 0.6363,
+      "chi2_kinematic": 11.8884,
+      "chi2_composite": 1.3189,
+      "chi2_conservative": 0.4771,
+      "kappa_range": [
+        0.820734,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "name": "PGC51017",
+      "N": 6,
+      "distance_Mpc": 13.6,
+      "v_max_kms": 20.5,
+      "RMS_kms": 7.05,
+      "correlation": 0.6308,
+      "chi2_kinematic": 12.3122,
+      "chi2_composite": 5.7218,
+      "chi2_conservative": 1.5908,
+      "kappa_range": [
+        0.295841,
+        0.933625
+      ],
+      "converged": true,
+      "iterations": 109
+    },
+    {
+      "name": "UGC04305",
+      "N": 22,
+      "distance_Mpc": 3.45,
+      "v_max_kms": 37.3,
+      "RMS_kms": 9.0,
+      "correlation": 0.6161,
+      "chi2_kinematic": 8.5901,
+      "chi2_composite": 3.2758,
+      "chi2_conservative": 1.1337,
+      "kappa_range": [
+        0.960416,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "UGC09133",
+      "N": 68,
+      "distance_Mpc": 57.1,
+      "v_max_kms": 289.0,
+      "RMS_kms": 59.59,
+      "correlation": 0.612,
+      "chi2_kinematic": 229.105,
+      "chi2_composite": 5.1619,
+      "chi2_conservative": 1.7492,
+      "kappa_range": [
+        0.378897,
+        1.0
+      ],
+      "converged": false,
+      "iterations": 500
+    },
+    {
+      "name": "UGC03546",
+      "N": 30,
+      "distance_Mpc": 28.7,
+      "v_max_kms": 262.0,
+      "RMS_kms": 86.93,
+      "correlation": 0.6098,
+      "chi2_kinematic": 25.651,
+      "chi2_composite": 3.954,
+      "chi2_conservative": 2.3878,
+      "kappa_range": [
+        0.484172,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 157
+    },
+    {
+      "name": "NGC6674",
+      "N": 15,
+      "distance_Mpc": 51.2,
+      "v_max_kms": 291.0,
+      "RMS_kms": 35.43,
+      "correlation": 0.5996,
+      "chi2_kinematic": 238.1389,
+      "chi2_composite": 5.1313,
+      "chi2_conservative": 1.6179,
+      "kappa_range": [
+        0.499238,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "NGC4217",
+      "N": 19,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 191.0,
+      "RMS_kms": 71.08,
+      "correlation": 0.576,
+      "chi2_kinematic": 79.7657,
+      "chi2_composite": 8.414,
+      "chi2_conservative": 3.5229,
+      "kappa_range": [
+        0.870928,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "NGC3521",
+      "N": 41,
+      "distance_Mpc": 7.7,
+      "v_max_kms": 220.0,
+      "RMS_kms": 46.02,
+      "correlation": 0.5563,
+      "chi2_kinematic": 20.8588,
+      "chi2_composite": 3.0816,
+      "chi2_conservative": 1.3646,
+      "kappa_range": [
+        0.560743,
+        1.0
+      ],
+      "converged": false,
+      "iterations": 500
+    },
+    {
+      "name": "NGC5033",
+      "N": 22,
+      "distance_Mpc": 15.7,
+      "v_max_kms": 225.0,
+      "RMS_kms": 40.51,
+      "correlation": 0.5445,
+      "chi2_kinematic": 29.5068,
+      "chi2_composite": 1.9346,
+      "chi2_conservative": 0.7622,
+      "kappa_range": [
+        0.51268,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 112
+    },
+    {
+      "name": "NGC3949",
+      "N": 7,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 169.0,
+      "RMS_kms": 27.79,
+      "correlation": 0.5241,
+      "chi2_kinematic": 25.7565,
+      "chi2_composite": 2.8573,
+      "chi2_conservative": 1.0096,
+      "kappa_range": [
+        0.642197,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "D631-7",
+      "N": 16,
+      "distance_Mpc": 7.72,
+      "v_max_kms": 58.5,
+      "RMS_kms": 9.94,
+      "correlation": 0.4902,
+      "chi2_kinematic": 24.6351,
+      "chi2_composite": 9.9488,
+      "chi2_conservative": 2.716,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 109
+    },
+    {
+      "name": "NGC4214",
+      "N": 14,
+      "distance_Mpc": 2.87,
+      "v_max_kms": 80.6,
+      "RMS_kms": 16.29,
+      "correlation": 0.4861,
+      "chi2_kinematic": 42.9078,
+      "chi2_composite": 13.3009,
+      "chi2_conservative": 3.585,
+      "kappa_range": [
+        0.602037,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 110
+    },
+    {
+      "name": "UGC12506",
+      "N": 31,
+      "distance_Mpc": 100.6,
+      "v_max_kms": 255.0,
+      "RMS_kms": 31.0,
+      "correlation": 0.4818,
+      "chi2_kinematic": 24.3353,
+      "chi2_composite": 5.5642,
+      "chi2_conservative": 1.6428,
+      "kappa_range": [
+        0.408514,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 130
+    },
+    {
+      "name": "UGC05253",
+      "N": 73,
+      "distance_Mpc": 22.9,
+      "v_max_kms": 248.0,
+      "RMS_kms": 59.83,
+      "correlation": 0.4754,
+      "chi2_kinematic": 281.1124,
+      "chi2_composite": 4.4769,
+      "chi2_conservative": 1.5835,
+      "kappa_range": [
+        0.323327,
+        1.0
+      ],
+      "converged": false,
+      "iterations": 500
+    },
+    {
+      "name": "NGC1705",
+      "N": 14,
+      "distance_Mpc": 5.73,
+      "v_max_kms": 73.2,
+      "RMS_kms": 19.74,
+      "correlation": 0.4445,
+      "chi2_kinematic": 89.2989,
+      "chi2_composite": 30.4405,
+      "chi2_conservative": 7.5101,
+      "kappa_range": [
+        0.563067,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    },
+    {
+      "name": "UGC02953",
+      "N": 115,
+      "distance_Mpc": 16.5,
+      "v_max_kms": 319.0,
+      "RMS_kms": 56.89,
+      "correlation": 0.4376,
+      "chi2_kinematic": 150.7259,
+      "chi2_composite": 5.2067,
+      "chi2_conservative": 1.8574,
+      "kappa_range": [
+        0.183095,
+        1.0
+      ],
+      "converged": false,
+      "iterations": 500
+    },
+    {
+      "name": "NGC0289",
+      "N": 28,
+      "distance_Mpc": 20.8,
+      "v_max_kms": 194.0,
+      "RMS_kms": 27.67,
+      "correlation": 0.3631,
+      "chi2_kinematic": 54.6736,
+      "chi2_composite": 3.7892,
+      "chi2_conservative": 1.4217,
+      "kappa_range": [
+        0.537155,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 139
+    },
+    {
+      "name": "UGC08699",
+      "N": 41,
+      "distance_Mpc": 39.3,
+      "v_max_kms": 202.0,
+      "RMS_kms": 35.29,
+      "correlation": 0.3036,
+      "chi2_kinematic": 35.8037,
+      "chi2_composite": 1.9315,
+      "chi2_conservative": 0.8652,
+      "kappa_range": [
+        0.51503,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 121
+    },
+    {
+      "name": "NGC5985",
+      "N": 33,
+      "distance_Mpc": 39.7,
+      "v_max_kms": 305.0,
+      "RMS_kms": 49.73,
+      "correlation": 0.297,
+      "chi2_kinematic": 277.7767,
+      "chi2_composite": 8.2351,
+      "chi2_conservative": 2.6949,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 133
+    },
+    {
+      "name": "UGC06786",
+      "N": 45,
+      "distance_Mpc": 29.3,
+      "v_max_kms": 229.0,
+      "RMS_kms": 31.76,
+      "correlation": 0.2925,
+      "chi2_kinematic": 97.0936,
+      "chi2_composite": 3.6441,
+      "chi2_conservative": 1.3222,
+      "kappa_range": [
+        0.438409,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 121
+    },
+    {
+      "name": "NGC0801",
+      "N": 13,
+      "distance_Mpc": 80.7,
+      "v_max_kms": 238.0,
+      "RMS_kms": 49.18,
+      "correlation": 0.2468,
+      "chi2_kinematic": 91.2838,
+      "chi2_composite": 5.6879,
+      "chi2_conservative": 1.9914,
+      "kappa_range": [
+        0.425547,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "UGC06983",
+      "N": 17,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 113.0,
+      "RMS_kms": 17.36,
+      "correlation": 0.1512,
+      "chi2_kinematic": 63.65,
+      "chi2_composite": 8.3996,
+      "chi2_conservative": 2.3876,
+      "kappa_range": [
+        1.0,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 109
+    },
+    {
+      "name": "NGC3769",
+      "N": 12,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 126.0,
+      "RMS_kms": 21.48,
+      "correlation": 0.1337,
+      "chi2_kinematic": 24.7294,
+      "chi2_composite": 5.0961,
+      "chi2_conservative": 1.9509,
+      "kappa_range": [
+        0.636745,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "NGC3893",
+      "N": 10,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 194.0,
+      "RMS_kms": 25.94,
+      "correlation": 0.1087,
+      "chi2_kinematic": 17.6851,
+      "chi2_composite": 2.0562,
+      "chi2_conservative": 0.7389,
+      "kappa_range": [
+        0.540408,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "UGC07690",
+      "N": 7,
+      "distance_Mpc": 8.11,
+      "v_max_kms": 60.7,
+      "RMS_kms": 6.45,
+      "correlation": 0.0494,
+      "chi2_kinematic": 5.7646,
+      "chi2_composite": 1.7943,
+      "chi2_conservative": 0.5612,
+      "kappa_range": [
+        0.428936,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 105
+    },
+    {
+      "name": "NGC1003",
+      "N": 36,
+      "distance_Mpc": 11.4,
+      "v_max_kms": 115.0,
+      "RMS_kms": 22.14,
+      "correlation": 0.0226,
+      "chi2_kinematic": 121.7056,
+      "chi2_composite": 17.4801,
+      "chi2_conservative": 4.7501,
+      "kappa_range": [
+        0.758478,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 115
+    },
+    {
+      "name": "F571-8",
+      "N": 13,
+      "distance_Mpc": 53.3,
+      "v_max_kms": 144.0,
+      "RMS_kms": 31.06,
+      "correlation": -0.0373,
+      "chi2_kinematic": 149.2568,
+      "chi2_composite": 18.7732,
+      "chi2_conservative": 6.1597,
+      "kappa_range": [
+        0.665312,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 108
+    },
+    {
+      "name": "UGC06973",
+      "N": 9,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 180.0,
+      "RMS_kms": 73.07,
+      "correlation": -0.0698,
+      "chi2_kinematic": 159.8306,
+      "chi2_composite": 7.6104,
+      "chi2_conservative": 2.6283,
+      "kappa_range": [
+        0.666228,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 107
+    },
+    {
+      "name": "UGC02885",
+      "N": 19,
+      "distance_Mpc": 80.6,
+      "v_max_kms": 305.0,
+      "RMS_kms": 33.29,
+      "correlation": -0.194,
+      "chi2_kinematic": 19.8986,
+      "chi2_composite": 1.6313,
+      "chi2_conservative": 0.5817,
+      "kappa_range": [
+        0.47102,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 114
+    },
+    {
+      "name": "UGC06787",
+      "N": 71,
+      "distance_Mpc": 21.3,
+      "v_max_kms": 276.0,
+      "RMS_kms": 68.3,
+      "correlation": -0.2328,
+      "chi2_kinematic": 179.2757,
+      "chi2_composite": 6.508,
+      "chi2_conservative": 2.4205,
+      "kappa_range": [
+        0.337703,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 128
+    },
+    {
+      "name": "UGC03580",
+      "N": 47,
+      "distance_Mpc": 20.7,
+      "v_max_kms": 131.0,
+      "RMS_kms": 37.56,
+      "correlation": -0.4718,
+      "chi2_kinematic": 85.0674,
+      "chi2_composite": 9.2272,
+      "chi2_conservative": 3.6822,
+      "kappa_range": [
+        0.199984,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 131
+    },
+    {
+      "name": "NGC4138",
+      "N": 7,
+      "distance_Mpc": 18.0,
+      "v_max_kms": 195.0,
+      "RMS_kms": 39.04,
+      "correlation": -0.476,
+      "chi2_kinematic": 17.3553,
+      "chi2_composite": 3.2114,
+      "chi2_conservative": 1.4197,
+      "kappa_range": [
+        0.391552,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 106
+    },
+    {
+      "name": "NGC2915",
+      "N": 30,
+      "distance_Mpc": 4.06,
+      "v_max_kms": 86.5,
+      "RMS_kms": 27.42,
+      "correlation": -0.6917,
+      "chi2_kinematic": 150.1779,
+      "chi2_composite": 56.3661,
+      "chi2_conservative": 13.3651,
+      "kappa_range": [
+        0.864806,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 117
+    },
+    {
+      "name": "UGC06614",
+      "N": 13,
+      "distance_Mpc": 88.7,
+      "v_max_kms": 205.0,
+      "RMS_kms": 51.03,
+      "correlation": -0.8512,
+      "chi2_kinematic": 30.7284,
+      "chi2_composite": 5.299,
+      "chi2_conservative": 2.2246,
+      "kappa_range": [
+        0.445629,
+        1.0
+      ],
+      "converged": true,
+      "iterations": 113
+    }
+  ]
+}
