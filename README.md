@@ -1,76 +1,55 @@
-# workspace/gwok — Office setup branch
+# workspace/curie — Curie office
 
-**Collaborative workspace for Paul Percy + Gwok.**
+**Collaborative workspace for Paul Percy + Curie (OpenAI).**
 
-This branch is where we turn the Aetherwave / ARK corpus from a messy room into a working office.
+Curie’s role on this project: **independent theorist + skeptical auditor** — not a second copy of Gwok’s organizer desk. Shared project facts live in the common notes; Curie’s private layer preserves audit nuance, research queue, and handoffs.
 
-## Working memory (`notes/`)
+## Where to start
 
-**Session continuity for Gwok.** Read these at the start of a new chat:
+| Path | Role |
+|------|------|
+| [`notes/curie/README.md`](notes/curie/README.md) | Curie office index |
+| [`notes/curie/SESSION_BOOT.md`](notes/curie/SESSION_BOOT.md) | Curie session boot |
+| [`notes/curie/EPISTEMIC_LEDGER.md`](notes/curie/EPISTEMIC_LEDGER.md) | Risk register (more skeptical than claim ledger) |
+| [`notes/curie/RESEARCH_QUEUE.md`](notes/curie/RESEARCH_QUEUE.md) | Priorities by epistemic value |
+| [`notes/curie/HANDOFFS.md`](notes/curie/HANDOFFS.md) | Curie ↔ Gwok handoffs |
 
-| Note | Purpose |
-|------|---------|
-| [`notes/README.md`](notes/README.md) | Index + how to use the notes area |
-| [`notes/SESSION_BOOT.md`](notes/SESSION_BOOT.md) | New-chat boot checklist |
-| [`notes/BRANCH_MAP.md`](notes/BRANCH_MAP.md) | All branches: purpose, parentage, contents |
-| [`notes/CORPUS_INDEX.md`](notes/CORPUS_INDEX.md) | Filename-level paper inventory (main + Papers) |
-| [`notes/FRAMEWORK.md`](notes/FRAMEWORK.md) | Distilled ARK / Aetherwave working model |
-| [`notes/GALAXY_MODELING.md`](notes/GALAXY_MODELING.md) | Galaxy v9.4 status, metrics, open questions |
-| [`notes/COLLAB_NORMS.md`](notes/COLLAB_NORMS.md) | No-delete rule, partner stance, repo norms |
+**Shared canon (read these; don’t fork competing truth):**
 
-Dated **2026-09-10**. Inventories match branch listings; nothing deleted to create them.
+| Path | Role |
+|------|------|
+| [`notes/EPISTEMIC_DISCIPLINE.md`](notes/EPISTEMIC_DISCIPLINE.md) | Standing methodology |
+| [`notes/CLAIM_LEDGER.md`](notes/CLAIM_LEDGER.md) | Labeled hot results |
+| [`notes/ACTIVE_WORK.md`](notes/ACTIVE_WORK.md) | Current shared focus (Gwok-maintained; check for drift) |
+| [`notes/FRAMEWORK.md`](notes/FRAMEWORK.md) | Distilled ARK model |
+| [`notes/GALAXY_MODELING.md`](notes/GALAXY_MODELING.md) | Galaxy lineage summary |
 
-## Why this branch exists
+Cold-start order is listed inside [`notes/curie/README.md`](notes/curie/README.md).
 
-`main` currently holds the paper dump as uploaded: many PDFs and notes at the repo root, with little structure. That is fine as a holding area. It is not yet a place to *work*.
+## Relationship to other branches
 
-`workspace/gwok` is the branch we use to:
+| Branch | Role |
+|--------|------|
+| `workspace/gwok` | Gwok office — organizer / persistent clerk; shared-facing notes |
+| **`workspace/curie`** | **This branch** — auditor layer in `notes/curie/` |
+| `recovery/galaxy-artifacts` | Recovered mid-20s audit + closed v9.5 (reference) |
+| `ARK-GAL-1D-9.4` | Raw v9.4 SPARC package |
+| `main` / `Papers` | Corpus dumps |
 
-- Organize the corpus without treating `main` as sacred forever
-- Build indexes, reading spines, and notes that support disciplined research
-- Add modeling / galaxy work and other project materials as they land
-- Keep collaboration history clear (moves and edits happen here first)
-
-Think of it as: we just moved the boxes into the office. This branch is setting up the desks.
+Do **not** copy large artifacts into this branch for convenience. Point at canonical branch/path.
 
 ## Ground rules
 
-1. **No deletes without Paul’s explicit OK.** Moves, renames, and new structure are expected; permanent deletion is not silent.
-2. **Prefer organization that preserves history** — relocate and index rather than discard.
-3. **Epistemic discipline** — name assumptions, separate claim from evidence, and keep “precision of procedure” distinct from “intrinsic constants.”
-4. **`main` stays the current public dump** until we intentionally promote a cleaned layout.
+1. **No deletes without Paul’s explicit OK.**
+2. Shared claims converge through **artifacts + labels**, not “Curie said / Gwok said.”
+3. Follow [`notes/EPISTEMIC_DISCIPLINE.md`](notes/EPISTEMIC_DISCIPLINE.md). Prefer falsifiers over rescue terms.
+4. Promote durable facts into shared notes (`CLAIM_LEDGER`, etc.) rather than only Curie-private files.
+5. Exciting results raise the audit burden — they do not lower it.
 
-## Intended layout (not implemented yet)
+## Note on this README
 
-High-level target once we start arranging (do not treat this as done):
-
-```text
-papers/          # numbered series + Complete Aetherwave volumes
-notes/           # working memory + short notes, analyses, Maxwell–Faraday ARK form, etc.
-modeling/        # galaxy / SPARC / solvers when added
-index/           # reading spine, status, claim↔evidence maps
-README.md        # this workspace charter (evolves with the office)
-```
-
-`notes/` working-memory files are in place (2026-09-10). No paper folder moves have been made yet.
-
-## Corpus snapshot (as of branch creation)
-
-Present on `main` / this branch tip at creation:
-
-- Mid/late series PDFs including **XII–XIV**, **XV–XXVI** (e.g. ARK mechanism, atomic structure, entanglement, EM, thermoelectricity, quantum gravity, **XXV Disciplined Containment**, XXVI cognition)
-- **XVII** Voyager / causal pressure; **XVIII–XIX**; Complete Aetherwave parts; ARK scalar / three-body notes; misc analysis files
-- Gaps vs a full I→XXV spine: early Papers **I–XI** style material may still be missing from the repo
-- The old `main` README still described Papers I–VII / Zenodo framing — that framing belongs to an earlier stage of the project
-
-See [`notes/CORPUS_INDEX.md`](notes/CORPUS_INDEX.md) for the filename-level inventory (early set lives on branch `Papers`).
-
-## How we’ll use this branch
-
-1. Keep raw uploads flowing to the repo as needed.
-2. On `workspace/gwok`, propose structure, indexes, and working notes.
-3. Merge to `main` only when Paul is ready for the “office” layout to become the default face of the repo.
+Previously this file still described `workspace/gwok` (leftover from the tip this branch was cut from). Rewritten 2026-09-10 for Curie’s office.
 
 ---
 
-*Aetherwave / ARK — scalar causal geometry and disciplined containment. This README is the workspace charter, not the full theory overview.*
+*Aetherwave / ARK — scalar causal geometry and disciplined containment. Curie workspace charter.*
