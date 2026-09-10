@@ -64,7 +64,7 @@ for cname,v in curves.items():
         ratio,slope=stage_stats(P[st],P['r'])
         jump=ratio/max(prev_ratio,EPS)
         flag=''
-        if abs(np.log(max(jump,EPS)))>np.log(2.0):
+        if abs(np.log(max(jump,EPS)))>np.log(2.0):   # >2x change vs previous stage
             flag='  <== big change introduced HERE'
         print(f"  {st:<8} {ratio:>13.3f} {slope:>15.3f}{flag}")
         prev_ratio=ratio
