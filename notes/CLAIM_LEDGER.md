@@ -10,7 +10,8 @@ Update this file whenever a number or thesis is quoted in chat or papers.
 
 | Claim | Approx. value | Label | Where | Notes / falsifier |
 |-------|---------------|-------|-------|-------------------|
-| Raw V9.4 `mixed_slope` global RMS | ~30.55 km/s | **RAW RESULT** | `ARK-GAL-1D-9.4` (`model_comparison.csv`) | N=175, 3213 pts; Y_disk=0.5, Y_bulge=0.7 in target; no photometry in predictor |
+| **V5.4 inverse solver** (SPARC retrodiction) | r≈0.89, RMS≈**34.8** km/s; 167/175 converged | **NEGATIVE RESULT / CLOSED FOR ORIGINAL INTENT** | `ARK-GAL-1D-5.4` | Inverse: v_obs → v_bar; α=4π/3 claimed derived; Υ 0.5/0.7. Did **not** meet original expectations — kept as failure record; lineage continued to 9.x. Do **not** cite as a win. |
+| Raw V9.4 `mixed_slope` global RMS | ~30.55 km/s | **RAW RESULT** | `ARK-GAL-1D-9.4` (`model_comparison.csv`) | Forward projector; N=175, 3213 pts; Y_disk=0.5, Y_bulge=0.7 in target; no photometry in predictor |
 | Raw V9.4 global correlation | r ≈ 0.91–0.92 | **RAW RESULT** | same | Strong shape correlation |
 | κ_outer median / CV | ≈0.912 / ≈0.077 | **RAW RESULT** (structural regularity) | same | Stable across projectors — treat as claim only with cross-checks |
 | residual_vs_logSB (raw) | ≈ −0.38 to −0.63 | **RAW RESULT** / open interpretation | same | SB sealed from predictor but residuals track log SB |
@@ -18,6 +19,8 @@ Update this file whenever a number or thesis is quoted in chat or papers.
 | Guarded / Stowe-style OOS | ~23.63–23.65 km/s | **COMPATIBLE BUT UNDERDETERMINED** | same audit folder | Exact Stowe form not identified; boundary-degenerate |
 | V9.5 viscosity-shape ~10× radial rise | — | **NEGATIVE RESULT / CLOSED ROUTE** | `recovery/.../v9.5-negative-result/` | Guards: largely reconstruction artifact |
 | Projection loss vs outside influence as residual story | — | **EXPLORATORY HYPOTHESIS** | discussion + notes | Needs discriminating tests before promotion |
+
+**Lineage note:** V5.4 failure → later 9.4 (forward) / 9.5 (closed negative). Do not collapse inverse V5.4 RMS with forward 9.4 or mid-20s audit numbers.
 
 ## Theory / corpus
 
@@ -31,4 +34,4 @@ Update this file whenever a number or thesis is quoted in chat or papers.
 
 ## How to cite
 
-When summarizing to Paul or into a draft, carry the **label with the number**. Never say “we got ~23 km/s” without saying **CALIBRATED / guarded** vs **RAW ~30.55**.
+When summarizing to Paul or into a draft, carry the **label with the number**. Never say “we got ~23 km/s” without saying **CALIBRATED / guarded** vs **RAW ~30.55**. Never cite V5.4 as meeting the original galaxy-modeling bar.
