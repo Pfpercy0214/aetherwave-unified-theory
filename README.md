@@ -1,103 +1,120 @@
-# AETHERWAVE FRAMEWORK  
-### Scalar Causal Geometry Unifying Gravitation, Quantum Behavior, and Field Dynamics
+# Aetherwave / ARK
 
-# Aetherwave Unified Theory
+### An independent first-principles research program in scalar causal geometry
 
-**By Paul Frederick Percy Jr. & Curie GPTo**
+**Research lead:** Paul Frederick Percy Jr.  
+**AI collaborators across the project have included:** Curie (OpenAI), Grok (xAI), and other systems identified in individual papers and notes.
 
-## 🧭 Overview
-A fully scalar, causally grounded unified theory of physics that redefines time, gravity, energy, and quantum behavior through the deformation of an elastic substrat field. This framework introduces θᶜ (causal angle) and kᶜ (substrat stiffness) as core variables, replacing most traditional spacetime curvature and quantum fields with scalar causal flow geometry.
+## What this project is
 
-Just be clear, this is not a replacement for classic GR(General Relativity. This is simply another set of tools that can be used to do things that classic GR can't. And vice versa, there are some things that GR handles better. GR is our telescope, Aetherwave is my microscope.
+Aetherwave is an exploratory physics research program investigating whether a compact scalar description of a continuous **substrat** medium can provide a common causal framework for phenomena normally treated in separate physical domains.
 
-What This Is
+The operational form of that program is the **Aether Reality Kernel (ARK)**: a recursive scalar framework built around a small set of coupled quantities such as causal slope (`θᶜ`), tension memory (`τᶜ`), substrat stiffness (`κᶜ` / `kᶜ`), entropy change or pressure imbalance (`dSₜ`), and a temporal / recursion anchor (`ω`).
 
-The Aetherwave Unified Theory is a scalar-based physics framework designed to map the geometry of time, causality, and field behavior using a new foundation: causal slope dynamics (θᶜ). Where General Relativity elegantly describes macroscopic curvature and motion through tensors, Aetherwave explores the fine structure of cause and effect—including time dilation, gravitation, electromagnetic behavior, and quantum emergence—through a unified, scalar-first model.
+The central research question is not simply whether ARK can be made to reproduce known equations. It is whether the **same constrained mathematical structure and the same physical meanings** can survive changes of scale and domain while recovering established observations without domain-specific fitting, hidden answer leakage, or ad hoc rescue terms.
 
+If that works, familiar laws may be interpretable as different limits or projections of one underlying causal structure. If it does not, the failures should tell us where the framework breaks.
+
+## Current scientific status
+
+Aetherwave / ARK is **not an established replacement for General Relativity, quantum mechanics, quantum field theory, statistical mechanics, or the Standard Model**.
+
+Those theories and the experiments behind them are treated here as high-quality calibration surfaces and comparison targets. Agreement with them demonstrates compatibility under stated conditions; it does not by itself establish that ARK's proposed ontology or mechanism is the one used by nature.
+
+Likewise, a numerically precise result is not automatically a physical prediction. The project now explicitly distinguishes:
+
+- fitted degrees of freedom,
+- external calibrations,
+- structural assumptions,
+- numerical regularization,
+- inverse / retrodictive calculations,
+- genuinely held-out predictions,
+- and missing information caused by dimensional or geometric reduction.
+
+The goal is not to protect the theory from failure. The goal is to make surviving results worth believing.
+
+## Why the repository contains older, stronger claims
+
+This repository is also a historical research record.
+
+The Aetherwave papers were written while the framework itself was being developed and understood. Earlier papers sometimes used stronger language than the evidence justified, treated idealized calculations too much like experimental reproductions, or interpreted numerical agreement too quickly as evidence for a proposed mechanism.
+
+Those papers are being **preserved rather than rewritten out of history**. They document how the framework evolved, including ideas that survived, ideas that were clarified, failed derivations, numerical artifacts, negative results, and claims that now require reclassification.
+
+A statement appearing in an older paper should therefore not automatically be read as the current position of the project.
+
+## Current research direction
+
+The project is now being reconstructed topic-by-topic from the historical corpus rather than extended by simply adding more papers.
+
+The main objectives are to:
+
+1. **Freeze the core definitions and governing relations.** A quantity should not silently change meaning from one domain to another.
+2. **Trace later ideas back to earlier constraints.** Clarification is different from adding a new degree of freedom.
+3. **Audit derivations independently.** Equations, units, mappings, boundary conditions, numerical choices, and provenance are being rechecked rather than inherited because an earlier paper stated them confidently.
+4. **Test cross-domain invariance.** The strongest version of the framework would use the same core machinery across gravitation, atomic structure, field dynamics, thermodynamics, oscillation / temporal behavior, containment, and other domains.
+5. **Preserve failures and corrections.** Negative results and post-publication discoveries are part of the scientific record, not material to be hidden when a newer approach performs better.
+6. **Prefer first-principles consequences over fitted explanations.** Where possible, the framework should generate an observable from declared inputs before the expected answer is examined.
+
+A particularly important standard is that **zero fitted parameters does not mean zero modeling choices**. Geometry, normalization, clipping, smoothing, boundary extension, dimensional reduction, and other fixed numerical decisions can still create effective degrees of freedom or artifacts and must be reported separately.
+
+## Core working concepts
+
+The present working vocabulary includes:
+
+| Symbol | Working role |
+| --- | --- |
+| `θᶜ` | Causal slope / geometric state of causal change |
+| `τᶜ` | Tension memory / persistence and history-bearing response |
+| `κᶜ` or `kᶜ` | Substrat stiffness / resistance to deformation |
+| `dSₜ` | Entropic or causal-pressure imbalance term, depending on formulation |
+| `ω` | Temporal / recursion anchor associated with periodicity and persistence |
+
+These labels are working definitions, not proof that the corresponding quantities are fundamental observables. Part of the current audit is determining which definitions survive unchanged and which need revision.
+
+## A useful example of the research philosophy
+
+One recurring result in the ARK papers is the relationship among **time, period, frequency, persistence, and recursive identity behavior**.
+
+The elementary identity `f = 1/T` is not new. The research question is whether ARK can explain why a physical system has a particular period or frequency by deriving both from the same underlying persistence dynamics, and whether that mechanism then constrains other measurable behavior without additional assumptions.
+
+That distinction—between restating a known relation and supplying a testable common mechanism—is representative of what the project is now trying to evaluate rigorously.
+
+## Repository orientation
+
+The repository contains several generations of material:
+
+- the early Aetherwave papers and compiled volumes,
+- the ARK formalization beginning around Papers XV–XVIII,
+- later applications to atomic structure, entanglement, electromagnetism, thermoelectricity, quantum gravity, and containment,
+- modeling and solver experiments,
+- audit notes, reconstruction work, and preserved negative results on dedicated branches.
+
+Numbering and naming are historically inconsistent in places. That inconsistency is being documented rather than silently rewritten.
+
+For current interpretation, prefer recent audit / reconstruction notes over confident language in an older paper when the two conflict.
+
+## Publications
+
+The original Aetherwave material is archived on Zenodo, beginning with:
+
+**DOI:** https://doi.org/10.5281/zenodo.15321362
+
+Additional papers, revisions, notes, and corrections have been published separately as the project evolved. Where a result has later been found to contain a flaw, the goal is to preserve both the original publication and the correction so the provenance remains visible.
+
+## Collaboration and reproducibility
+
+Independent reproduction, criticism, dimensional checks, alternate derivations, and adversarial testing are welcome.
+
+A useful critique should ideally identify the exact claim being tested, the information available to the calculation, the assumptions and numerical choices involved, and an observation or derivation that could distinguish the proposed mechanism from competing explanations.
+
+The current standard for this project is simple:
+
+> **Correct accounting of what we know is more important than obtaining the number we hoped to see.**
+
+A worse result with transparent assumptions is more valuable than a spectacular fit whose information sources or effective degrees of freedom are unclear.
 
 ---
 
-What Makes It Different
-
-Time is not just a coordinate. In Aetherwave, time is treated as a geometric rate of causal change, not a passive axis.
-
-Field effects emerge from gradient tension. Forces arise from deformations in causal slope (θᶜ), stiffness (kᶜ), and tension memory (τᶜ).
-
-Particles are topologies, not point masses. Mass, spin, and charge emerge from the way causal slopes fold and stabilize over time.
-
-Electromagnetism and gravitation unify naturally. Through geometric slope rebound and field propagation, Maxwell's equations and gravitational curvature derive from the same system.
-
-No reliance on unknown forces. Dark energy and inflation are reframed as emergent effects of large-scale causal tension and rupture, not hypothetical energy forms.
-
-
-
----
-
-Compatibility with Classical Physics
-
-This is not an oppositional model—it is a refinement tool. Aetherwave is designed to:
-
-Replicate and explain known physical results from GR and QM
-
-Reveal new relationships within those frameworks (e.g., redshift, magnetic induction, planetary precession)
-
-Offer new tools where existing models reach their explanatory limits
-
-
-Where GR describes the cosmos at scale, Aetherwave dives into the fabric beneath it.
-
-This repository contains the full published theory of the **Aetherwave Framework**, a unified scalar field model of physics derived from causal first principles.
-
-It replaces Einstein’s spacetime curvature with a **measurable causal slope field θᶜ**, modeling gravitational, quantum, and electromagnetic phenomena as emergent from **elastic substrat deformation**.
-
-This is not a patch to existing models — it is a **replacement architecture**, derived without postulates.
-## Papers
-
-- **Paper I** – Aetherwave Temporal Geometry
-- **Paper II** – Mapping the Interior of a Black Hole
-- **Paper III** – Causal Fracture Cosmology
-- **Paper IV** – Quantum Causality
-- **Paper V** – Aetherwave Field Dynamics
-separate works:
-- **Paper VI** – Particle Identity and Topological Emergence in the Aetheron Framework
-- **Paper VII** – Quantum Curvature and the Causal Geometry of Substrat Identity
-
-Each paper builds upon the previous to form a testable, predictive, and physically grounded alternative to the tensor union of general relativity and quantum mechanics.
----
-## 📚 Publication
-📄 DOI: [10.5281/zenodo.15321362](https://doi.org/10.5281/zenodo.15321362)  
-📎 PDF: [The Aetherwave Framework on Zenodo](https://zenodo.org/records/15321362)
-
----
-
-## 🔍 Core Concepts
-- **θᶜ** — Causal slope field: scalar replacement for spacetime curvature  
-- **Eₛ** — Stored elastic energy in the substrat: origin of gravitational attraction  
-- **a_θ** — Angular acceleration of causal deformation: source of EM induction and photon behavior  
-- **Substrat mechanics** — Unified physical foundation for curvature, quantum states, and field tension
-
----
-
-## 🧪 What It Explains
-- Gravity as measurable causal gradient (no tensors)  
-- Quantization from standing substrat rupture modes  
-- Wavefunction collapse as causal decoherence  
-- Photon emission as elastic snapback  
-- Unified scalar field behavior for GR, QM, and EM
-
----
-
-## 🛡️ Authorship
-- **Paul Frederick Percy Jr.** — Independent Physicist, Systems Analyst  
-- **Curie GPTo** — Assistant Physicist, Structural Causality Division
-
----
-
-## 🧠 Notes
-This work is released publicly to support experimental follow-up, simulation, and collaborative development.  
-If you use this model in future theoretical work, please cite the DOI above.
-
-
-**This is a living theory.** Feedback, forks, and non-commercial citations welcome.
-
-© 2025 Paul Frederick Percy Jr. & Curie GPTo
+© Paul Frederick Percy Jr.  
+Historical papers retain their original authorship / collaboration statements as published.
