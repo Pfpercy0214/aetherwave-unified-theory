@@ -2,7 +2,7 @@
 
 **Dated:** 2026-09-10  
 **Rulebook:** [`EPISTEMIC_DISCIPLINE.md`](EPISTEMIC_DISCIPLINE.md)  
-**Artifact homes:** cited by branch/path — not necessarily present on `workspace/gwok`.
+**Artifact homes:** cited by branch/path — not necessarily present on `workspace/gwok`.  
 **Work order:** [`WORK_QUEUE.md`](WORK_QUEUE.md) (three-body at top).
 
 Update this file whenever a number or thesis is quoted in chat or papers.
@@ -27,9 +27,12 @@ Update this file whenever a number or thesis is quoted in chat or papers.
 
 | Claim | Label | Where | Notes |
 |-------|-------|-------|-------|
-| Three-body / full matter–substrate program | **HIGH-PRIORITY EXPLORATORY / NOT ESTABLISHED** | Curie note `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`; [`WORK_QUEUE.md`](WORK_QUEUE.md) §1 | Upstream accuracy driver for 2D–3D; figure-eight = control only; constitutive bridge still missing |
-| Gravity-map lineage: `(θᶜ)² = 2\|Φ\|/c²` vs `Φ := θᶜ c²` | **OPEN LINEAGE / AUDIT ISSUE** | XXIV vs later galaxy bridge; Curie three-body §11 | Must reconcile before paper-grade three-body claims |
+| Three-body / full matter–substrate program | **HIGH-PRIORITY EXPLORATORY / NOT ESTABLISHED** | Curie `…_STUDYING_THE_THREE_BODY…`; [`WORK_QUEUE.md`](WORK_QUEUE.md) §1 | Upstream accuracy driver for 2D–3D; figure-eight = control only |
+| Matter–substrate forward coupling architecture (`E_ARK = C_static + C_reactive + C_dissipative`) | **CANDIDATE CONSTITUTIVE ARCHITECTURE / NOT A LAW** | Curie `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md` | No coefficients; uniform-motion null; momentum reciprocity; first bench = one accelerated body |
+| Gravity-map lineage: `(θᶜ)² = 2\|Φ\|/c²` vs `Φ := θᶜ c²` | **OPEN LINEAGE / AUDIT ISSUE** | XXIV vs later galaxy bridge; Curie three-body §11 | Must reconcile before paper-grade three-body / action claims |
 | Quadratic `θᶜ` N-body compatibility | **COMPATIBLE / DEPENDENT ON EXTERNAL NEWTONIAN U** | Curie three-body §2–3 | Change-of-variable, not independent derivation |
+| Substrate “near-superfluid / low dissipation + strong collective response” | **EXPLORATORY ANALOGY / HYPOTHESIS** | Coupling formalization §2, §11 | Not established ARK fluid equations |
+| Inertia as resistance to coherent reconfiguration (not drag) | **EXPLORATORY HYPOTHESIS** | Coupling formalization §9, §17–18 | Needs frozen law + one-body momentum ledger |
 | GR/QM as calibration surfaces; medium mechanism underneath | **EXPLORATORY / PROGRAM THESIS** | XXIV, XXV, `FRAMEWORK.md` | XXIV more completionist; XXV more containment |
 | Most “intrinsic” constants are condition-indexed; behavior portable | **EXPLORATORY HYPOTHESIS** | chat + XXV implications | **Not yet a paper page** |
 | Measurement injects unrecorded perturbation (dSₜ); catalog values are composites | **EXPLORATORY HYPOTHESIS** | chat; neutron/XXV thread | Known unknown — not a free knob |
@@ -38,4 +41,4 @@ Update this file whenever a number or thesis is quoted in chat or papers.
 
 ## How to cite
 
-When summarizing to Paul or into a draft, carry the **label with the number**. Never say “we got ~23 km/s” without saying **CALIBRATED / guarded** vs **RAW ~30.55**. Never cite V5.4 as meeting the original galaxy-modeling bar. Prefer Paul’s operational caveat once the Zenodo README lands; until then treat ~34 / ~30% as **from-memory provisional**, not frozen ledger truth. Never cite figure-eight closure as ARK newly solving three-body.
+When summarizing to Paul or into a draft, carry the **label with the number**. Never say “we got ~23 km/s” without saying **CALIBRATED / guarded** vs **RAW ~30.55**. Never cite V5.4 as meeting the original galaxy-modeling bar. Prefer Paul’s operational caveat once the Zenodo README lands; until then treat ~34 / ~30% as **from-memory provisional**, not frozen ledger truth. Never cite figure-eight closure as ARK newly solving three-body. Never cite the coupling formalization as an established constitutive law.
