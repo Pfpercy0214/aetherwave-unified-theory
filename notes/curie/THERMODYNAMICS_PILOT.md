@@ -18,6 +18,75 @@ Nothing should be promoted into a modern thermodynamics rewrite simply because i
 
 The paper contains strong ontological and completion-level language. Examples include claims that thermodynamic variables are directly measurable scalar-geometric quantities, radiation is fundamentally exported curvature/memory rather than photon emission, and the framework completes rather than reinterprets thermodynamics. These statements require independent physical and mathematical justification.
 
+## Current mechanistic hypothesis to test
+
+A newer project-level intuition is that conventional energy bookkeeping may correspond, at a deeper Aetherwave level, to changes in the local state and transport of the substrat/aether rather than to energy as a transported substance.
+
+This is **not yet established theory**. It should be decomposed into distinct candidate mechanisms rather than summarized as “energy = aether.”
+
+### Thermal state / heating
+
+Working idea: higher temperature may correspond to a local **overabundance, compression, or elevated pressure/state density of aether** within and around atomic structures. If that internal/external balance shifts, the atomic identity may expand and the imbalance may place greater stress on `tau^c` (tension memory). As local pressure/state gradients relax toward equilibrium, the load on `tau^c` should also decrease.
+
+Required clarification before formalization:
+
+- What exactly is “aether abundance”: density, pressure, occupancy, scalar amplitude, stored deformation, or something else?
+- Is temperature proportional to that quantity, to fluctuations of it, to gradients of it, or to a statistical distribution over local structural states?
+- Does thermal expansion follow quantitatively from the same state variable without inserting the observed expansion behavior by hand?
+- Can pressure equalization and cooling be derived as transport of that state variable while recovering ordinary thermodynamic limits?
+
+### Matter moving through the medium
+
+Working idea: a material structure displaces/couples to local aether as its constituent atoms change position relative to the surrounding medium. Denser atomic configurations would couple a larger amount of structured matter to the medium and could therefore exhibit a larger reaction to attempted displacement.
+
+Critical distinction: this proposed “resistance” must be separated into at least three cases:
+
+1. **Resistance to acceleration / change of motion** — candidate connection to inertia.
+2. **Steady motion at constant velocity** — must not automatically imply ordinary fluid drag; any preferred-frame drag prediction would face strong empirical constraints.
+3. **Internal atomic/thermal motion** — may couple differently from coherent bulk translation.
+
+A modern derivation should not assume these three responses are the same.
+
+### Sub-atomic permeability / pressure zones
+
+Working idea: the hypothesized medium is smaller-scale than atomic structure and can move through or across the effective boundaries of atoms, interacting with inner and outer pressure/state zones rather than treating an atom as an impermeable solid object.
+
+This suggests that “inside” and “outside” an identity may be better modeled as coupled pressure/geometry domains with finite permeability or response, not sealed compartments.
+
+Questions to resolve:
+
+- What defines the effective boundary of an atomic identity in ARK?
+- What continuity or jump conditions apply to aether density/pressure/flux across that boundary?
+- Is there a conserved aether quantity, or only a conserved relation/state measure?
+- How do `theta^c`, `tau^c`, `k^c`, `dS_t`, and possibly `omega` encode the local medium state and its transport?
+
+### Candidate continuum variables
+
+Before using thermodynamic words, attempt a substrate-level state description with explicit variables such as:
+
+- `rho_a(x,t)` — candidate aether density/state occupancy,
+- `P_a(x,t)` — candidate aether pressure or restoring stress,
+- `J_a(x,t)` — candidate aether/state flux,
+- structural coupling term between matter identity and local medium,
+- boundary/permeability relation for inner ↔ outer pressure zones.
+
+These names are placeholders only. They should not be promoted until mapped consistently onto existing ARK scalars and checked for redundancy.
+
+### Falsification burden
+
+The hypothesis becomes scientifically useful only if it can recover ordinary observables without merely renaming them. In particular, it should eventually explain or reproduce from declared substrate variables:
+
+- thermal expansion,
+- heat flow from hotter to colder systems,
+- equilibration,
+- pressure/temperature relationships,
+- inertial resistance to acceleration,
+- lack of obvious dissipative drag for uniform motion,
+- density/mass dependence of inertial response,
+- and the observable energy ledger across heat/work/radiation channels.
+
+If the same proposed medium variable cannot satisfy those constraints consistently, the model must split the mechanisms or reject the identification.
+
 ## Preliminary decomposition
 
 The 93-section historical sequence should be reorganized into clusters before detailed auditing.
