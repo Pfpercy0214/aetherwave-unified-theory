@@ -1,98 +1,72 @@
 # GALAXY_MODELING — status
 
-**Dated:** 2026-09-10  
-**Primary artifact branch:** `ARK-GAL-1D-9.4`  
-**Sources:** `ark_v94_scalar_geom.txt` header, `model_comparison.csv`, `v94_summary.txt`, branch READMEs.
+**Dated:** 2026-09-10 (updated after `recovery/galaxy-artifacts` landed)  
+**Raw v9.4 package:** `ARK-GAL-1D-9.4`  
+**Recovered later analysis:** `recovery/galaxy-artifacts` → `modeling/galaxy/recovered/`
 
 ## Branch lineage
 
 ```text
 main
- └── galaxy-modeling          # parent home (+ 1d/ drop zone)
-      └── galaxy-1d           # 1D charter (parameter-free)
-           └── ARK-GAL-1D-9.4 # v9.4 run package (present)
-                └── ARK-GAL-1D-9.5  # pending — not on repo
+ └── galaxy-modeling
+      └── galaxy-1d
+           └── ARK-GAL-1D-9.4          # raw v9.4 projector package (~30.55 RMS)
+
+workspace/gwok  (office + notes)
+recovery/galaxy-artifacts              # Curie/Paul recovery: mid-20s audit + v9.5 negative result
+  └── modeling/galaxy/recovered/
+        ├── v9.4-audit-mid20s/
+        └── v9.5-negative-result/
 ```
 
-| Branch | Content relevant to galaxy |
-|--------|----------------------------|
-| `galaxy-modeling` | Charter + `1d/README.md` stub |
-| `galaxy-1d` | 1D charter only (inherits theory PDFs) |
-| `ARK-GAL-1D-9.4` | Script, stdout, summary, CSVs, scatters |
+## Canonical result labels (do not collapse)
 
-## Method sketch (V9.4) — from `ark_v94_scalar_geom.txt` header
+From `modeling/galaxy/recovered/README.md` on `recovery/galaxy-artifacts`:
 
-Builds on corrected **V9.3** baseline:
+| Label | Approx. RMS | What it is |
+|-------|-------------|------------|
+| **Raw V9.4** `mixed_slope` | **~30.55 km/s** | Untouched projector vs standard SPARC baryonic target in the `ARK-GAL-1D-9.4` package |
+| **V9.4-derived global Y recalibration** | **~24.36 km/s** OOS | `Y_disk=0.475`, `Y_bulge=0.35` — post-V9.4 audit, **not** raw V9.4 |
+| **Guarded V9.4 / Stowe-style radial-response** | **~23.63–23.65 km/s** OOS | Guarded tests; exact Stowe form not identified; boundary-degenerate |
+| **V9.5 viscosity-shape** | — | **CLOSED negative result** — apparent ~10× radial rise largely reconstruction artifact (synthetic/null guards) |
 
-| Quantity | Definition |
-|----------|------------|
-| τ(r) | `v_obs(r) * √2 / c` |
-| θ_obs(r) | `√(2\|Φ(r)\| / c²)` |
-| κ(r) | `τ(r) / θ_obs(r)` |
+**This reconciles the earlier ~23–25 vs ~30+ confusion:** mid-20s numbers are **audit / recalibration / guarded** lineages; ~30.55 is the **raw projector** result.
 
-Integrand form:
+## Raw V9.4 package (`ARK-GAL-1D-9.4`)
 
-```text
-I(r) = |κ dθ/dr| + F_geom(r) * r * |div(κ ∇θ)|
-```
+**N = 175 galaxies, 3213 radial points.** No photometry in predictor; Y_DISK=0.5, Y_BULGE=0.7 in target.
 
-- **V9.3:** constant λ on the divergence term.
-- **V9.4:** scalar-only geometry projectors **F_geom(r)** replace λ.
-- **No photometry in the predictor.** Surface brightness / morphology saved only as **audit** variables in per-galaxy output.
-- **Target / baryonic proxy** uses SPARC components with **Y_DISK = 0.5**, **Y_BULGE = 0.7** (in `compute_sparc_baryonic`).
-- SI bridge: θ̄ from outer integral of I; `g_bar = c² θ̄ |dθ̄/dr|`; `v_bar = √(r g_bar)`.
+| projector | global_r | global_rms_kms | residual_vs_logSB_r |
+|-----------|----------|----------------|---------------------|
+| const_1_3 | 0.915 | 32.98 | −0.627 |
+| const_1_2 | 0.911 | 31.99 | −0.383 |
+| theta_slope | 0.918 | 30.73 | −0.568 |
+| kappa_slope | 0.921 | 30.63 | −0.581 |
+| **mixed_slope** | 0.921 | **30.55** | −0.580 |
+| div_partition | 0.911 | 31.99 | −0.383 |
 
-### Candidate projectors
+`kappa_outer_median ≈ 0.912`, CV ≈ 0.077. `const_1_2` ≈ `div_partition` (investigate).
 
-| Name | F_geom idea |
-|------|-------------|
-| `const_1_3` | F = 1/3 (V9.3-style control) |
-| `const_1_2` | F = 1/2 (control) |
-| `theta_slope` | F = 1/(2 + 2 clip(χ_θ,0,1)), χ_θ = \|d ln θ / d ln r\| |
-| `kappa_slope` | same with χ_κ |
-| `mixed_slope` | χ = ½(χ_θ + χ_κ) |
-| `div_partition` | q from grad-coupling vs plain curvature share; F = 1/(2+2q) |
+## Recovered folders (`recovery/galaxy-artifacts`)
 
-## Metrics (dump on `ARK-GAL-1D-9.4`)
+### `v9.4-audit-mid20s/`
+Toolkit / harness / Stowe bridge notes / CV CSVs / SB correction record / comparison md. **Home of the ~24.36 and ~23.6 results.**
 
-**N = 175 galaxies, 3213 radial points** (from `model_comparison.csv` / `v94_summary.txt`).
-
-| projector | global_r | global_rms_kms | mean_resid_kms | residual_vs_vmax_r | residual_vs_logSB_r | F_median |
-|-----------|----------|----------------|----------------|--------------------|---------------------|----------|
-| const_1_3 | 0.915 | **32.98** | −9.62 | −0.460 | **−0.627** | 0.333 |
-| const_1_2 | 0.911 | 31.99 | +7.20 | −0.090 | −0.383 | 0.500 |
-| theta_slope | 0.918 | 30.73 | −4.52 | −0.373 | −0.568 | 0.396 |
-| kappa_slope | **0.921** | 30.63 | −6.29 | −0.387 | −0.581 | 0.373 |
-| mixed_slope | 0.921 | **30.55** | −5.75 | −0.386 | −0.580 | 0.378 |
-| div_partition | 0.911 | 31.99 | +7.20 | −0.090 | −0.383 | 0.500 |
-
-Shared: `kappa_outer_median ≈ 0.912`, `kappa_outer_cv ≈ 0.077`.
-
-**Best in-file RMS:** `mixed_slope` ≈ 30.55 km/s (then kappa_slope / theta_slope).
-
-### Files present
-
-| File | Role |
-|------|------|
-| `ark_v94_scalar_geom.txt` | Full method + runner script |
-| `ark_v94_scalar_geom_stdout.txt` | Stdout JSON dump |
-| `v94_summary.txt` | Per-projector summary |
-| `model_comparison.csv` | Comparison table |
-| `{projector}_galaxy_info.csv` | Per-galaxy rows |
-| `{projector}_scatter.png` | Pred vs baryonic-proxy scatter |
+### `v9.5-negative-result/`
+Negative-result record (docx), viscosity/relax/autopsy/guard scripts + repro text. Two filenames referenced but **not** in Library at recovery (not invented): `stowe_v95_guard_output.txt`, `v95_autopsy_repro.txt` — findings preserved in comparison/guard records.
 
 ## Open questions
 
-| Issue | Note |
-|-------|------|
-| **23–25 vs ~30+ RMS** | Charter / discussion cites typical SPARC RMS ~23–25; **this v9.4 dump** shows ~30.5–33. Reconcile run definition, sample cuts, or prior version — do not blur numbers. |
-| **residual_vs_logSB** | Strong negative correlation especially for `const_1_3` (−0.63); photometry not in predictor but residuals still track log SB — audit / open. |
-| **const_1_2 ≈ div_partition** | Metrics match to numerical noise (F≈½ everywhere for div_partition in this run) — projector may be collapsing to constant ½; investigate before interpreting as geometry signal. |
-| **v9.5** | **Pending upload** — expected as new offshoot off `galaxy-1d` / latest version branch. |
-| Residual attribution | Keep **projection loss** vs **external/phase influence** as separate hypotheses. |
+| Issue | Status |
+|-------|--------|
+| 23–25 vs 30+ | **Reconciled in labels** — cite which lineage |
+| residual_vs_logSB on raw V9.4 | Still open on raw package |
+| const_1_2 ≈ div_partition | Still open |
+| Stowe form identity | Unidentified; boundary-degenerate per recovery README |
+| Merge recovery into `galaxy-1d` / version branches | Not done — recovery branch is provenance home for now |
 
-## Norms (from charters)
+## Norms
 
-- Zero articulation / no free knobs in core method; label any tuning as calibration/experiment.
-- MOND-style low residuals ≠ proof of mechanical completeness if knobs absorb lost 3D structure.
+- Zero articulation in core projector; label Y-recal / guards as calibration/experiment.
+- Do not cite mid-20s as “raw V9.4.”
 - No deletes without Paul’s OK.
