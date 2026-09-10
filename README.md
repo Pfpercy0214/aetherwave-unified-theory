@@ -15,11 +15,15 @@ The central research question is not simply whether ARK can be made to reproduce
 
 If that works, familiar laws may be interpretable as different limits or projections of one underlying causal structure. If it does not, the failures should tell us where the framework breaks.
 
+The long-term goal is deliberately deeper than curve matching or mathematical compression: to understand the **cause-and-effect structure of physical reality as far down as the framework can be responsibly resolved** — ultimately, to the smallest physically meaningful scale, the closest thing nature has to a “smallest pixel.” The project is therefore aimed at mechanism and ontology, while recognizing that those have not yet been established.
+
 ## Current scientific status
 
 Aetherwave / ARK is **not an established replacement for General Relativity, quantum mechanics, quantum field theory, statistical mechanics, or the Standard Model**.
 
 Those theories and the experiments behind them are treated here as high-quality calibration surfaces and comparison targets. Agreement with them demonstrates compatibility under stated conditions; it does not by itself establish that ARK's proposed ontology or mechanism is the one used by nature.
+
+That limitation is about the **current evidentiary status**, not the ambition of the project. Establishing a coherent causal mechanism and, eventually, a defensible ontology is the end goal. The present task is to determine whether the framework can earn that interpretation through consistent first-principles structure, cross-domain survival, independent derivation, and reproducible evidence.
 
 Likewise, a numerically precise result is not automatically a physical prediction. The project now explicitly distinguishes:
 
