@@ -6,7 +6,8 @@ This queue prioritizes work by epistemic value, not by how impressive the result
 
 **Status:** PARAMOUNT / upstream framework problem.
 
-**Primary record:** `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
+**Primary three-body record:** `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`  
+**Constitutive formalization:** `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`
 
 The three-body study exposed a framework-level requirement that sits upstream of inertia, gravity, rigid-body motion, galaxy dynamics, and other forward modeling: ARK does not yet uniquely specify how arbitrary moving structured matter sources and updates the full substrate state.
 
