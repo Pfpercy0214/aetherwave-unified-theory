@@ -1,0 +1,99 @@
+{
+  "comparison": "V5.4 (fixed \u03b1) vs V5.5 (morphology-responsive \u03b1)",
+  "v55_change": "\u03b1_eff(r) = (2\u03c0/3)(1 + f_bul(r)) \u2014 solid angle from source geometry",
+  "free_parameters": 0,
+  "v54": {
+    "label": "V5.4",
+    "total": 175,
+    "converged": 167,
+    "global_r": 0.8922,
+    "global_rms": 34.8,
+    "median_r": 0.8825,
+    "mean_r": 0.7669,
+    "frac_r_gt_08": 0.686,
+    "chi2_comp_global": 7.6581,
+    "chi2_cons_global": 2.324,
+    "chi2_comp_median": 4.468,
+    "chi2_cons_median": 1.4217,
+    "binned_residuals": {
+      "0-20": {
+        "mean_resid": 5.1,
+        "count": 386
+      },
+      "20-40": {
+        "mean_resid": 11.3,
+        "count": 759
+      },
+      "40-80": {
+        "mean_resid": 4.8,
+        "count": 625
+      },
+      "80-150": {
+        "mean_resid": -4.4,
+        "count": 737
+      },
+      "150-200": {
+        "mean_resid": -21.2,
+        "count": 445
+      },
+      "200-260": {
+        "mean_resid": -47.9,
+        "count": 396
+      },
+      "260-400": {
+        "mean_resid": -118.1,
+        "count": 40
+      }
+    },
+    "resid_bulge_corr": -0.5469
+  },
+  "v55": {
+    "label": "V5.5",
+    "total": 175,
+    "converged": 161,
+    "global_r": 0.875,
+    "global_rms": 44.8,
+    "median_r": 0.8846,
+    "mean_r": 0.6754,
+    "frac_r_gt_08": 0.629,
+    "chi2_comp_global": 6.7032,
+    "chi2_cons_global": 2.2854,
+    "chi2_comp_median": 4.6591,
+    "chi2_cons_median": 1.6432,
+    "binned_residuals": {
+      "0-20": {
+        "mean_resid": 1.0,
+        "count": 385
+      },
+      "20-40": {
+        "mean_resid": 3.3,
+        "count": 759
+      },
+      "40-80": {
+        "mean_resid": -6.3,
+        "count": 625
+      },
+      "80-150": {
+        "mean_resid": -22.3,
+        "count": 737
+      },
+      "150-200": {
+        "mean_resid": -47.6,
+        "count": 445
+      },
+      "200-260": {
+        "mean_resid": -81.1,
+        "count": 396
+      },
+      "260-400": {
+        "mean_resid": -144.8,
+        "count": 40
+      }
+    },
+    "resid_bulge_corr": -0.5217
+  },
+  "runtime": {
+    "v54": 7.3,
+    "v55": 8.6
+  }
+}
