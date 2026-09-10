@@ -10,7 +10,7 @@ Update this file whenever a number or thesis is quoted in chat or papers.
 
 | Claim | Approx. value | Label | Where | Notes / falsifier |
 |-------|---------------|-------|-------|-------------------|
-| **V5.4 inverse solver** (SPARC retrodiction) | r≈0.89, RMS≈**34.8** km/s; 167/175 converged | **NEGATIVE RESULT / CLOSED FOR ORIGINAL INTENT** | `ARK-GAL-1D-5.4` | Inverse: v_obs → v_bar; α=4π/3 claimed derived; Υ 0.5/0.7. Did **not** meet original expectations — kept as failure record; lineage continued to 9.x. Do **not** cite as a win. |
+| **V5.4 inverse solver** (SPARC retrodiction) | Summary: r≈0.89, RMS≈34.8; reported 167/175 “converged” | **NEGATIVE RESULT / CLOSED FOR ORIGINAL INTENT** | `ARK-GAL-1D-5.4` | Inverse: v_obs → v_bar; α=4π/3 claimed derived; Υ 0.5/0.7. **Paul’s operational read (authoritative over glossy summary):** only ~**34 true convergences** before **forced perfect closure** on the remainder; last **six** missed consistently; best-case correct enclosure ~**30%**. Do **not** cite summary converged-count or RMS as a catalog win. Failure path → 9.x. |
 | Raw V9.4 `mixed_slope` global RMS | ~30.55 km/s | **RAW RESULT** | `ARK-GAL-1D-9.4` (`model_comparison.csv`) | Forward projector; N=175, 3213 pts; Y_disk=0.5, Y_bulge=0.7 in target; no photometry in predictor |
 | Raw V9.4 global correlation | r ≈ 0.91–0.92 | **RAW RESULT** | same | Strong shape correlation |
 | κ_outer median / CV | ≈0.912 / ≈0.077 | **RAW RESULT** (structural regularity) | same | Stable across projectors — treat as claim only with cross-checks |
@@ -34,4 +34,4 @@ Update this file whenever a number or thesis is quoted in chat or papers.
 
 ## How to cite
 
-When summarizing to Paul or into a draft, carry the **label with the number**. Never say “we got ~23 km/s” without saying **CALIBRATED / guarded** vs **RAW ~30.55**. Never cite V5.4 as meeting the original galaxy-modeling bar.
+When summarizing to Paul or into a draft, carry the **label with the number**. Never say “we got ~23 km/s” without saying **CALIBRATED / guarded** vs **RAW ~30.55**. Never cite V5.4 as meeting the original galaxy-modeling bar; prefer Paul’s ~34 true / ~30% enclosure read over the summary’s 167/175 converged.
