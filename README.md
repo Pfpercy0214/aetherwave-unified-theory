@@ -74,6 +74,8 @@ The present working vocabulary includes:
 | `dSₜ` | Entropic or causal-pressure imbalance term, depending on formulation |
 | `ω` | Temporal / recursion anchor associated with periodicity and persistence |
 
+**Notation note — superscript `c`:** In ARK notation, the superscript `c` is a semantic qualifier for **causal** quantities. It is part of the symbol's label, not an exponent, and it is unrelated to the conventional physics symbol `c` for the speed of light. Thus `θᶜ`, `τᶜ`, and `κᶜ` denote causal/scalar framework quantities; when the speed of light appears in an equation it is written separately as `c`, `c²`, etc.
+
 These labels are working definitions, not proof that the corresponding quantities are fundamental observables. Part of the current audit is determining which definitions survive unchanged and which need revision.
 
 ## A useful example of the research philosophy
