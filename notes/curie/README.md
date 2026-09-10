@@ -6,9 +6,15 @@ It is **not** a competing canonical record. Shared project facts live in the com
 
 ## Current top priority
 
-The 2026-09-10 three-body study is now the highest-priority forward-modeling thread because it exposes the missing matter–substrate constitutive bridge needed to connect motion, inertia, gravity, geometry/asymmetry, field memory, conservation, and multidimensional dynamics without ad hoc domain patches.
+The 2026-09-10 three-body / matter–substrate program is now the highest-priority forward-modeling thread because it exposes the missing constitutive bridge needed to connect motion, inertia, gravity, geometry/asymmetry, field memory, conservation, and multidimensional dynamics without ad hoc domain patches.
 
-Primary record: `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
+The newest mechanical-core note adds a major upstream constraint: historical Maxwell–Faraday and effective-energy relations may already contain the beginnings of a common deformation / persistence mechanics, but their lineage is inconsistent and must be audited before a canonical action or solver is chosen. In particular, an earlier algebraically closed solenoid bridge using `1/2 k^c(theta^c)^2` must be reconciled with the currently archived Paper XXII squared-product bridge.
+
+Primary records:
+
+- `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
+- `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`
+- `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
 
 ## Read first
 
@@ -21,9 +27,11 @@ Primary record: `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
 7. `REWRITE_ARCHITECTURE.md`
 8. `SUBSTRATE_SCALE_BRIDGE.md`
 9. `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
-10. `THERMODYNAMICS_PILOT.md`
-11. `RESEARCH_QUEUE.md`
-12. `HANDOFFS.md`
+10. `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`
+11. `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
+12. `THERMODYNAMICS_PILOT.md`
+13. `RESEARCH_QUEUE.md`
+14. `HANDOFFS.md`
 
 ## Office rule
 
