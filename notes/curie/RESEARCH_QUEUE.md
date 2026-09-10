@@ -2,6 +2,36 @@
 
 This queue prioritizes work by epistemic value, not by how impressive the result would look.
 
+## Priority 0 — three-body dynamics and the matter–substrate constitutive bridge
+
+**Status:** PARAMOUNT / upstream framework problem.
+
+**Primary record:** `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
+
+The three-body study exposed a framework-level requirement that sits upstream of inertia, gravity, rigid-body motion, galaxy dynamics, and other forward modeling: ARK does not yet uniquely specify how arbitrary moving structured matter sources and updates the full substrate state.
+
+Immediate sequence:
+
+1. Reconcile the historical gravity-map lineage: `(theta^c)^2 = 2|Phi|/c^2` versus `Phi = theta^c c^2`.
+2. Derive the matter–substrate constitutive law from prior constraints rather than three-body residuals.
+3. State how position, velocity, acceleration history, shape, orientation, and matter distribution initialize and update `theta^c`, `tau^c`, `kappa^c`, `dS_t`, and `omega`.
+4. Require explicit matter/field energy and momentum bookkeeping.
+5. Build a sealed forward benchmark harness with a separate conventional gravitational integrator as calibration surface.
+6. Validate progressively: two-body controls → periodic three-body controls → symmetric/hierarchical triples → rigid-body/asymmetry calibration → close-encounter and chaotic systems.
+7. Preserve the Newtonian-equivalent `theta^c` figure-eight result as a control only, not a novel ARK prediction.
+8. Search for a discriminating ARK residual only after the coupling law is frozen.
+
+Non-negotiable guards:
+
+- no target-driven memory kernel or stabilizer,
+- no convergence-by-design,
+- no naive preferred-frame aether drag,
+- no claiming ordinary rigid-body effects as substrate evidence,
+- no hidden 1-D reduction of an intrinsically 3-D problem,
+- and no claim of a three-body “solution” unless the full causal model is independently specified.
+
+The goal is not to obtain a prettier orbit. The goal is to determine whether one constrained matter–substrate law can make the established gravitational/inertial behavior fall out while retaining a coherent larger causal state.
+
 ## Priority 1 — adversarial reproduction of one legacy precision claim
 
 **Target:** hydrogen 1S–2S or another historically strong ARK precision claim with recoverable inputs.
