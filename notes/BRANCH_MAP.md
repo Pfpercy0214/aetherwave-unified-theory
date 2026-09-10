@@ -1,69 +1,57 @@
 # BRANCH_MAP
 
-**Dated:** 2026-09-10  
-**Source:** `list_branches` + `get_file_contents` on each tip.  
-**Confirmed branches (6):** `ARK-GAL-1D-9.4`, `Papers`, `galaxy-1d`, `galaxy-modeling`, `main`, `workspace/gwok`.
+**Dated:** 2026-09-10 (updated for `recovery/galaxy-artifacts`)  
+**Source:** `list_branches` + `get_file_contents` on tips.
 
 ## Summary table
 
-| Branch | Purpose | Parentage (from charters / commits) | What’s on tip |
-|--------|---------|--------------------------------------|---------------|
-| `main` | Paper dump / messy office | Default / public tip | Mid–late PDFs (XII–XIV, XVII, XV–XXVI…), Complete volumes, misc notes, old I–VII-framed README |
-| `workspace/gwok` | Office setup + Gwok notes home | Cut from `main`-like tip; charter README rewritten 2026-09-10 | Same paper dump as `main` at creation + **workspace charter README** + **`notes/`** (this area) |
-| `galaxy-modeling` | Galaxy / SPARC modeling parent | Branched off `main` | Inherited theory PDFs + `1d/` drop zone + galaxy charter README |
-| `galaxy-1d` | 1D kinematics→output pipeline charter | Offshoot of `galaxy-modeling` | Inherited theory PDFs + 1D charter README (no v9.4 run package) |
-| `ARK-GAL-1D-9.4` | v9.4 SPARC modeling artifacts | Offshoot of `galaxy-1d` | Inherited theory PDFs **plus** v9.4 script/logs/CSVs/PNGs/summaries |
-| `Papers` | Early paper set ~00–10 | Older line (May 2025 uploads) | `00`–`10` early papers, Complete volume, LICENSE, dual README / `READ ME.md` |
+| Branch | Purpose | Parentage | What’s on tip |
+|--------|---------|-----------|---------------|
+| `main` | Paper dump / messy office | Default | Mid–late PDFs (XII–XIV, XVII, XV–XXVI…), Complete volumes, misc notes, old I–VII README |
+| `workspace/gwok` | Office setup + Gwok working memory | Off `main`-like tip | Papers + charter + `notes/` |
+| `galaxy-modeling` | Galaxy modeling parent | Off `main` | Theory PDFs + `1d/` + charter |
+| `galaxy-1d` | 1D pipeline charter | Off `galaxy-modeling` | Charter (no run package) |
+| `ARK-GAL-1D-9.4` | Raw v9.4 SPARC projector package | Off `galaxy-1d` | Script/logs/CSVs/PNGs + inherited PDFs |
+| **`recovery/galaxy-artifacts`** | **Recovered mid-20s audit + v9.5 negative result** | Built from workspace-like tip + Curie/Paul recovery | `modeling/galaxy/recovered/{v9.4-audit-mid20s,v9.5-negative-result}/` + notes/ |
+| `Papers` | Early ~00–10 set | Older line | Early papers, Complete volume, dual README |
 
-## Lineage (galaxy)
+## Lineage
 
 ```text
 main
  └── galaxy-modeling
       └── galaxy-1d
-           └── ARK-GAL-1D-9.4   (v9.4)
-                └── (expected) ARK-GAL-1D-9.5  — not present yet
+           └── ARK-GAL-1D-9.4     # raw ~30.55 km/s mixed_slope
+
+workspace/gwok                   # office + notes
+recovery/galaxy-artifacts        # provenance for later analysis (not a separate GitHub repo)
+  modeling/galaxy/recovered/
+    v9.4-audit-mid20s/           # ~24.36 Y-recal; ~23.6 guarded/Stowe-style
+    v9.5-negative-result/        # CLOSED negative (viscosity-shape artifact)
 ```
 
-Sibling office line: `workspace/gwok`. Early corpus: `Papers`.
+## Per-branch notes
 
-## Per-branch detail
-
-### `main`
-- **Role:** Holding dump for theory PDFs and misc files.
-- **Notable:** Includes **XXV** (containment) and **XXVI** (cognition under entropy).
-- **README:** Still describes early Papers I–VII / Zenodo framing — stale vs current tip contents.
-
-### `workspace/gwok`
-- **Role:** Collaborative office; indexes and notes without treating `main` as sacred forever.
-- **Ground rule:** No deletes without explicit OK; structure proposed here first.
-- **Intended layout (not done):** `papers/`, `notes/`, `modeling/`, `index/`.
-- **This notes area:** `notes/` (created 2026-09-10).
-
-### `galaxy-modeling`
-- **Role:** Dedicated galaxy modeling home; zero-knob methodology.
-- **Extra vs main:** `1d/README.md` drop-zone stub pointing at `galaxy-1d`.
-
-### `galaxy-1d`
-- **Role:** Parameter-free 1D SPARC pipeline charter; residual discipline.
-- **Version policy:** New versions → named offshoots (e.g. `ARK-GAL-1D-9.5`), not nested under existing refs.
+### `recovery/galaxy-artifacts`
+- **Not a separate repository** — branch on `aetherwave-unified-theory`.
+- Restores session artifacts **without modifying** raw `ARK-GAL-1D-9.4`.
+- Latest commits (2026-09-10): recovery notes, V9.4 audit lineage index, V9.5 negative-result folder, “Finalize exact V9.5 source and negative-result recovery.”
+- Two referenced outputs missing from Library (not invented): `stowe_v95_guard_output.txt`, `v95_autopsy_repro.txt`.
 
 ### `ARK-GAL-1D-9.4`
-- **Role:** Versioned v9.4 run package.
-- **Modeling files:** `ark_v94_scalar_geom.txt`, `ark_v94_scalar_geom_stdout.txt`, `v94_summary.txt`, `model_comparison.csv`, six `*_galaxy_info.csv` + six `*_scatter.png`.
-- **Note:** Root still carries inherited theory PDFs; they are not the branch purpose.
+- Authoritative for **raw** V9.4 projector metrics only.
+
+### `workspace/gwok`
+- Working-memory `notes/` live here; keep galaxy status in sync with recovery findings.
 
 ### `Papers`
-- **Role:** Early ~00–10 set (and Complete volume).
-- **Surprise:** Paper `10` is `.docx` (PDF was deleted historically per commits); both `README.md` and `READ ME.md` exist.
+- Early 00–10 only; paper 10 is `.docx`; `README.md` + `READ ME.md`.
 
-## Tip SHAs (as of survey)
+## Tip SHAs (approx., resurvey if stale)
 
-| Branch | SHA (short) |
-|--------|-------------|
-| `ARK-GAL-1D-9.4` | `f0b462d` |
-| `Papers` | `d2d43e5` |
-| `galaxy-1d` | `cf6e55d` |
-| `galaxy-modeling` | `c04a78c` |
-| `main` | `f248f28` |
+| Branch | Notes |
+|--------|--------|
+| `recovery/galaxy-artifacts` | tip includes finalize commit `7437edf` |
+| `ARK-GAL-1D-9.4` | raw package + charter |
 | `workspace/gwok` | advances with notes commits |
+| `main` | `f248f28` at last full survey |
