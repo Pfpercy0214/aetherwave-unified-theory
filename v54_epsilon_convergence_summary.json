@@ -1,0 +1,217 @@
+{
+  "method": "V5.4\u03b5: V5.4 + minimum environmental entropy for convergence",
+  "epsilon_definition": "dSt_eff = dSt * (1 + \u03b5)",
+  "epsilon_source": "binary search for minimum \u03b5 achieving convergence",
+  "free_parameters_core": 0,
+  "v54": {
+    "label": "V5.4",
+    "total": 175,
+    "converged": 167,
+    "global_r": 0.8922,
+    "global_rms": 34.8,
+    "median_r": 0.8825,
+    "frac_r_gt_08": 0.686,
+    "chi2_comp_global": 7.6581,
+    "chi2_cons_global": 2.324,
+    "chi2_comp_median": 4.468,
+    "chi2_cons_median": 1.4217,
+    "binned_residuals": {
+      "0-20": {
+        "mean_resid": 5.1,
+        "count": 386
+      },
+      "20-40": {
+        "mean_resid": 11.3,
+        "count": 759
+      },
+      "40-80": {
+        "mean_resid": 4.8,
+        "count": 625
+      },
+      "80-150": {
+        "mean_resid": -4.4,
+        "count": 737
+      },
+      "150-200": {
+        "mean_resid": -21.2,
+        "count": 445
+      },
+      "200-260": {
+        "mean_resid": -47.9,
+        "count": 396
+      },
+      "260-400": {
+        "mean_resid": -118.1,
+        "count": 40
+      }
+    },
+    "resid_bulge_corr": -0.5469
+  },
+  "v54_epsilon": {
+    "label": "V5.4\u03b5",
+    "total": 175,
+    "converged": 175,
+    "global_r": 0.9093,
+    "global_rms": 31.9,
+    "median_r": 0.886,
+    "frac_r_gt_08": 0.691,
+    "chi2_comp_global": 7.2731,
+    "chi2_cons_global": 2.1841,
+    "chi2_comp_median": 3.9908,
+    "chi2_cons_median": 1.3672,
+    "binned_residuals": {
+      "0-20": {
+        "mean_resid": 5.1,
+        "count": 386
+      },
+      "20-40": {
+        "mean_resid": 11.3,
+        "count": 759
+      },
+      "40-80": {
+        "mean_resid": 4.8,
+        "count": 625
+      },
+      "80-150": {
+        "mean_resid": -3.6,
+        "count": 737
+      },
+      "150-200": {
+        "mean_resid": -17.0,
+        "count": 445
+      },
+      "200-260": {
+        "mean_resid": -41.5,
+        "count": 396
+      },
+      "260-400": {
+        "mean_resid": -108.4,
+        "count": 40
+      }
+    },
+    "resid_bulge_corr": -0.5413
+  },
+  "epsilon_galaxies": [
+    {
+      "name": "NGC2841",
+      "v_max": 323.0,
+      "N": 50,
+      "epsilon": 0.06543,
+      "converged": true,
+      "rms_v54": 38.4,
+      "rms_eps": 43.89,
+      "distance_Mpc": 14.1,
+      "r_last_kpc": 63.64,
+      "mean_SBdisk": 169.28,
+      "mean_SBbul": 2.4122222222222223,
+      "f_bul_max": 0.6823716148949458,
+      "v_outer_slope": 0.34101971516368407
+    },
+    {
+      "name": "NGC3521",
+      "v_max": 220.0,
+      "N": 41,
+      "epsilon": 0.057617,
+      "converged": true,
+      "rms_v54": 46.02,
+      "rms_eps": 27.31,
+      "distance_Mpc": 7.7,
+      "r_last_kpc": 17.74,
+      "mean_SBdisk": 930.7057500000001,
+      "mean_SBbul": 0,
+      "f_bul_max": 0.0,
+      "v_outer_slope": -0.6824223728742007
+    },
+    {
+      "name": "NGC6946",
+      "v_max": 181.0,
+      "N": 58,
+      "epsilon": 1.869141,
+      "converged": true,
+      "rms_v54": 54.73,
+      "rms_eps": 22.04,
+      "distance_Mpc": 5.52,
+      "r_last_kpc": 20.4,
+      "mean_SBdisk": 202.2167857142857,
+      "mean_SBbul": 1385.8449999999998,
+      "f_bul_max": 0.9891515201789998,
+      "v_outer_slope": -2.244711871672241
+    },
+    {
+      "name": "NGC7331",
+      "v_max": 257.0,
+      "N": 36,
+      "epsilon": 0.302734,
+      "converged": true,
+      "rms_v54": 103.1,
+      "rms_eps": 77.69,
+      "distance_Mpc": 14.7,
+      "r_last_kpc": 36.31,
+      "mean_SBdisk": 256.4511764705882,
+      "mean_SBbul": 0,
+      "f_bul_max": 0.15613419272743564,
+      "v_outer_slope": 0.11536800395104273
+    },
+    {
+      "name": "UGC02916",
+      "v_max": 218.0,
+      "N": 43,
+      "epsilon": 0.040039,
+      "converged": true,
+      "rms_v54": 54.62,
+      "rms_eps": 42.31,
+      "distance_Mpc": 65.4,
+      "r_last_kpc": 38.0,
+      "mean_SBdisk": 80.32380952380952,
+      "mean_SBbul": 822.6481818181819,
+      "f_bul_max": 0.9914125928547426,
+      "v_outer_slope": -1.2519062542273496
+    },
+    {
+      "name": "UGC02953",
+      "v_max": 319.0,
+      "N": 115,
+      "epsilon": 0.022461,
+      "converged": true,
+      "rms_v54": 56.89,
+      "rms_eps": 54.13,
+      "distance_Mpc": 16.5,
+      "r_last_kpc": 62.39,
+      "mean_SBdisk": 868.2402857142856,
+      "mean_SBbul": 2428.6641509433957,
+      "f_bul_max": 0.9777006494360264,
+      "v_outer_slope": -0.8225806524862661
+    },
+    {
+      "name": "UGC05253",
+      "v_max": 248.0,
+      "N": 73,
+      "epsilon": 0.136719,
+      "converged": true,
+      "rms_v54": 59.83,
+      "rms_eps": 43.33,
+      "distance_Mpc": 22.9,
+      "r_last_kpc": 53.29,
+      "mean_SBdisk": 305.45736111111114,
+      "mean_SBbul": 2152.992,
+      "f_bul_max": 0.9967287960946803,
+      "v_outer_slope": -0.8344113956413667
+    },
+    {
+      "name": "UGC09133",
+      "v_max": 289.0,
+      "N": 68,
+      "epsilon": 0.075195,
+      "converged": true,
+      "rms_v54": 59.59,
+      "rms_eps": 46.74,
+      "distance_Mpc": 57.1,
+      "r_last_kpc": 108.31,
+      "mean_SBdisk": 296.001475409836,
+      "mean_SBbul": 1649.2864285714284,
+      "f_bul_max": 0.9802025582405489,
+      "v_outer_slope": -0.32506187155057753
+    }
+  ],
+  "runtime": 16.3
+}
