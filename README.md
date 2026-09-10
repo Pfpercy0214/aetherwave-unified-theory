@@ -1,32 +1,44 @@
-# galaxy-1d
+# ARK-GAL-1D-9.4
 
-**1D offshoot of `galaxy-modeling`.**
+**Version 9.4 offshoot of [`galaxy-1d`](https://github.com/Pfpercy0214/aetherwave-unified-theory/tree/galaxy-1d).**
 
-This branch is for the parameter-free **1D kinematics → output** galaxy pipeline (SPARC and related), kept separate because the method and residual story are specific.
+This branch is the home for the **ARK V9.4** 1D scalar-geometry projector runs (SPARC), not a separate repository. It was created from `galaxy-1d` when the v9.4 materials were uploaded.
 
-## Why 1D has its own line
+## Lineage
 
-- Collapse from 3D → 1D throws away structure; that loss shows up in residuals (not in tuning knobs)
-- Zero articulation: take kinematics / data in, emit results — no free parameters to absorb “dark” phenomenology or projection loss
-- Typical SPARC RMS in recent work ~23–25; residual attribution is an open, disciplined question (mostly projection loss, some external influence)
+```text
+main
+ └── galaxy-modeling
+      └── galaxy-1d
+           └── ARK-GAL-1D-9.4   ← you are here (v9.4)
+```
 
-## Parent / siblings
+Sibling / office branches: `workspace/gwok` (corpus organization), `Papers` (early paper set).
 
-- Parent conceptual home: [`galaxy-modeling`](https://github.com/Pfpercy0214/aetherwave-unified-theory/tree/galaxy-modeling)
-- Folder drop on parent: `1d/` on that branch
-- Theory corpus / office setup: `main`, `workspace/gwok`
+## v9.4 modeling artifacts (this version)
+
+Method note: *ARK V9.4 scalar-derived geometry projector test*
+
+| File | Role |
+|------|------|
+| `ark_v94_scalar_geom.txt` | Run / method log |
+| `ark_v94_scalar_geom_stdout.txt` | Stdout capture |
+| `v94_summary.txt` | Per-projector summary (r, RMS, residuals, κ, F) |
+| `model_comparison.csv` | Cross-model comparison table |
+| `*_galaxy_info.csv` + `*_scatter.png` | Per projector: `const_1_2`, `const_1_3`, `theta_slope`, `kappa_slope`, `mixed_slope`, `div_partition` |
+
+Summary snapshot from `v94_summary.txt` (175 galaxies, 3213 radial points): global RMS roughly **~30.6–33.0 km/s** across projectors in this dump (best in-file: `mixed_slope` / `kappa_slope` / `theta_slope` near ~30.5–30.7).
+
+## About the theory PDFs on this branch
+
+Root still contains the inherited paper corpus from `main` / `galaxy-1d`. Those are **not** part of the v9.4 modeling package — they came along because the branch was cut from a paper-heavy tip. Treat this branch’s *purpose* as the v9.4 artifacts above; we can tidy layout later without deleting anything unless Paul says so.
 
 ## Ground rules
 
 1. **No deletes without Paul’s explicit OK.**
-2. Keep knobs out of the core method — if something is tuned, label it as calibration or experiment, not silent fit.
-3. When discussing residuals, keep **projection loss** and **outside influence** as separate hypotheses with different falsifiers.
-4. MOND-style low residuals are not treated as proof of mechanical completeness when knobs can absorb lost 3D structure.
-
-## Drop zone
-
-Upload solvers, run scripts, SPARC inputs/outputs, RMS tables, and notes here. A fuller folder layout can grow once the first materials land.
+2. Version branches stay specific (9.4 here); newer versions get their own offshoot off `galaxy-1d`.
+3. Residual interpretation: keep projection loss vs outside influence as separate hypotheses.
 
 ---
 
-*1D ARK galaxy modeling — honest residuals over pretty knobs.*
+*ARK GAL 1D v9.4 — versioned offshoot under galaxy-1d.*
