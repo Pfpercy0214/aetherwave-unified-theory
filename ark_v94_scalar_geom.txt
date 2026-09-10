@@ -1,0 +1,298 @@
+#!/usr/bin/env python3
+"""
+ARK V9.4 — scalar-derived geometry projector test.
+
+Builds on the corrected V9.3 reproducibility baseline:
+  tau(r)       = v_obs(r) * sqrt(2) / c
+  theta_obs(r) = sqrt(2 |Phi(r)| / c^2)
+  kappa(r)     = tau(r) / theta_obs(r)
+
+V9.3 used a constant geometry factor lambda on the divergence term:
+  I(r) = |kappa dtheta/dr| + lambda * r * |div(kappa grad theta)|
+
+V9.4 tests scalar-only geometry projectors F_geom(r), replacing lambda:
+  I(r) = |kappa dtheta/dr| + F_geom(r) * r * |div(kappa grad theta)|
+
+No photometry is used in the predictor. Surface brightness and morphology are only saved as
+audit variables in the per-galaxy output.
+
+Candidate projectors:
+  const_1_3, const_1_2:
+      Controls matching V9.3.
+
+  theta_slope:
+      chi_theta = |d ln theta / d ln r|
+      F = 1 / (2 + 2 clip(chi_theta, 0, 1))
+      Interpretation: effective projection dimension D_eff = 2 + 2 chi_theta.
+      Disk-like relaxed profiles (small chi) approach 1/2; compact/steep profiles approach 1/4.
+      Kepler/spherical-like chi~1/2 gives ~1/3.
+
+  kappa_slope:
+      chi_kappa = |d ln kappa / d ln r|
+      F = 1 / (2 + 2 clip(chi_kappa, 0, 1))
+
+  mixed_slope:
+      chi = 0.5*(chi_theta + chi_kappa)
+      F = 1 / (2 + 2 clip(chi, 0, 1))
+
+  div_partition:
+      q = |grad(kappa).grad(theta)| / (|kappa lap(theta)| + |grad(kappa).grad(theta)|)
+      F = 1 / (2 + 2 q)
+      Interpretation: geometry projector based on how much of div(kappa grad theta)
+      comes from stiffness-gradient coupling instead of plain curvature.
+
+The SI bridge remains c^2 through the same theta_bar reconstruction:
+  theta_bar = integral_from_outer I(r) dr
+  g_bar = c^2 theta_bar |d theta_bar/dr|
+  v_bar = sqrt(r g_bar)
+"""
+from __future__ import annotations
+
+import argparse, csv, io, json, zipfile
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Optional, Union
+
+import numpy as np
+from scipy.integrate import cumulative_trapezoid
+from scipy.ndimage import gaussian_filter1d
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+
+C = 299_792_458.0
+KPC = 3.08567758e19
+Y_DISK = 0.5
+Y_BULGE = 0.7
+EPS = 1e-30
+
+@dataclass
+class Galaxy:
+    name: str
+    distance_mpc: Optional[float]
+    r_kpc: np.ndarray
+    v_obs_kms: np.ndarray
+    err_v_kms: np.ndarray
+    v_gas_kms: np.ndarray
+    v_disk_kms: np.ndarray
+    v_bul_kms: np.ndarray
+    sb_disk: np.ndarray
+    sb_bul: np.ndarray
+    @property
+    def n(self): return len(self.r_kpc)
+
+def _parse_rotmod_text(name: str, text: str) -> Optional[Galaxy]:
+    rows=[]; distance=None
+    for raw in text.splitlines():
+        line=raw.strip()
+        if not line: continue
+        if line.startswith('#'):
+            if 'Distance' in line and '=' in line:
+                try: distance=float(line.split('=',1)[1].strip().split()[0])
+                except Exception: pass
+            continue
+        parts=line.split()
+        if len(parts)>=6:
+            try: vals=[float(x) for x in parts[:8]]
+            except ValueError: continue
+            while len(vals)<8: vals.append(0.0)
+            rows.append(vals)
+    if len(rows)<3: return None
+    arr=np.asarray(rows,float)
+    return Galaxy(Path(name).name.replace('_rotmod.dat',''), distance,
+                  arr[:,0], arr[:,1], arr[:,2], arr[:,3], arr[:,4], arr[:,5], arr[:,6], arr[:,7])
+
+def load_galaxies(data_path: Union[str,Path]) -> list[Galaxy]:
+    data_path=Path(data_path)
+    galaxies=[]
+    if data_path.is_dir():
+        for fp in sorted(data_path.glob('*_rotmod.dat')):
+            gal=_parse_rotmod_text(fp.name, fp.read_text(errors='replace'))
+            if gal is not None: galaxies.append(gal)
+    elif data_path.suffix.lower()=='.zip':
+        with zipfile.ZipFile(data_path,'r') as zf:
+            for name in sorted(n for n in zf.namelist() if n.endswith('_rotmod.dat')):
+                with zf.open(name,'r') as fh:
+                    text=io.TextIOWrapper(fh, encoding='utf-8', errors='replace').read()
+                gal=_parse_rotmod_text(name,text)
+                if gal is not None: galaxies.append(gal)
+    else:
+        raise ValueError(f'Unsupported data path: {data_path}')
+    return galaxies
+
+def adaptive_smooth(arr,R,N,base_sig):
+    if len(arr)<7: return gaussian_filter1d(arr, sigma=base_sig)
+    d2=np.abs(np.gradient(np.gradient(arr[:N],R[:N]),R[:N]))
+    d2=np.concatenate([d2, np.zeros(len(arr)-N)])
+    d2_norm=d2/(np.max(d2)+EPS)
+    light=gaussian_filter1d(arr, sigma=max(1,base_sig//3))
+    heavy=gaussian_filter1d(arr, sigma=base_sig*2)
+    weight=gaussian_filter1d(d2_norm, sigma=max(2,base_sig//2))
+    return weight*light + (1-weight)*heavy
+
+def compute_sparc_baryonic(gal):
+    vg,vd,vb=gal.v_gas_kms, gal.v_disk_kms, gal.v_bul_kms
+    return np.sqrt(np.maximum(np.abs(vg)*vg + Y_DISK*np.abs(vd)*vd + Y_BULGE*np.abs(vb)*vb, 0.0))
+
+def morphology(gal):
+    vb2=np.abs(gal.v_bul_kms)**2; vd2=np.abs(gal.v_disk_kms)**2; vg2=np.abs(gal.v_gas_kms)**2
+    vtot2=vb2+vd2+vg2
+    sb=gal.sb_disk[gal.sb_disk>0]
+    return {
+        'v_max': float(np.max(gal.v_obs_kms)),
+        'f_bul': float(np.max(vb2/np.maximum(vtot2,1e-10))),
+        'f_gas': float(np.mean(vg2/np.maximum(vtot2,1e-10))),
+        'log_SBdisk': float(np.log10(max(np.mean(sb),1e-3))) if len(sb) else 0.0,
+    }
+
+def safe_log_slope(y, x):
+    logx=np.log(np.maximum(x, EPS))
+    logy=np.log(np.maximum(np.abs(y), EPS))
+    out=np.abs(np.gradient(logy, logx))
+    return np.nan_to_num(out, nan=0.0, posinf=1.0, neginf=1.0)
+
+def smooth_projector(F, sigma=2):
+    F=np.nan_to_num(F, nan=1/3, posinf=1/3, neginf=1/3)
+    F=np.clip(F, 0.20, 0.60)
+    if len(F)>=5:
+        F=gaussian_filter1d(F, sigma=sigma)
+    return np.clip(F, 0.20, 0.60)
+
+def solve(gal: Galaxy, projector: str) -> Optional[dict]:
+    r=np.asarray(gal.r_kpc,float)*KPC; v=np.asarray(gal.v_obs_kms,float)*1e3
+    N=len(r)
+    if N<3 or not np.all(np.isfinite(r)) or not np.all(np.isfinite(v)): return None
+    g_obs=v**2/np.maximum(r,r[0])
+    r_ext=np.linspace(r[-1]*1.01, 20.0*r[-1], 400)
+    R=np.concatenate([r,r_ext])
+    G_obs=np.concatenate([g_obs, g_obs[-1]*(r[-1]/r_ext)**2])
+    cum_obs=cumulative_trapezoid(G_obs,R,initial=0.0)
+    phi_obs=cum_obs[-1]-cum_obs
+    theta_full=np.sqrt(np.maximum(2.0*phi_obs/C**2,0.0))
+    theta=theta_full[:N]
+    base_sig=max(3,int(2*np.median(np.diff(R[:N]))/np.median(np.diff(R))))
+    V_full=np.concatenate([v, v[-1]*np.ones(len(r_ext))])
+    tau_raw=V_full*np.sqrt(2.0)/C
+    tau_full=np.maximum(adaptive_smooth(tau_raw,R,N,base_sig), EPS)
+    tau=tau_full[:N]
+    kappa_abs_full=tau_full/np.maximum(theta_full,EPS)
+    kappa_full=np.maximum(gaussian_filter1d(kappa_abs_full, sigma=max(2,base_sig//2)), EPS)
+    kappa=kappa_full[:N]
+
+    dtheta_full=np.gradient(theta_full,R)
+    dtheta=dtheta_full[:N]
+    base_integrand=np.abs(kappa*dtheta)
+
+    flux_full=R**2*kappa_full*dtheta_full
+    div_full=np.gradient(flux_full,R)/np.maximum(R**2,1e-300)
+    div=div_full[:N]
+
+    # Components for scalar-only projectors on observed domain.
+    dkappa=np.gradient(kappa, r)
+    d2theta=np.gradient(dtheta, r)
+    lap_theta=d2theta + 2.0*dtheta/np.maximum(r, r[0])
+    plain=np.abs(kappa*lap_theta)
+    grad_couple=np.abs(dkappa*dtheta)
+
+    if projector == 'const_1_3':
+        F=np.full(N, 1/3)
+    elif projector == 'const_1_2':
+        F=np.full(N, 1/2)
+    elif projector == 'theta_slope':
+        chi=np.clip(safe_log_slope(theta, r), 0, 1)
+        F=1.0/(2.0 + 2.0*chi)
+    elif projector == 'kappa_slope':
+        chi=np.clip(safe_log_slope(kappa, r), 0, 1)
+        F=1.0/(2.0 + 2.0*chi)
+    elif projector == 'mixed_slope':
+        chi=np.clip(0.5*(safe_log_slope(theta,r)+safe_log_slope(kappa,r)), 0, 1)
+        F=1.0/(2.0 + 2.0*chi)
+    elif projector == 'div_partition':
+        q=grad_couple/np.maximum(plain+grad_couple, EPS)
+        q=np.clip(q, 0, 1)
+        F=1.0/(2.0 + 2.0*q)
+    else:
+        raise ValueError(f'unknown projector: {projector}')
+    F=smooth_projector(F, sigma=max(1,base_sig//4))
+
+    integrand=base_integrand + F*r*np.abs(div)
+    cum_integrand=cumulative_trapezoid(integrand,r,initial=0.0)
+    theta_bar=np.maximum(cum_integrand[-1]-cum_integrand, EPS)
+    dtheta_bar=np.gradient(theta_bar,r)
+    g_bar=C**2*theta_bar*np.abs(dtheta_bar)
+    v_bar=np.sqrt(np.maximum(r*g_bar,0.0))/1e3
+    n_outer=max(3,N//5)
+    return {
+        'v_pred_kms': v_bar,
+        'kappa_outer': float(np.median(kappa[-n_outer:])),
+        'kappa_center': float(kappa[0]),
+        'kappa_mean': float(np.mean(kappa)),
+        'F_median': float(np.median(F)),
+        'F_mean': float(np.mean(F)),
+        'F_inner': float(np.mean(F[:max(1,N//5)])),
+        'F_outer': float(np.mean(F[-max(1,N//5):])),
+    }
+
+def evaluate(galaxies, projector):
+    all_meas=[]; all_pred=[]; rows=[]
+    for gal in galaxies:
+        sol=solve(gal,projector)
+        if sol is None: continue
+        v_meas=compute_sparc_baryonic(gal); v_pred=sol['v_pred_kms']
+        valid=(v_meas>1)&(v_pred>1)&np.isfinite(v_meas)&np.isfinite(v_pred)
+        if np.sum(valid)<3: continue
+        resid=v_pred-v_meas
+        row={'name':gal.name,'N':gal.n, **morphology(gal),
+             'kappa_outer':sol['kappa_outer'],'kappa_center':sol['kappa_center'],'kappa_mean':sol['kappa_mean'],
+             'F_median':sol['F_median'],'F_mean':sol['F_mean'],'F_inner':sol['F_inner'],'F_outer':sol['F_outer'],
+             'mean_resid':float(np.mean(resid[valid])), 'rms_resid':float(np.sqrt(np.mean(resid[valid]**2))),
+             'corr':float(np.corrcoef(v_meas[valid],v_pred[valid])[0,1]) if np.sum(valid)>3 else float('nan')}
+        rows.append(row)
+        all_meas.extend(v_meas[valid].tolist()); all_pred.extend(v_pred[valid].tolist())
+    am=np.asarray(all_meas); ap=np.asarray(all_pred); res=ap-am
+    vmax=np.asarray([r['v_max'] for r in rows]); mres=np.asarray([r['mean_resid'] for r in rows])
+    k_out=np.asarray([r['kappa_outer'] for r in rows]); Fmed=np.asarray([r['F_median'] for r in rows])
+    summary={
+        'projector':projector, 'n_galaxies':len(rows), 'n_radial_points':int(len(am)),
+        'global_r':float(np.corrcoef(am,ap)[0,1]), 'global_rms_kms':float(np.sqrt(np.mean(res**2))),
+        'global_mean_resid_kms':float(np.mean(res)),
+        'residual_vs_vmax_r':float(np.corrcoef(mres,vmax)[0,1]),
+        'kappa_outer_median':float(np.median(k_out)), 'kappa_outer_cv':float(np.std(k_out)/np.mean(k_out)),
+        'F_median_global':float(np.median(Fmed)), 'F_mean_global':float(np.mean(Fmed)),
+        'F_vs_logSB_r':float(np.corrcoef(Fmed, np.asarray([r['log_SBdisk'] for r in rows]))[0,1]),
+        'residual_vs_logSB_r':float(np.corrcoef(mres, np.asarray([r['log_SBdisk'] for r in rows]))[0,1]),
+    }
+    return summary, rows, am, ap
+
+def write_csv(path, rows):
+    if not rows: return
+    with open(path,'w',newline='') as f:
+        w=csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
+
+def plot_scatter(path, am, ap, title):
+    fig,ax=plt.subplots(figsize=(7,6)); ax.scatter(am,ap,s=8,alpha=0.45)
+    lo=float(min(np.min(am),np.min(ap))); hi=float(max(np.max(am),np.max(ap)))
+    ax.plot([lo,hi],[lo,hi],'--',lw=1); ax.set_xlabel('SPARC baryonic velocity proxy (km/s)')
+    ax.set_ylabel('ARK predicted velocity (km/s)'); ax.set_title(title); ax.grid(True,alpha=.25)
+    fig.tight_layout(); fig.savefig(path,dpi=180); plt.close(fig)
+
+def main():
+    p=argparse.ArgumentParser()
+    p.add_argument('--data', required=True); p.add_argument('--out', default='ark_v94_scalar_geom_out')
+    args=p.parse_args(); out=Path(args.out); out.mkdir(parents=True,exist_ok=True)
+    galaxies=load_galaxies(args.data)
+    projectors=['const_1_3','const_1_2','theta_slope','kappa_slope','mixed_slope','div_partition']
+    summaries={}; infos={}
+    for proj in projectors:
+        s,rows,am,ap=evaluate(galaxies,proj)
+        summaries[proj]=s; infos[proj]=rows
+        write_csv(out/f'{proj}_galaxy_info.csv', rows)
+        plot_scatter(out/f'{proj}_scatter.png', am, ap, proj)
+    with open(out/'v94_summary.json','w') as f: json.dump({'method':'ARK V9.4 scalar-derived geometry projector test','models':summaries},f,indent=2)
+    # Compact model comparison CSV.
+    keys=list(next(iter(summaries.values())).keys())
+    with open(out/'model_comparison.csv','w',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=keys); w.writeheader(); w.writerows(summaries.values())
+    print(json.dumps({'loaded_galaxies':len(galaxies),'models':summaries},indent=2))
+
+if __name__=='__main__': main()
