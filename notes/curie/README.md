@@ -8,13 +8,16 @@ It is **not** a competing canonical record. Shared project facts live in the com
 
 The 2026-09-10 three-body / matter–substrate program is now the highest-priority forward-modeling thread because it exposes the missing constitutive bridge needed to connect motion, inertia, gravity, geometry/asymmetry, field memory, conservation, and multidimensional dynamics without ad hoc domain patches.
 
-The newest mechanical-core note adds a major upstream constraint: historical Maxwell–Faraday and effective-energy relations may already contain the beginnings of a common deformation / persistence mechanics, but their lineage is inconsistent and must be audited before a canonical action or solver is chosen. In particular, an earlier algebraically closed solenoid bridge using `1/2 k^c(theta^c)^2` must be reconciled with the currently archived Paper XXII squared-product bridge.
+The mechanical-core note adds a major upstream constraint: historical Maxwell–Faraday and effective-energy relations may already contain the beginnings of a common deformation / persistence mechanics, but their lineage is inconsistent and must be audited before a canonical action or solver is chosen. In particular, an earlier algebraically closed solenoid bridge using `1/2 k^c(theta^c)^2` must be reconciled with the currently archived Paper XXII squared-product bridge.
+
+The recurrence/time/frequency audit adds a second major upstream constraint: historical `omega` is semantically overloaded across the corpus and cannot presently be treated as one unambiguous fundamental rate. Signed state evolution, recurrence-frequency magnitude, angular phase rate, update rate, and pressure-balance residual must remain distinct until dimensions and mechanics derive their relationships. The same audit reframes `2pi` as the radian representation of one closed recurrence rather than a separately derived physical ingredient and promotes quartz as the first clean recurrence calibration problem.
 
 Primary records:
 
 - `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
 - `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`
 - `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
+- `2026-09-10_ARK_RECURRENCE_TIME_FREQUENCY_IDENTITY_CLOSURE_AUDIT.md`
 
 ## Read first
 
@@ -29,9 +32,10 @@ Primary records:
 9. `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
 10. `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`
 11. `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
-12. `THERMODYNAMICS_PILOT.md`
-13. `RESEARCH_QUEUE.md`
-14. `HANDOFFS.md`
+12. `2026-09-10_ARK_RECURRENCE_TIME_FREQUENCY_IDENTITY_CLOSURE_AUDIT.md`
+13. `THERMODYNAMICS_PILOT.md`
+14. `RESEARCH_QUEUE.md`
+15. `HANDOFFS.md`
 
 ## Office rule
 
