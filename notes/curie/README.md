@@ -12,12 +12,15 @@ The mechanical-core note adds a major upstream constraint: historical Maxwell–
 
 The recurrence/time/frequency audit adds a second major upstream constraint: historical `omega` is semantically overloaded across the corpus and cannot presently be treated as one unambiguous fundamental rate. Signed state evolution, recurrence-frequency magnitude, angular phase rate, update rate, and pressure-balance residual must remain distinct until dimensions and mechanics derive their relationships. The same audit reframes `2pi` as the radian representation of one closed recurrence rather than a separately derived physical ingredient and promotes quartz as the first clean recurrence calibration problem.
 
+The 2026-09-11 intrinsic-behavior clarification is now the cross-cutting interpretation guardrail for those notes. Its central rule is that **behavior is the candidate intrinsic content; effective properties and numerical values are conditioned on the identity, state, geometry, boundaries, and environment.** In particular, a frequency-like `omega` should be treated as the measured eigenbehavior of a solved persistent bounded identity unless an independent more primitive role is actually derived. The historical five-scalar language remains provenance, but notation alone does not establish that `omega` is an independent fundamental dynamical degree of freedom.
+
 Primary records:
 
 - `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
 - `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`
 - `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
 - `2026-09-10_ARK_RECURRENCE_TIME_FREQUENCY_IDENTITY_CLOSURE_AUDIT.md`
+- `2026-09-11_INTRINSIC_BEHAVIOR_IDENTITY_BOUNDARIES_AND_EMERGENT_PROPERTIES.md`
 
 ## Read first
 
@@ -33,9 +36,10 @@ Primary records:
 10. `2026-09-10_MATTER_SUBSTRATE_FORWARD_COUPLING_FORMALIZATION.md`
 11. `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
 12. `2026-09-10_ARK_RECURRENCE_TIME_FREQUENCY_IDENTITY_CLOSURE_AUDIT.md`
-13. `THERMODYNAMICS_PILOT.md`
-14. `RESEARCH_QUEUE.md`
-15. `HANDOFFS.md`
+13. `2026-09-11_INTRINSIC_BEHAVIOR_IDENTITY_BOUNDARIES_AND_EMERGENT_PROPERTIES.md`
+14. `THERMODYNAMICS_PILOT.md`
+15. `RESEARCH_QUEUE.md`
+16. `HANDOFFS.md`
 
 ## Office rule
 
