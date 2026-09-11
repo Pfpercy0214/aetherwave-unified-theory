@@ -14,6 +14,8 @@ The recurrence/time/frequency audit adds a second major upstream constraint: his
 
 The 2026-09-11 intrinsic-behavior clarification is now the cross-cutting interpretation guardrail for those notes. Its central rule is that **behavior is the candidate intrinsic content; effective properties and numerical values are conditioned on the identity, state, geometry, boundaries, and environment.** In particular, a frequency-like `omega` should be treated as the measured eigenbehavior of a solved persistent bounded identity unless an independent more primitive role is actually derived. The historical five-scalar language remains provenance, but notation alone does not establish that `omega` is an independent fundamental dynamical degree of freedom.
 
+The pre-ARK scalar ancestry audit strengthens that interpretation historically. Papers VI–VIII already contain the recurring behavioral roles of geometric deformation, restoring resistance, persistence/history, bounded identity, and external/boundary forcing. At the same time, they expose semantic drift that the modern reconstruction must undo: `tau` appears as a relaxation time before later becoming action-like, `theta` is historically calibrated through clock/proper-time relations, and Paper VIII keeps thermodynamic entropy separate from an explicit forcing term while later ARK uses `dS_t` as external causal pressure. The current reconstruction should therefore preserve the behavioral constraints while refusing to let inherited symbols decide the final ontology or dimensions.
+
 Primary records:
 
 - `2026-09-10_STUDYING_THE_THREE_BODY_PROBLEM_WITH_ARK.md`
@@ -21,6 +23,7 @@ Primary records:
 - `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
 - `2026-09-10_ARK_RECURRENCE_TIME_FREQUENCY_IDENTITY_CLOSURE_AUDIT.md`
 - `2026-09-11_INTRINSIC_BEHAVIOR_IDENTITY_BOUNDARIES_AND_EMERGENT_PROPERTIES.md`
+- `2026-09-11_PRE_ARK_SCALAR_ANCESTRY_AUDIT.md`
 
 ## Read first
 
@@ -37,9 +40,10 @@ Primary records:
 11. `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`
 12. `2026-09-10_ARK_RECURRENCE_TIME_FREQUENCY_IDENTITY_CLOSURE_AUDIT.md`
 13. `2026-09-11_INTRINSIC_BEHAVIOR_IDENTITY_BOUNDARIES_AND_EMERGENT_PROPERTIES.md`
-14. `THERMODYNAMICS_PILOT.md`
-15. `RESEARCH_QUEUE.md`
-16. `HANDOFFS.md`
+14. `2026-09-11_PRE_ARK_SCALAR_ANCESTRY_AUDIT.md`
+15. `THERMODYNAMICS_PILOT.md`
+16. `RESEARCH_QUEUE.md`
+17. `HANDOFFS.md`
 
 ## Office rule
 
