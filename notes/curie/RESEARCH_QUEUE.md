@@ -11,6 +11,7 @@ This queue prioritizes work by epistemic value, not by how impressive the result
 **Mechanical core / Maxwell–Faraday lineage:** `2026-09-10_ARK_MECHANICAL_CORE_MAXWELL_FARADAY_AND_RATE_EMERGENCE.md`  
 **Recurrence / time / frequency / identity-closure audit:** `2026-09-10_ARK_RECURRENCE_TIME_FREQUENCY_IDENTITY_CLOSURE_AUDIT.md`  
 **Current intrinsic-behavior / identity-boundary clarification:** `2026-09-11_INTRINSIC_BEHAVIOR_IDENTITY_BOUNDARIES_AND_EMERGENT_PROPERTIES.md`  
+**Tau / omega behavioral-expression clarification:** `2026-09-11_TAU_OMEGA_AS_EXPRESSIONS_OF_BEHAVIOR.md`  
 **Pre-ARK scalar ancestry audit:** `2026-09-11_PRE_ARK_SCALAR_ANCESTRY_AUDIT.md`
 
 The three-body study exposed a framework-level requirement that sits upstream of inertia, gravity, rigid-body motion, galaxy dynamics, and other forward modeling: ARK does not yet uniquely specify how arbitrary moving structured matter sources and updates the full substrate state.
@@ -21,19 +22,21 @@ The recurrence/time/frequency audit adds another upstream constraint: historical
 
 The 2026-09-11 intrinsic-behavior clarification adds the broader organizing rule now governing all of these notes: **behavior is the candidate intrinsic content; properties and numerical values are state-, identity-, boundary-, geometry-, and environment-conditioned expressions of that behavior.** A stable number is not automatically fundamental merely because it is reproducible. For recurrence specifically, a frequency-like `omega` is expected to be an observable of a solved recurring mode of a persistent bounded identity, not a pre-assigned property owned independently of the boundary-value problem. The historical five-scalar language remains useful for lineage, but `omega` should not presently be assumed to be an independent fundamental dynamical degree of freedom merely because it was historically listed as one.
 
+The tau/omega clarification sharpens that rule into a direct reconstruction constraint: **persistence-like `tau` and recurrence-like `omega` are presently best treated as expressions of behavior, not automatically as primitive stored quantities.** A bounded mode may possess both a persistence scale and a recurrence rate, but those are complementary observables rather than universal inverses. Persistence can exist without recurrence; recurrence can be transient; and changing the identity boundary can change both while the underlying response law remains the same. The forward model should therefore predict persistence and recurrence first and measure/label `tau` and `omega` afterward wherever possible.
+
 The pre-ARK ancestry audit now shows that the behavior-first interpretation is not merely a late overlay. Papers VI–VIII already contain the recurring mechanical roles `theta` as configuration/deformation, `k` as resistance/restoring behavior, `tau` as persistence/history, explicit identity/boundary conditions, and boundary forcing capable of sustaining collective modes. But the same audit exposes semantic compression that must be undone before a canonical kernel is chosen: Paper VI–VIII `tau` is predominantly a relaxation time in seconds whereas later ARK also treats `tau` as action-like `E*t`; the historical `theta` observable is tied to clock/proper-time ratios and therefore cannot be used uncritically as a pre-temporal primitive; and Paper VIII keeps thermodynamic entropy `S^c` separate from explicit external forcing `F_u`, while later ARK folds external causal pressure into `dS_t/DeltaS_t`. The durable ancestry is therefore behavioral, not proof that the later five symbols were always one dimensionally invariant set.
 
 Immediate sequence:
 
-1. Use the recurrence/time/frequency audit, intrinsic-behavior clarification, and pre-ARK ancestry audit as semantic guardrails: identify the physical identity and boundaries first; keep signed evolution, recurrence rate, entropy, external drive, and pressure-balance roles distinct until derived.
+1. Use the recurrence/time/frequency audit, intrinsic-behavior clarification, tau/omega behavioral-expression clarification, and pre-ARK ancestry audit as semantic guardrails: identify the physical identity and boundaries first; keep signed evolution, recurrence rate, persistence scale, entropy, external drive, and pressure-balance roles distinct until derived.
 2. Build a **lineage-aware** dimensions/normalization table for every historical definition of `theta^c`, `tau^c`, `k^c`, entropy/forcing, `omega`, and the historical EM bridges. Record source, units, role, and whether each quantity was measured, calibrated, assumed, or derived.
 3. Split historical entropy from external source during derivation. Use neutral `S_ext` / `F_ext` for drive and a separate entropy functional/flux until a conservation/constitutive derivation proves a relation to `dS_t`.
 4. Split relaxation-time memory from action-like memory. Do not identify a `tau` measured in seconds with a `tau` carrying `J*s` by symbol identity; retain neutral persistence coefficients such as `M_theta^c` where needed.
 5. Recover and audit Paper I directly so the original causal-slope definition can be compared against later summaries, especially the proper-time/coordinate-time mapping.
-6. Formalize the identity-boundary dependence of collective modes using neutral modal notation before mapping any mode coefficient directly to `tau^c` or `k^c`.
+6. Formalize the identity-boundary dependence of collective modes using neutral modal notation before mapping any mode coefficient directly to `tau^c` or `k^c`. Treat mode persistence and recurrence as outputs to be measured from the solved trajectory, not as mandatory primitive inputs.
 7. Recover and audit the Maxwell–Faraday / energy-bridge lineage: earlier `1/2 k^c(theta^c)^2` versus Paper XXII `1/2(k^c theta^c)^2`, including the geometry-factor insertion and inversion algebra.
 8. Audit Paper XXIV H.10 and the pre-ARK Paper VII action proposal together to determine whether local `theta^2` storage, spatial `|grad theta|^2` storage, or both survive in one common action.
-9. Build a quartz recurrence benchmark: static deformation, driven response, natural resonance, and dissipation must emerge from state/mechanics/identity boundaries without inserting the resonance rate.
+9. Build a quartz recurrence benchmark: static deformation, driven response, natural resonance, persistence/ringdown, and dissipation must emerge from state/mechanics/identity boundaries without inserting the resonance rate or persistence time as target values.
 10. Reconcile the historical gravity-map lineage: `(theta^c)^2 = 2|Phi|/c^2` versus `Phi = theta^c c^2`.
 11. Derive the matter–substrate constitutive law from prior constraints and a common energy/momentum ledger rather than three-body residuals.
 12. State how position, velocity, acceleration history, shape, orientation, matter distribution, identity boundary, and environmental conditions initialize and update the surviving ARK state.
@@ -49,6 +52,8 @@ Non-negotiable guards:
 - no convergence-by-design,
 - no prescribed sustained dynamical rate when the rate can be derived from the state,
 - no treating a stable measured property/value as intrinsically fundamental merely because it is stable,
+- no treating a measured persistence time as proof that `tau` is a primitive stored time quantity,
+- no assuming `omega = 1/tau` except where a specific solved model independently yields that relation,
 - no assigning a collective recurrence frequency before declaring the identity domain and boundary conditions that define the mode,
 - no silently equating signed state evolution with recurrence-frequency magnitude,
 - no treating `2pi` as a separately derived physical constant merely because a closed cycle is represented in radians,
@@ -134,7 +139,7 @@ Requirements:
 - comparison against ordinary systematic-error explanations,
 - no post-hoc condition variable introduced solely to repair a miss.
 
-The 2026-09-10 mechanical-core formalization adds a stricter working principle for dynamical quantities: effective constants and sustained rates should be treated as properties of sustained regimes wherever the underlying mechanics can derive them, rather than inserted as free instructions. The recurrence audit sharpens this further: the solved trajectory should determine recurrence and signed evolution wherever possible, and the selected clock/phase convention must not be mistaken for the underlying mechanics. The 2026-09-11 intrinsic-behavior clarification generalizes both: **the response law is the candidate intrinsic object; a stable effective property is a solution conditioned on the identity, state, geometry, boundaries, and environment.** The pre-ARK ancestry audit strengthens this historically while warning that repeated symbols do not guarantee repeated dimensions or roles.
+The 2026-09-10 mechanical-core formalization adds a stricter working principle for dynamical quantities: effective constants and sustained rates should be treated as properties of sustained regimes wherever the underlying mechanics can derive them, rather than inserted as free instructions. The recurrence audit sharpens this further: the solved trajectory should determine recurrence and signed evolution wherever possible, and the selected clock/phase convention must not be mistaken for the underlying mechanics. The 2026-09-11 intrinsic-behavior clarification generalizes both: **the response law is the candidate intrinsic object; a stable effective property is a solution conditioned on the identity, state, geometry, boundaries, and environment.** The tau/omega clarification applies this directly to persistence and recurrence: these should be read first as behavioral expressions of solved modes, not automatically as primitive stored numbers. The pre-ARK ancestry audit strengthens this historically while warning that repeated symbols do not guarantee repeated dimensions or roles.
 
 ## Gate before major new paper
 
