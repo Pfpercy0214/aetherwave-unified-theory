@@ -14,7 +14,8 @@ Group findings for the formalization / cross-domain mechanical-rules program. Cu
 4. [`WORK_QUEUE.md`](WORK_QUEUE.md) — full queue
 5. [`CLAIM_LEDGER.md`](CLAIM_LEDGER.md) — labeled results
 6. [`EPISTEMIC_DISCIPLINE.md`](EPISTEMIC_DISCIPLINE.md) — standing rulebook
-7. Trio exploration / FRAMEWORK / GALAXY / BRANCH_MAP as needed
+7. [`2026-09-12_QUARTZ_CALIBRATION_INDEX.md`](2026-09-12_QUARTZ_CALIBRATION_INDEX.md) — quartz cite-only pointers
+8. Trio exploration / FRAMEWORK / GALAXY / BRANCH_MAP as needed
 
 ## Index
 
@@ -24,6 +25,7 @@ Group findings for the formalization / cross-domain mechanical-rules program. Cu
 | [WORK_QUEUE.md](WORK_QUEUE.md) | Prioritized queue |
 | [2026-09-12_POST_XXV_RESEARCH_THRUST_ORDER.md](2026-09-12_POST_XXV_RESEARCH_THRUST_ORDER.md) | **XXV → thrust order** |
 | [XXV_SYMBOL_FREEZE.md](XXV_SYMBOL_FREEZE.md) | **Symbol non-identification table** |
+| [2026-09-12_QUARTZ_CALIBRATION_INDEX.md](2026-09-12_QUARTZ_CALIBRATION_INDEX.md) | Quartz Curie freezes (cite-only) |
 | [2026-09-10_EXPLORATION_CURIE_TRIO_MECHANICAL_CORE_AND_RATE_EMERGENCE.md](2026-09-10_EXPLORATION_CURIE_TRIO_MECHANICAL_CORE_AND_RATE_EMERGENCE.md) | Curie trio vs repo |
 | [CLAIM_LEDGER.md](CLAIM_LEDGER.md) | Hot results + labels |
 | [SESSION_BOOT.md](SESSION_BOOT.md) | Boot checklist |
