@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-14",
+  "status": "Executed geometric compatibility audit; not an ARK validation or a physical atom-displacement prediction",
+  "base_commit": "f3035c02d828cf568e2398fa0234b2cc78c642b5",
+  "base_code_sha256": "593b2f441a3f6c0c8e71e06b81138a50be8687f1538bbde66466393cc39d44f5",
+  "audit_code_sha256": "41a64ef80eae89e79903e39a1b79161e0ea6347af5f26214c248e188f83ebf4e",
+  "full_results_sha256": "f84627e8bdf4eea7320333e848dbb8998bb8c914a6d788784ffd1f549fbf51c2",
+  "registration": "Dextro z(+) to laevo r(+): inversion followed by basal Rz(pi), net diag(1,1,-1). Enantiomorph plus setting conversion, not a proper rotation of one specimen. Inherited ANSYS coefficients unchanged.",
+  "rigid_unit_deformation_dimension": 3,
+  "rigid_unit_strain_dimension": 3,
+  "engineering_strain_order": ["Sxx", "Syy", "Szz", "2Syz", "2Sxz", "2Sxy"],
+  "rigid_unit_s5_over_s6": 0.6576782646283142,
+  "control_s5_over_s6": 0.15725398596212842,
+  "E_AT_V_m": [0.0, 81664.15551616788, 57714.51900372336],
+  "target_strain": [0.0, 0.0, 0.0, 0.0, -5.9257109208743704e-8, -3.768242111396441e-7],
+  "nearest_compatible_s5": -1.9089175252080415e-7,
+  "nearest_compatible_s6": -2.90250967361201e-7,
+  "relative_strain_Frobenius_residual": 0.4130288732425296,
+  "strain_space_angular_mismatch_degrees": 24.395246437380212,
+  "deliberately_mismatched_conventions_residual": 0.6726103500164028,
+  "same_fractional_residual_for": ["X field", "Y field", "AT field", "reversed AT field", "doubled AT field"],
+  "Z_field_control": "Zero linear piezoelectric strain; relative residual is undefined, not evidence of successful nonzero-strain prediction",
+  "SiO_only_constraints": {
+    "deformation_dimension": 18,
+    "strain_dimension": 6,
+    "target_projection_relative_residual": 7.822609101721002e-16,
+    "internal_freedoms_at_fixed_strain": 12,
+    "interpretation": "Releasing internal angular rigidity removes the kinematic obstruction; no force law selects the physical motion yet"
+  },
+  "target_conditioned_shape_example": {
+    "selector": "Minimum squared fractional O-O changes, exact first-order Si-O lengths, zero mean translation",
+    "NOT": "Predicted physical displacement, calibrated microscopic energy, or proof of large distortion/damage",
+    "maximum_fractional_SiO_change": 2.481417511370302e-22,
+    "rms_fractional_OO_change": 3.836834746613981e-8,
+    "maximum_fractional_OO_change": 5.966156376653876e-8,
+    "maximum_abs_OSiO_angle_change_degrees": 9.865733069506952e-6
+  },
+  "guards": {
+    "table_crosswalk_max_error": 1.1102230246251565e-16,
+    "Jacobian_finite_difference_max_error": 7.01266822389357e-11,
+    "nullspace_residual": 1.4830539845366087e-15,
+    "mirror_covariance_residual_difference": 6.106226635438361e-16,
+    "largest_of_16_proper_rotation_residual_differences": 7.771561172376096e-16,
+    "row_permutation_difference": 0.0,
+    "translation_gauge_rescaling_difference": 1.6653345369377348e-16,
+    "neighbor_cutoffs_A": [1.7, 1.8, 1.9],
+    "cutoff_result": "Same connectivity and residual",
+    "100_coordinate_rounding_probe_residual_range": [0.4124081626070219, 0.4137007119771962],
+    "rounding_probe_interpretation": "Sensitivity to printed-coordinate rounding only, not experimental confidence intervals"
+  },
+  "full_output": "The script generates results.json with registered coordinates, complete nullspace, tensors, projections, illustrative displacement representative, and checks, plus comparison.csv. Full outputs are preserved in the companion downloadable package."
+}
