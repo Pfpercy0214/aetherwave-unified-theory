@@ -28,6 +28,14 @@ Primary records:
 - `2026-09-11_TAU_OMEGA_AS_EXPRESSIONS_OF_BEHAVIOR.md`
 - `2026-09-11_PRE_ARK_SCALAR_ANCESTRY_AUDIT.md`
 
+## Recent discussion continuity — September 30 session
+
+[Full record: κ, structural slack, and external boundary conditions](2026-09-30_KAPPA_EQUILIBRIUM_STRUCTURAL_SLACK_AND_EXTERNAL_BOUNDARY_CONDITIONS.md) — archived October 3, 2026 at Paul's request. Includes the discussion's full conceptual sequence, Paul's original wording, competing interpretations, source provenance, and proposed tests.
+
+Core thread: possible κ return to unity versus definitional closure; atomic and macroscopic geometry as allowed response; the grass-blade/slack analogy; Paper XVIII seed reconstruction; zero plus ε and the missing outside condition; cup/trapped-air equilibrium position versus equilibrium criterion; inferred galaxy ε versus independent environments; and the nested-pressure/gravity hypothesis.
+
+**Status remains exploratory.** No new simulation was performed. Historical stiffness, V9.4's constructed κ ratio, and a proposed normalized balance diagnostic must stay distinct. The old quartz κ/θ tradeoff has not been demonstrated; the latest quartz [CURRENT_STATUS.md](experiments/2026-09-14_quartz_cell/CURRENT_STATUS.md), rather than the earlier checkpoint README, gives the completed compatibility result and pending physical-coupling work. V9.5 remains a closed negative route. This record adds continuity, not a new canonical result or an automatic change of modeling priority.
+
 ## Read first
 
 1. `../EPISTEMIC_DISCIPLINE.md`
@@ -48,6 +56,7 @@ Primary records:
 16. `THERMODYNAMICS_PILOT.md`
 17. `RESEARCH_QUEUE.md`
 18. `HANDOFFS.md`
+19. `2026-09-30_KAPPA_EQUILIBRIUM_STRUCTURAL_SLACK_AND_EXTERNAL_BOUNDARY_CONDITIONS.md`
 
 ## Office rule
 
