@@ -59,6 +59,20 @@ The idea that many apparently intrinsic constants may be condition-indexed while
 
 The idea that measurement introduces an unrecorded perturbative contribution is also a **working hypothesis**. It must never become a universal rescue term for discrepancies.
 
+### September 30 discussion — κ, structural slack, and the outside condition
+
+Read [the full discussion record](2026-09-30_KAPPA_EQUILIBRIUM_STRUCTURAL_SLACK_AND_EXTERNAL_BOUNDARY_CONDITIONS.md), archived October 3 at Paul's request. It includes Paul's original turns and preserves the interpretation changes rather than replacing them with a polished conclusion.
+
+Paul's starting position was explicitly uncertain: he does not know that κ equals one. The working question is whether a persistent identity changes expression within permitted geometry under external conditions, possibly returning to the same normalized balance condition. The grass blade illustrates constrained allowed movement; the cup with trapped air distinguishes the equilibrium criterion from the environment-dependent equilibrium position. His interruption matters: an older freely changing K might have absorbed structural slack rather than expressing it in θ. That specific tradeoff has not been established for the quartz code.
+
+Keep exact-closure, transient-return, and cycle-mean-one κ alternatives open. Historical stiffness, the V9.4 τ/θ construction, a force-constant matrix K, and a new normalized balance diagnostic are not identical quantities. Do not automatically identify ω with pressure imbalance, oscillator frequency, or numerical update rate.
+
+Paper XVIII's published seed protocols differ from Paul's remembered K = 1, entropy = 0, θ = seed, derive τ run. Recover that run before claiming it was reproduced. Distinguish zero initialization from disabling evolution, an algorithmic ε floor from a physical external contribution, and inverse calibration from prediction.
+
+The proposed galaxy test is to infer a well-defined ε under a declared κ hypothesis, freeze it, and compare with independently withheld environmental observations. No ε values were calculated. V9.4's outer continuation and ratio construction remain potential confounders; V9.5 remains a closed negative route. The nested-pressure/gravity idea remains a hypothesis; temperature alone is not a measured pressure budget.
+
+Quartz continuation must start from [CURRENT_STATUS.md](experiments/2026-09-14_quartz_cell/CURRENT_STATUS.md): the compatibility audit has already run, and finite internal stiffness/electrical coupling remain pending. The earlier checkpoint README's pending list is historical. No new quartz resonance, neutron, seed, or galaxy calculation was run in the September 30 discussion or its archival pass.
+
 ## Git/provenance caution
 
 The current galaxy branch diagram is conceptually useful, but earlier inspection showed literal Git ancestry did **not** perfectly match the diagram: `galaxy-modeling` and `galaxy-1d` appeared to diverge from the same `main` merge base, while `galaxy-1d` was described conceptually as an offshoot of `galaxy-modeling`. Verify actual history before rewriting or rebasing branches.
