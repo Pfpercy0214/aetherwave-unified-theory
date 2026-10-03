@@ -1,5 +1,11 @@
 # Aetherwave / ARK
 
+> **AI collaborators: [start here](00_START_HERE/README.md) before reviewing papers or changing research code.**
+>
+> Read the [onboarding brief](00_START_HERE/AI_Onboarding_Brief.md), [prediction and closure guide](00_START_HERE/Prediction_Closure_and_Mechanism.md), and [full epistemic charter](00_START_HERE/ARK_Epistemic_Charter.md). Root [AGENTS.md](AGENTS.md) provides the repository-level research instructions.
+>
+> **Measured inputs can support genuine prediction.** Invertibility, coupled closure, and legitimate calibration are not automatically circular. Trace the actual information flow; distinguish empirical success, structural usefulness, and evidence for a mechanism.
+
 ### An independent first-principles research program in scalar causal geometry
 
 **Research lead:** Paul Frederick Percy Jr.  
