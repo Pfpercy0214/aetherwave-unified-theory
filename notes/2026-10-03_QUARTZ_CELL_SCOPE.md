@@ -7,7 +7,8 @@ The 2026-09-14 quartz cell run is a static bulk cell. It is not a resonator. A r
 ## What stays, as material checks, not device results
 
 - Signed strain flips when the field flips, so a law of `|E|^2` cannot be that response.
-- Exact rigid tetrahedra leave a 41.3% strain-tensor residual against the imported control (shear ratio 0.658 against 0.157).
+- Exact rigid tetrahedra leave a 41.3% strain-tensor residual against the imported control (shear ratio 0.658 against 0.157). That 41.3% is the static strain-tensor miss. It is not the Layer-0 frequency residual and not the Baù miss. Letting the angles move only shows a motion is possible. It is not the motion the forces select.
+- The laevo sign-family registration is done. The signed material tensors are still not on the crystallographic atom labels, and no resonator handedness was inferred from that registration.
 - Geometry, the rigid-unit rank, and the imported energy control stay separate calculations.
 - The permittivity in that energy law is not the project's perturbation epsilon.
 - Zero cycle loss means dissipation was left out, not that a Q was measured.
